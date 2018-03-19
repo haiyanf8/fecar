@@ -1,0 +1,63 @@
+<div class="banner saleguidebg">
+  <div class="main_container">
+      <div class="banner-title">
+          <h2 class="ct">卖车指南</h2>
+          <p class="tt">Sale Guide</p>
+      </div>
+    </div>
+</div>
+<div class="main_container m-column">
+
+  <div class="m-column-tab">
+    <p class="tt">卖车指南</p>
+    <ul class="ct">
+      <if condition="$level == 'top'">
+        <li class="{$action_name=='process'? 'current':''}"><a href="./process.html">卖车流程</a></li>
+        <li class="{$action_name=='introduction'? 'current':''}"><a href="./introduction.html">卖车须知</a></li>
+      <else />
+        <li class="{$action_name=='process'? 'current':''}"><a href="../process.html">卖车流程</a></li>
+        <li class="{$action_name=='introduction'? 'current':''}"><a href="../introduction.html">卖车须知</a></li>
+      </if>
+    </ul>
+  </div>
+
+  <div class="m-column-ct">
+   
+        <p class="tt">卖车流程</p>
+       
+        <div class="flow">
+           
+            <h2>01. 在线预约 免费上门</h2>
+            <div class="flow-1 flow-txt">
+                <span class="left">在线预约，专业检测师免费上门提供检测服务，保障您爱车的真正价值。</span>
+            </div>
+            
+
+            <h2>02. 价比百家 省时省心</h2>
+            <div class="flow-2 flow-txt">
+                <span class="right">
+                    全国超3000买家在线实时竞拍，让您足不出户，价比百家，获得最满意的高价。
+                </span>
+            </div>
+            
+            <h2>03. 安全保障 极速打款</h2>
+            <div class="flow-3 flow-txt">
+                <span class="left">
+                    完成签约，极速打款，实时到账，通过朋友e车的诚信
+                    保障体系，保证您的证件和车款安全。
+                </span>
+            </div>
+            
+            <h2>04. 全程免费 优质服务</h2>
+            <div class="flow-4 flow-txt">
+                <span class="center">
+                    所有手续免费代办，全程0费用，享受一站式服务。朋
+                    友e车优质服务只为您10分满意！
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

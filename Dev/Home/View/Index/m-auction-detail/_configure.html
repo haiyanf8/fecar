@@ -1,0 +1,248 @@
+<div class="configure">
+    
+    <div class="configure-nav">
+        <ul class="js-switch-chosen">
+            <li class="item--chosen item current">基本配置</li>
+            <li class="item--chosen item">主要配置</li>
+         </ul>
+    </div>
+
+    <div class="configure-content js-switch-target">
+        <div class="config item--target active">
+       
+            <ul class="config-list">
+                <li>
+                    <span class="tt">车辆类型</span>
+                    <span class="ct">{$carDetailInfo['car_model']}</span>
+                </li>
+                <li>
+                    <span class="tt">供油方式</span>
+                    <span class="ct">{$carDetailInfo['fuel_supply']}</span>
+                </li>
+                <li>
+                    <span class="tt">燃油方式</span>
+                    <span class="ct">{$carDetailInfo['fuel_type']}</span>
+                </li>
+                <li>
+                    <span class="tt">车身型式</span>
+                    <span class="ct">{$carDetailInfo['body_style']}</span>
+                </li>
+
+                <li>
+                    <span class="tt">驱动形式</span>
+                    <span class="ct">{$carDetailInfo['drive_style']}</span>
+                </li>
+                <li>
+                    <span class="tt">车门数</span>
+                    <span class="ct">{$carDetailInfo['door_num']}</span>
+                </li>
+                <li>
+                    <span class="tt">前轮胎规格</span>
+                    <span class="ct">{$carDetailInfo['front_wheel']}</span>
+                </li>
+                <li>
+                    <span class="tt">后轮胎规格</span>
+                    <span class="ct">{$carDetailInfo['rear_wheel']}</span>
+                </li>
+                <li>
+                    <span class="tt">座位数</span>
+                    <span class="ct">{$carDetailInfo['seat_num']}</span>
+                </li>
+                <li>
+                    <span class="tt">轮毂材料</span>
+                    <span class="ct">{$carDetailInfo['wheel_hub']}</span>
+                </li>
+                <li>
+                    <span class="tt">最大功率</span>
+                    <span class="ct">{$carDetailInfo['max_power']}</span>
+                </li>
+                <li>
+                    <span class="tt">最大马力</span>
+                    <span class="ct">{$carDetailInfo['max_housepower']}</span>
+                </li>
+                <li>
+                    <span class="tt">气囊有无</span>
+                    <span class="ct">{$carDetailInfo['gas_bag']==1?'有':'无'}</span>
+                </li>
+                <li>
+                    <span class="tt">扬声器数</span>
+                    <span class="ct">{$carDetailInfo['speaker_num']}</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="config item--target">
+           
+            <ul class="config-list">
+                <li>
+                    <span class="tt">遥控钥匙</span>
+                    <span class="ct">
+                        <if condition="in_array('c79',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">真皮方向盘</span>
+                    <span class="ct">
+                        <if condition="in_array('c94',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">功能方向盘</span>
+                    <span class="ct">
+                        <if condition="in_array('c98',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">真皮座椅</span>
+                    <span class="ct">
+                        <if condition="in_array('c100',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">岔气大灯</span>
+                    <span class="ct">
+                        <if condition="in_array('c130',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">定速巡航</span>
+                    <span class="ct">
+                        <if condition="in_array('c149',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                 <li>
+                    <span class="tt">电动车窗</span>
+                    <span class="ct">
+                        <if condition="in_array('c138',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">倒车影像</span>
+                    <span class="ct">
+                        <if condition="in_array('c151',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">行车电脑</span>
+                    <span class="ct">
+                        <if condition="in_array('c152',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">后视镜电动调节</span>
+                    <span class="ct">
+                        <if condition="in_array('c142',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">GPS导航</span>
+                    <span class="ct">
+                        <if condition="in_array('c154',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">中控台电脑大屏</span>
+                    <span class="ct">
+                        <if condition="in_array('c156',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                 <li>
+                    <span class="tt">自动调节</span>
+                    <span class="ct">无</span>
+                </li>
+                <li>
+                    <span class="tt">倒车雷达</span>
+                    <span class="ct">
+                        <if condition="in_array('c182',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">电动天窗</span>
+                    <span class="ct">
+                        <if condition="in_array('c128',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">LED大灯</span>
+                    <span class="ct">
+                        <if condition="in_array('c131',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+                <li>
+                    <span class="tt">随车配件</span>
+                    <span class="ct">无</span>
+                </li>
+                <li>
+                    <span class="tt">驾驶座电动调节</span>
+                    <span class="ct">
+                        <if condition="in_array('c105',$mainConfig)">
+                            有
+                        <else/>
+                            无
+                        </if>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

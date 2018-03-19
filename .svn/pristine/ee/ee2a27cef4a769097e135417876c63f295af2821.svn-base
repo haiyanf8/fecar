@@ -1,0 +1,16 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/mx";
+
+
+@import "m-index/banner";
+@import "m-index/deal";
+@import "m-index/compare";
+@import "m-index/news";
+@import "m-index/service";
+@import "m-pbl/_flink";
+
+@import "m-pbl/_m-bsale";
+@import "m-pbl/_m-section-tt";

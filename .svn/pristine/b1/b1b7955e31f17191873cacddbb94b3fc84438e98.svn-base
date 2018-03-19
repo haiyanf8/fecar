@@ -1,0 +1,32 @@
+
+<div class="m-column-tab">
+	<p class="tt">卖车指南</p>
+	<ul class="ct">
+		<li><a>卖车流程</a></li>
+		<li><a>卖车须知</a></li>
+		<li class="current"><a>卖车保障</a></li>
+	</ul>
+</div>
+
+<div class="m-column-ct">
+	<p class="tt">商务合作</p>
+
+	<div class="security">
+		<p class="security-tt">上门检测  专业保障</p>
+		<div class="security-img">
+			<img src="__PUBLIC__/prd/img/info/security-1.png" alt="" />
+		</div>
+		<p class="security-tt">全国竞拍  高价保障</p>
+		<div class="security-img">
+			<img src="__PUBLIC__/prd/img/info/security-2.png" alt="" />
+		</div>
+		<p class="security-tt">极速打款  安全保障</p>
+		<div class="security-img">
+			<img src="__PUBLIC__/prd/img/info/security-3.png" alt="" />
+		</div>
+		<p class="security-tt">省时省心  无忧保障</p>
+		<div class="security-img">
+			<img src="__PUBLIC__/prd/img/info/security-4.png" alt="" />
+		</div>
+	</div>
+</div>

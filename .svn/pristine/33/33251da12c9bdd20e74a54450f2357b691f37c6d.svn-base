@@ -1,0 +1,35 @@
+<div class="faq">
+	<div class="main_container">
+
+		<h2 class="faq-title m-section-tt"><span>答疑解惑</span></h2>
+
+		<div class="faq-box">
+
+			<div class="faq-box-small">
+				<h3 class="tt">Q1 朋友e车怎么帮您卖车？</h3>
+				<p class="ct ct60">朋友e车是二手车交易的第三方二手车竞拍平台，通过上门评估，组织3000家买家线上竞拍，提供免费过户代办，为您提供高效便捷安全的卖车服务，帮您足不出户把车卖出最优价。</p>
+			</div>
+
+			<div class="faq-box-small diff">
+				<h3 class="tt">Q2 交易过程中需要哪些费用？</h3>
+				<p class="ct ct60">对于个人车主卖家，朋友e车在整个的服务过程中（包括上门评估、手续代办过户等一系列服务）都是免费的。</p>
+			</div>
+
+
+			<div class="faq-box-small">
+				<h3 class="tt">Q3 如何卖价更高？</h3>
+				<p class="ct ct80">买家比较看重漆面保养，划痕，保养情况等，因此您在卖车前最好能提前修复外观(可走保险)，保证车的清洁，并且出示4s店的保养记录，这样可以相对卖个高价。</p>
+			</div>
+
+
+			<div class="faq-box-small diff">
+				<h3 class="tt">Q4 多久能收到车款？</h3>
+				<p class="ct ct80">检测完一天内您将收到报价，如您同意成交，在签署交易协议后，即可在24小时之内收到50%的车款，剩余50%款项过户完成后即刻收取。</p>
+			</div>
+		</div>
+
+		<div class="faq-more">
+			<a href="./introduction.html">更多问题&gt;&gt;</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,226 @@
+
+
+.main_container{
+	@include clearfix();
+}
+
+.main{
+
+	margin-top: 63px;
+	margin-bottom: 87px;
+
+	&-left{
+		width: 418px;
+		float: left;
+	}
+	&-right{
+		width: 750px;
+		height: 635px;
+
+		float: right;
+
+		border: 1px solid #f0f0ef;
+		border-radius: 8px;
+	}
+}
+	
+
+.m-city{
+	height: 100px;
+
+	margin-bottom: 16px;
+
+	border: 1px solid $cl-bd;
+	border-radius: 8px;
+
+	cursor: pointer;
+
+	overflow: hidden;
+
+	transition: all 0.5s ease 0s;
+
+	position: relative;
+
+	&.last{
+		margin-bottom: 0;
+	}
+
+	&-tt{
+		margin-top: 20px;
+		margin-left: 25px;
+
+		font-size: 20px;
+		line-height: 26px;
+
+		.before{
+			width: 20px;
+			height: 18px;
+
+			margin-top: 4px;
+			margin-right: 7px;
+
+			background: url(../img/store/m-city-tt.png) center center no-repeat;
+		}
+		.goto-map{
+			width: 19px;
+			height: 12px;
+
+			float: right;
+
+			margin-right: 20px;
+			padding: 7px 5px;
+
+			background: url(../img/store/m-city-goto.png) center center no-repeat;
+		}
+	}
+
+	&-addr{
+		padding-right: 0;
+		margin-top: 7px;
+		margin-left: 25px;
+
+		font-size: 16px;
+		line-height: 22px;
+
+		&.fztxt{
+			height: 22px;
+			
+			@include text-overflow();
+		}
+	}
+
+	&-img{
+		width: 216px;
+		height: 160px;
+		
+		display: none;
+
+		margin: 10px auto 0;
+
+		text-align: center;
+
+		overflow: hidden;
+
+		img{
+			width: 100%;
+
+			border-radius: 6px;
+		}
+	}
+
+	&.current{
+		height: 280px;
+
+		border-color: $cl-yl;
+
+		.m-city-img{
+			display: block;
+		}
+
+		.m-city-tt{
+			.before{
+				background-image: url(../img/store/m-city-tt--current.png);
+			}
+			.goto-map{
+				background-image: url(../img/store/m-city-goto--current.png);
+			}
+		}
+
+		.fztxt{
+			height: auto;
+		}
+	}
+}
+
+.m-sh{
+
+
+	&-tt{
+
+		padding-left: 25px;
+		margin: 8px 0;
+
+		overflow: hidden;
+
+		.item{
+			float: left;
+
+			width: 68px;
+			height: 24px;
+			line-height: 24px;
+
+			text-align: center;
+
+			&.current{
+				color: $cl-wt;
+				font-size: 12px;
+				border-radius: 3px;
+				background: $cl-yl;
+			}
+		}
+	}
+
+	&-cont{
+		
+		.item{
+			display: none;
+
+			clear: both;
+
+			p{
+				letter-spacing: -1px;
+			}
+
+			&.active{
+				display: block;
+			}
+		}
+	}
+}
+
+
+.m-map{
+	position: relative;
+
+	&-fake{
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		overflow: hidden;
+		background: url(../img/store/m-map-fake.png) center center no-repeat;
+
+		.point{
+			position: absolute;
+
+			width: 62px;
+			height: 32px;
+
+			background-position: center center;
+			background-repeat: no-repeat;
+
+			cursor: pointer;
+		}
+	}
+
+	&-baidu{
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+}
+
+.city-xiamen{
+	margin: 25px auto 10px auto;
+}
+
+.city-shanghai{
+	margin: 25px auto 10px auto;
+}

@@ -1,0 +1,136 @@
+.banner {
+  width: 100%;
+  height: 240px;
+}
+.banner-title {
+  padding-left: 70px;
+  padding-top: 70px;
+}
+.banner-title .ct {
+  font-size: 50px;
+  color: #353535;
+}
+.banner-title .tt {
+  padding-top: 3px;
+  font-size: 24px;
+  color: #ff6b1d;
+  font-family: "Arial";
+}
+.banner.introbg {
+  background: url(../img/info/intro-banner.jpg) no-repeat center 0;
+}
+.banner.saleguidebg {
+  background: url(../img/info/saleguide-banner.jpg) no-repeat center 0;
+}
+.banner.saleguidebg .ct {
+  color: #fff;
+}
+
+.m-column {
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.m-column-tab {
+  width: 200px;
+  float: left;
+  margin-bottom: 200px;
+  margin-right: 63px;
+  font-size: 16px;
+}
+.m-column-tab .tt {
+  margin-bottom: 13px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 28px;
+  color: #ff6b1d;
+}
+.m-column-tab .ct li {
+  height: 53px;
+  line-height: 53px;
+  font-size: 18px;
+  text-align: center;
+  background: url(../img/info/info-notice-black-arrow.png) no-repeat 40px center;
+}
+.m-column-tab .ct li a {
+  display: block;
+}
+.m-column-tab .ct li.current {
+  background: url(../img/info/info-notice-white-arrow.png) no-repeat 177px center #ff6b1d;
+  color: #ffffff;
+}
+.m-column-ct {
+  overflow: hidden;
+}
+.m-column-ct > .tt {
+  position: relative;
+  padding-left: 20px;
+  height: 90px;
+  font-size: 24px;
+  line-height: 90px;
+  text-indent: 7px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.m-column-ct > .tt::before {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #ff6b1d;
+}
+
+.intro {
+  padding-top: 50px;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+.intro-tt {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.intro p {
+  font-size: 20px;
+  line-height: 40px;
+  color: #353535;
+}
+.intro p.yl {
+  color: #ff6b1d;
+  font-weight: bold;
+}
+.intro p.circle {
+  position: relative;
+  padding-left: 20px;
+}
+.intro p.circle::before {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff6b1d;
+}
+.intro p.breakTop60 {
+  margin-bottom: 40px;
+}
+.intro p.breakTopBottom60 {
+  margin: 40px 0;
+}
+
+.company {
+  width: 933px;
+  margin: 70px auto 0;
+}
+.company img {
+  width: 933px;
+  display: inline-block;
+  margin: 0 auto 10px;
+}
+
+/*# sourceMappingURL=info-intro.css.map */

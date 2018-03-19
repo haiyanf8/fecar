@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{$title}</title>
+        <meta name="keywords" content="{$keywords}">
+        <meta name="description" content="{$description}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" href="__PUBLIC__/prd/css/pbl-a0b0629de8.css">
+        <link rel="stylesheet" href="__PUBLIC__/prd/css/article-3b045a0010.css">
+    </head>
+    <body>
+
+        <include file="Index/m-pbl:_hd" />
+
+        <include file="Index/m-article:_hot" />
+
+        <div class="main_container content">
+
+            <div class="left">
+
+                <include file="Index/m-article:_list" />
+
+            </div>
+
+            <div class="right">
+
+                <include file="Index/m-pbl:_aside-quicksale" />
+
+                <include file="Index/m-pbl:_aside-auction" />
+
+                <include file="Index/m-article:_ad" />
+
+            </div>
+        </div>
+
+
+        <include file="Index/m-pbl:_ft" />
+
+        <include file="Index/m-pbl:_msg" />
+
+        <include file="Index/m-be:_api" />
+
+        <include file="Index/m-pbl:_success" />
+
+        <include file="Index/m-pbl:_aside-nav" />
+
+        <script src="__PUBLIC__/prd/lib/js/jquery-1.11.3.min.js" charset="utf-8"></script>
+        <script src="__PUBLIC__/prd/js/pbl-613f130abe.js" charset="utf-8"></script>
+        <script src="__PUBLIC__/prd/js/article-98ac341cb9.js" charset="utf-8"></script>
+
+        <!-- IE8及以下支持JSON -->
+        <!--[if lt IE 9]>
+            <script src="https://g.alicdn.com/aliww/ww/json/json.js" charset="utf-8"></script>
+        <![endif]-->
+        <!-- 自动适配移动端与pc端 -->
+        <script src="https://g.alicdn.com/aliww/??h5.imsdk/2.1.0/scripts/yw/wsdk.js,h5.openim.kit/0.3.7/scripts/kit.js" charset="utf-8"></script>
+
+        <include file="Index/m-be:_theThird" />
+        
+    </body>
+</html>

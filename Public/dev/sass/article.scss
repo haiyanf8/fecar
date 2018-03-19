@@ -1,0 +1,26 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/mx";
+
+@import "m-pbl/source-paging";
+@import "m-article/hot";
+@import "m-article/list";
+@import "m-article/ad";
+
+.content{
+    margin-bottom: 40px;
+    @include clearfix();
+
+    .left{
+        float: left;
+    }
+
+    .right{
+        width: 245px;
+        float: right;
+
+        margin-top: 28px;
+    }
+}

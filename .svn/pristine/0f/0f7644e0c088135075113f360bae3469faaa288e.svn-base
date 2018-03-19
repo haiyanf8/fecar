@@ -1,0 +1,161 @@
+<?php
+
+namespace Home\Controller;
+
+class ValuateController extends BaseController
+{
+    public function index()
+    {
+        $this->assign('action_name', 'valuate');
+
+        $hcwhere['open'] = '1';
+        $hotcity = D('gpjcity')->getCities($hcwhere, 'rank desc');
+        foreach ($hotcity as &$value) {
+            if ($value['city'] == session('opencity')) {
+                $value['current'] = 1;
+            } else {
+                $value['current'] = 0;
+            }
+        }
+        $this->assign('hotcity', $hotcity);
+
+        $field = '`site`, `sitename`, `rank`';
+        $order = '`rank` desc';
+        $links = D('link')->getLinks($field, $order, $limit);
+        $this->assign('links', $links);
+
+        $valuateRecords = D('valuaterecord')->getRandRecords();
+        $this->assign('records', $valuateRecords);
+
+        $this->assign('level', 'top');
+
+        $this->assign('title', '【迈迈车】估价_车辆估值');
+
+        $this->display('Index:valuate');
+    }
+
+    public function count()
+    {
+        echo D('valuate')->getCount()[0]['count'];
+    }
+
+    public function record()
+    {
+        $record = D('valuaterecord')->getRecords('uuid is not null', '', '', '');
+        echo json_encode(array('length' => count($record), 'data' => $record));
+    }
+
+    public function detail()
+    {
+        $queryString = 'd_model=' . I('d_model') . '&year=' . I('year') . '&month=' . I('month') . '&mile=' . I('mile') . '&city=' . I('city');
+        $api_url = C('GPJ_API_URL') . '?' . $queryString;
+
+        $ret = cur_get($api_url);
+
+        $dataResult = json_decode($ret, TRUE);
+
+        $this->assign('priceData', $dataResult);
+        $this->assign('date', I('year') . '-' . I('month'));
+        $this->assign('mile', I('mile'));
+
+        $city = D('gpjcity')->getCityByZipcode(I('city'));
+        $this->assign('city', $city);
+
+        $modelData = D('carmodel')->getValuateByModel(I('d_model'));
+        $this->assign('modelData', $modelData);
+
+        $this->_appointList = new AppointController();
+        $appointCount = $this->_appointList->appointCount();
+        $this->assign('appointCount',$appointCount[0]['number']);
+        $this->assign('action_name', 'valuate');
+
+        $where['open'] = '1';
+        $hotcity = D('gpjcity')->getCities($where, 'rank desc');
+        foreach ($hotcity as &$value) {
+            if ($value['city'] == session('opencity')) {
+                $value['current'] = 1;
+            } else {
+                $value['current'] = 0;
+            }
+        }
+        $this->assign('hotcity', $hotcity);
+        
+        $field = '`site`, `sitename`, `rank`';
+        $order = '`rank` desc';
+        $links = D('link')->getLinks($field, $order, $limit);
+        $this->assign('links', $links);
+
+        $hotSellData = D('auction')->getHisSellDataList('', 'auction.create_time desc,bid_times desc', 6);
+        $this->assign('hotSellData', $hotSellData);
+
+        $this->assign('level', 'top');
+
+        $this->assign('title', '【迈迈车】车辆估值_' . $modelData[0]['modelname'] . ' ' . $modelData[0]['stylename']);
+        $this->assign('queryString',$queryString);
+        $this->display('Index:valuate-detail');
+    }
+
+    public function innerAppoint()
+    {
+        $data['page'] = I('page');
+        $data['uuid'] = session_id();
+        $data['time'] = time();
+        $data['ipaddr'] = get_client_ip();
+
+        D('valuateappoint')->insertRecords($data);
+    }
+
+    public function appoint()
+    {
+        $record = D('valuateappoint')->getRecords('uuid is not null', '', '', '');
+        echo json_encode(array('length' => count($record), 'data' => $record));
+    }
+
+    public function submit()
+    {
+        $queryString = 'd_model=' . I('d_model') . '&year=' . I('year') . '&month=' . I('month') . '&mile=' . I('mile') . '&city=' . I('city');
+        $api_url = C('GPJ_API_URL') . '?' . $queryString;
+
+        //echo $api_url;
+        $ret = cur_get($api_url);
+        $dataResult = json_decode($ret, TRUE);
+        if ($dataResult['status'] == 'success') {
+            $submitString = 'd_model=' . I('d_model') . '&year=' . I('year') . '&month=' . I('month') . '&mile=' . I('mile') . '&city=' . I('city');
+            $submitUrl = './valuate-detail.html?' . $submitString;
+            $data['url'] = $submitUrl;
+
+            $modelData = D('carmodel')->getValuateByModel(I('d_model'));
+            //标题：显示列表用的
+            $data['title'] = $modelData[0]['modelname'] . ' ' . $modelData[0]['stylename'];
+            //最低价
+            $data['min_price'] = $dataResult['max_sell_price'];
+            //最高价
+            $data['max_price'] = $dataResult['max_private_price'];
+            //品牌名
+            $data['brand'] = $modelData[0]['brandname'];
+            //车型名
+            $data['model'] = $modelData[0]['modelname'];
+            //款型名
+            $data['style'] = $modelData[0]['stylename'];
+            //上牌日期
+            $data['regist_date'] = I('year') . '-' . I('month');
+            //城市
+            $data['city'] = D('gpjcity')->getCityByZipcode(I('city'))[0]['city'];
+            //公里数
+            $data['mile'] = I('mile');
+            //访问时间
+            $data['time'] = time();
+            //IP地址
+            $data['ipaddr'] = get_client_ip();
+            //UUID
+            $data['uuid'] = session_id();
+
+
+            D('valuaterecord')->insertRecords($data);
+            D('valuate')->addCount();
+            echo json_encode(array('status' => 0, 'msg' => '获取估价数据成功', 'url' => $submitUrl));
+        } else {
+            echo json_encode(array('status' => 1, 'msg' => '获取估价数据失败'));
+        }
+    }
+}

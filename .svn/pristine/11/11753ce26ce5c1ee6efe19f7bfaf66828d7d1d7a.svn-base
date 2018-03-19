@@ -1,0 +1,690 @@
+[ 2016-12-22T15:28:25+08:00 ] ::1 /www/dev.php/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 223 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 279 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0110s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0130s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0130s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:28:25' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0020s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 83 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 90 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 93 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 134 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 156 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 181 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 239 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 240 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 242 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 243 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-22T15:28:29+08:00 ] ::1 /www/dev.php/history.html?brand=%E6%A0%87%E8%87%B4&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 172 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 173 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 174 行.
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 238 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 251 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 265 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0020s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0030s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0140s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:28:29' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0020s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0010s ]
+ERR: 1054:Unknown column 'base.brand' in 'where clause'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE base.brand = '标致' AND `open` = 1 ORDER BY rank desc 
+ERR: 1054:Unknown column 'base.brand' in 'where clause'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE base.brand = '标致' AND `open` = 1 ORDER BY rank desc 
+
+[ 2016-12-22T15:28:31+08:00 ] ::1 /www/dev.php/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 223 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 279 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0120s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0130s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0130s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:28:31' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0020s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0030s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 83 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 90 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 93 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 134 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 156 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 181 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 239 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 240 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 242 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 243 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-22T15:29:06+08:00 ] ::1 /www/dev.php/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 223 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 279 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0130s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0130s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0130s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:29:06' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0030s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0010s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 83 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 90 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 93 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 134 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 156 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 181 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 239 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 240 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 242 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 243 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-22T15:29:09+08:00 ] ::1 /www/dev.php/history.html?brand=%E6%A0%87%E8%87%B4&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: series E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 98 行.
+NOTIC: [8] Undefined index: model E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 108 行.
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 172 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 173 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 174 行.
+NOTIC: [8] Undefined index: series E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 230 行.
+NOTIC: [8] Undefined index: model E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 234 行.
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 238 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 251 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 265 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0010s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0020s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0160s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:29:09' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0030s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined index: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-22T15:30:55+08:00 ] ::1 /www/dev.php/history.html?brand=%E6%A0%87%E8%87%B4&
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: series E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 98 行.
+NOTIC: [8] Undefined index: model E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 108 行.
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 172 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 173 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 174 行.
+NOTIC: [8] Undefined index: series E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 230 行.
+NOTIC: [8] Undefined index: model E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 234 行.
+NOTIC: [8] Undefined index: age E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 238 行.
+NOTIC: [8] Undefined index: price E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 251 行.
+NOTIC: [8] Undefined index: mile E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 265 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0010s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE base.brand = '标致' AND auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0020s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0130s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:30:55' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0030s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0010s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined index: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-22T15:30:56+08:00 ] ::1 /www/dev.php/valuate-index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Dev\Home\Controller\ValuateController.class.php 第 24 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_valuaterecord` [ RunTime:0.0020s ]
+SQL: SELECT `url`,`title` FROM `fecar_valuaterecord` ORDER BY rand() LIMIT 0,18   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keywords E:\www\www\Dev\Runtime\Cache\Home\707df514c4209601dfaf6465e6c246a3.php 第 9 行.
+NOTIC: [8] Undefined variable: description E:\www\www\Dev\Runtime\Cache\Home\707df514c4209601dfaf6465e6c246a3.php 第 10 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\707df514c4209601dfaf6465e6c246a3.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-22T15:30:59+08:00 ] ::1 /www/dev.php/store-index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'store'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Dev\Home\Controller\StoreController.class.php 第 36 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_address` [ RunTime:0.0010s ]
+SQL: SELECT c.city,c.pinyin,a.storename,a.address,a.image FROM fecar_address a left join fecar_city c on a.cityid = c.id  WHERE ( a.open='1' and c.id is not null ) ORDER BY a.priority desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\7c70847a9a927158423083fd4ee1b993.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-12-22T15:56:24+08:00 ] ::1 /www/dev.php/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 223 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 279 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0130s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0150s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0150s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:56:24' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0030s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0020s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 83 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 90 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 93 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 134 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 156 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 181 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 239 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 240 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 242 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 243 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-12-22T15:56:45+08:00 ] ::1 /www/dev.php/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `fecar_merchant_auction` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 223 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 279 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id  [ RunTime:0.0110s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Dev\Home\Controller\HistoryController.class.php 第 31 行.
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY auction.create_time desc LIMIT 0,12   [ RunTime:0.0130s ]
+SQL: SELECT concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url FROM fecar_merchant_auction auction INNER JOIN fecar_merchant_bid_time as bid on auction.id=bid.auction_id INNER JOIN fecar_car_base as base on auction.car_base_id=base.id INNER JOIN fecar_car_base_img as img on img.car_base_id=base.id  WHERE auction.status = 1 AND img.part = 'left_front_45' GROUP BY bid.auction_id ORDER BY bid_times LIMIT 6   [ RunTime:0.0130s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '15:56:45' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-12-22'  ) )  [ RunTime:0.0020s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_gpjcity` [ RunTime:0.0020s ]
+SQL: SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0010s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 83 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 84 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 85 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 87 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 90 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 93 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 108 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 115 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 128 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 129 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 130 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 134 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 137 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 139 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 149 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 150 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 151 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 156 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 158 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 160 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 170 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 171 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 172 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 181 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 184 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 186 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 239 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 240 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 242 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 243 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 244 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Dev\Runtime\Cache\Home\e818a8f31d814b070019278fc4b8bce7.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

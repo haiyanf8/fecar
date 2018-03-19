@@ -1,0 +1,27 @@
+<div class="aside-hotsale">
+    <h2>本周热门竞拍</h2>
+    <div class="aside-hotsale-list">
+        <ul>
+            <volist name="hotSellData" id="vo">
+                <li class="item">
+                    <h3 class="ct">
+                    <if condition="$level == 'top'">
+                        <a href="./history-detail/{$vo['carid']}.html">
+                    <else />
+                        <a href="../history-detail/{$vo['carid']}.html">
+                    </if>
+                        {$vo['info']}
+                    </a>
+                    </h3>
+                    <div class="info">
+                        <div class="txt">
+                            <p><span>{$vo['regist_date']}</span>上牌</p>
+                            <p>里程<span>{:round($vo['kilometer']/10000,2)}</span>万公里</p>
+                        </div>
+                        <div class="auction">{$vo['num']}人竞拍</div>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="overview-pic-big js-overview-pic-big">
+    <div class="slide-box js-overview-slide-box">
+        <ul class="slide-box-img js-overview-slide-img">
+            <volist name="img" id="val">
+                <if condition="$i eq 0 ">
+                    <li class="active"><img src="{:C('CHECK_URL')}/{$val['url']}" alt=""></li>
+                <else/>
+                    <li><img src="{:C('CHECK_URL')}/{$val['url']}" alt=""></li>
+                </if>
+            </volist>
+        </ul>
+
+        <div class="prev slide-box-btn js-overview-slide-prev"></div>
+        <div class="next slide-box-btn js-overview-slide-next"></div>
+
+        <div class="close js-close"></div>
+    </div>
+</div>

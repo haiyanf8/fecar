@@ -1,0 +1,12 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/mx";
+
+
+@import "m-auction-detail/tip";
+@import "m-auction-detail/overview";
+@import "m-auction-detail/checkup";
+@import "m-auction-detail/configure";
+@import "m-auction-detail/overview-pic-big";

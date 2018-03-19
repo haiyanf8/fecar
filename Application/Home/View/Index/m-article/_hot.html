@@ -1,0 +1,37 @@
+<div class="article-header">
+    <div class="article-header-pic">
+        <div class="left">
+            <ul class="js-articlehot-target">
+                <li class="item active">
+                   <a href="../article-detail/{$leftArticle['articleid']}.html">
+                       <img src="{$leftArticle['prepic']}" class="img">
+                       <div class="txt">
+                           <h3 class="tt">{$leftArticle['title']}</h3>
+                           <p class="ct">{$leftArticle['abstract']}</p>
+                       </div>
+                   </a> 
+                </li>
+            </ul>
+        </div>
+
+        <div class="right">
+           <div class="top">
+                <a href="../article-detail/{$rightTopArticle['articleid']}.html">
+                <img src="{$rightTopArticle['prepic']}" class="img">
+                <div class="txt">
+                    <h3 class="tt">{$rightTopArticle['title']}</h3>
+                </div>
+            </a>
+           </div>
+
+           <div class="top diff">
+                <a href="../article-detail/{$rightBottomArticle['articleid']}.html">
+                <img src="{$rightBottomArticle['prepic']}" class="img">
+                <div class="txt">
+                    <h3 class="tt">{$rightBottomArticle['title']}</h3>
+                </div>
+            </a>
+           </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<li class="m-history-item {$action_name=='history'? 'no-success-icon':''}">
+	<div class="img">
+		<php>
+			$dataArr=explode('/',$data['img00']);
+			$dataArr[count($dataArr)-1]='thumb_0_'.$dataArr[count($dataArr)-1];
+			$dataPic=implode('/',$dataArr);
+		</php>
+		<a href="{:U('detail/'.$data['carid'])}" target="_blank">
+			<img
+			src="__PUBLIC__/dev/img/source/pbl/source-default.jpg"
+			data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$dataPic}" alt="" />
+			<i class="i"></i>
+		</a>
+	</div>
+	<div class="info">
+		<h4 class="info-model">
+			<a href="{:U('detail/'.$data['carid'])}" target="_blank">{$data['info']}</a>
+		</h4>
+		<p class="info-desc">
+			<span class="date"> <i class="i"></i> <span>{$data['regist_date']}上牌</span>
+			</span> <span class="mileage"> <i class="i"></i> <span>里程{:round($data['kilometer']/10000,2)}万公里</span>
+			</span>
+		</p>
+	</div>
+	<div class="count">
+		<i class="i"></i> <span class="count-ct"><span class="red">{$data['num'] + 7}</span>人竞拍</span>
+	</div>
+</li>

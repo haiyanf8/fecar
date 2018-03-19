@@ -1,0 +1,195 @@
+
+$(function(){
+
+	initCitySwitch();
+
+	initSwitch();
+
+});
+
+
+function initCitySwitch(){
+	var map = new BMap.Map("m-map-baidu");
+	var point = {}, marker = {}, label = {}, labelText = {};
+
+	$.ajax({
+		url: "",
+		type: "post",
+		dataType: "json",
+		data:{
+			city: "fuzhou"
+		}
+	}).done(function(data){
+
+		if(data.status === 0){
+
+			
+		}
+		
+	});
+
+
+	$('.js-map-chosen').on("click", "li", function(){
+		var cityname = $(this).data("city");
+		var index = $(this).index();
+		var address = $(".js-item--target").eq(index).find(".address").text();
+		
+		point[cityname] = new BMap.Point(121.449665, 31.303999);
+
+		marker[cityname] = new BMap.Marker(point[cityname]);
+
+		var labelOpt = {
+			offset : new BMap.Size(-70, -72),
+			style : {
+				width : "120px",
+				padding : "5px 10px",
+				fontSize : "12px",
+				color : "#fff",
+				lineHeight : "18px",
+				whiteSpace : "normal",
+				backgroundColor : "rgba(75, 75, 75, 0.7)",
+				border : "none",
+				outline : "none",
+				borderRadius : "5px"
+			}
+		};
+
+		labelText[cityname] = address;
+
+		label[cityname] = new BMap.Label(labelText[cityname], {
+			position : point[cityname],
+			offset : labelOpt.offset
+		});
+
+
+		label.fuzhou.setStyle(labelOpt.style);
+
+		map.centerAndZoom(point.fuzhou, 15);
+
+		map.addControl(new BMap.ScaleControl());
+
+		map.enableScrollWheelZoom(true);
+
+		map.addOverlay(marker.fuzhou);
+
+		// map.addOverlay(label.fuzhou);
+
+		map.panTo(point[cityname]);
+	});
+
+	
+
+
+
+	// var point = {
+	// 	fuzhou : new BMap.Point(119.354807, 26.088581),
+	// 	shanghai : new BMap.Point(121.360882,31.172032),
+	// 	xiamen : new BMap.Point(118.170258, 24.491024),
+	// 	suzhou : new BMap.Point(120.607104,31.276843)
+	// };
+
+	// var marker = {
+	// 	fuzhou : new BMap.Marker(point.fuzhou),
+	// 	shanghai : new BMap.Marker(point.shanghai),
+	// 	xiamen : new BMap.Marker(point.xiamen),
+	// 	suzhou : new BMap.Marker(point.suzhou),
+	// };
+
+	// var labelOpt = {
+	// 	offset : new BMap.Size(-70, -72),
+	// 	style : {
+	// 		width : "120px",
+	// 		padding : "5px 10px",
+	// 		fontSize : "12px",
+	// 		color : "#fff",
+	// 		lineHeight : "18px",
+	// 		whiteSpace : "normal",
+	// 		backgroundColor : "rgba(75, 75, 75, 0.7)",
+	// 		border : "none",
+	// 		outline : "none",
+	// 		borderRadius : "5px"
+	// 	}
+	// };
+	// var labelText = {
+	// 	fuzhou : $(".js-addr-fuzhou").text(),
+	// 	shanghai : $(".js-addr-shanghai").text(),
+	// 	xiamen : $(".js-addr-xiamen").text(),
+	// 	suzhou : $(".js-addr-suzhou").text()
+	// };
+
+	// var label = {
+	// 	fuzhou : new BMap.Label(labelText.fuzhou, {
+	// 		position : point.fuzhou,
+	// 		offset : labelOpt.offset
+	// 	}),
+
+	// 	shanghai : new BMap.Label(labelText.shanghai, {
+	// 		position : point.shanghai,
+	// 		offset : labelOpt.offset
+	// 	}),
+
+	// 	xiamen : new BMap.Label(labelText.xiamen, {
+	// 		position : point.xiamen,
+	// 		offset : labelOpt.offset
+	// 	}),
+
+
+	// 	suzhou : new BMap.Label(labelText.xiamen, {
+	// 		position : point.suzhou,
+	// 		offset : labelOpt.offset
+	// 	})
+	// };
+	// label.fuzhou.setStyle(labelOpt.style);
+	// label.shanghai.setStyle(labelOpt.style);
+	// label.xiamen.setStyle(labelOpt.style);
+	// label.suzhou.setStyle(labelOpt.style);
+
+	// map.centerAndZoom(point.shanghai, 15);
+	// map.addControl(new BMap.ScaleControl());
+	// map.enableScrollWheelZoom(true);
+
+	// map.addOverlay(marker.fuzhou);
+	// map.addOverlay(marker.shanghai);
+	// map.addOverlay(marker.xiamen);
+	// map.addOverlay(marker.suzhou);
+
+	// map.addOverlay(label.fuzhou);
+	// map.addOverlay(label.shanghai);
+	// map.addOverlay(label.shbranch);
+	// map.addOverlay(label.xiamen);
+
+	// var $shanghai = $("[data-city=shanghai]");
+	// $shanghai.on("click", function(){
+	// 	map.panTo(point["shanghai"]);
+	// 	$shanghai.addClass("current").siblings().removeClass("current");
+	// });
+
+
+	// var $fuzhou = $("[data-city=fuzhou]");
+	// $fuzhou.on("click", function(){
+	// 	map.panTo(point["fuzhou"]);
+	// 	$fuzhou.addClass("current").siblings().removeClass("current");
+	// });
+
+	// var $xiamen = $("[data-city=xiamen]");
+	// $xiamen.on("click", function(){
+	// 	map.panTo(point["xiamen"]);
+	// 	$xiamen.addClass("current").siblings().removeClass("current");
+	// });
+
+	// var $suzhou = $("[data-city=suzhou]");
+	// $suzhou.on("click", function(){
+	// 	map.panTo(point["suzhou"]);
+	// 	$suzhou.addClass("current").siblings().removeClass("current");
+	// });
+}
+
+
+function initSwitch(){
+	var switchTabs = new SwitchTabs({
+		reference : ".js-map-chosen",
+		target: ".js-map-target",
+		referencesSelector: ".js-item--chosen",
+		targetsSelector: ".js-item--target"
+	});
+}

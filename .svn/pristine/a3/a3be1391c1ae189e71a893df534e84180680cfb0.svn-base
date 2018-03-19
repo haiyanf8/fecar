@@ -1,0 +1,19 @@
+<div class="assessnewswrap js-assessnews">
+    <div class="main_container assessnews">
+        <div class="assessnews-title">最新估价：</div>
+
+        <ul class="assessnews-list js-assessnews-list">
+            <php>for ($i=0; $i < count($records) / 3; $i++) {</php>
+
+                <li class="item">
+                    <for start="0" end="3"  name="j" >
+                        <div class="assessnews-list-detail">
+                        <p class="info"><a target="_blank" href="{$records[3 * $i + $j]['url']}">{$records[3 * $i + $j]['title']}</a></p>
+                    </div>
+                    </for>
+                </li>
+            <php>}</php>
+        </ul>
+        <ul class="assessnews-copy assessnews-list js-assessnews-copy"></ul>
+    </div>
+</div>

@@ -1,0 +1,762 @@
+[ 2016-10-07T10:12:44+08:00 ] ::1 /www/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_consult` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0380s ]
+SQL: SELECT count(*) as `count` FROM `fecar_consult` WHERE `verify` = 1  [ RunTime:0.0170s ]
+SQL: SELECT `name`,`sex`,`mobile`,`ask-time`,`ask`,`answer` FROM `fecar_consult` WHERE `verify` = 1 ORDER BY `ask-time` desc LIMIT 0,8   [ RunTime:0.0190s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=1 ) ORDER BY d.endtime desc LIMIT 3   [ RunTime:0.1010s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'sale'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0260s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\82fa936df17faa42f3c40b0878c97ca8.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:12:49+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_article` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0220s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=3 and a.finalprice > 100000 ) ORDER BY num desc, bid_time desc LIMIT 20   [ RunTime:0.0360s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '10:12:49' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-10-07'  ) )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0210s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0470s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0410s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` WHERE `recomm_index` = 1 ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_article_pic` [ RunTime:0.0210s ]
+SQL: SELECT `first`,`second`,`third` FROM `fecar_article_pic` WHERE `id` = 2  [ RunTime:0.0200s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'index'  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:12:51+08:00 ] ::1 /www/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_consult` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0410s ]
+SQL: SELECT count(*) as `count` FROM `fecar_consult` WHERE `verify` = 1  [ RunTime:0.0190s ]
+SQL: SELECT `name`,`sex`,`mobile`,`ask-time`,`ask`,`answer` FROM `fecar_consult` WHERE `verify` = 1 ORDER BY `ask-time` desc LIMIT 0,8   [ RunTime:0.0210s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=1 ) ORDER BY d.endtime desc LIMIT 3   [ RunTime:0.1060s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'sale'  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0440s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\82fa936df17faa42f3c40b0878c97ca8.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:12:57+08:00 ] ::1 /www/valuate-index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0210s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\ValuateController.class.php 第 13 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `fecar_valuaterecord` [ RunTime:0.0190s ]
+SQL: SELECT `url`,`title` FROM `fecar_valuaterecord` ORDER BY rand() LIMIT 0,18   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: keywords E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 9 行.
+NOTIC: [8] Undefined variable: description E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 10 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 38 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 43 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 44 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 45 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:12:58+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0420s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:13:01+08:00 ] ::1 /www/history.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0240s ]
+NOTIC: [8] Undefined offset: 0 E:\www\www\Application\Home\Controller\HistoryController.class.php 第 219 行.
+NOTIC: [8] Undefined offset: 1 E:\www\www\Application\Home\Controller\HistoryController.class.php 第 277 行.
+SQL: SELECT COUNT(a.carid) AS tp_count FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE a.status = 3 LIMIT 1   [ RunTime:0.0200s ]
+NOTIC: [2] Creating default object from empty value E:\www\www\Application\Home\Controller\HistoryController.class.php 第 32 行.
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE a.status = 3 ORDER BY d.endtime desc LIMIT 0,12   [ RunTime:0.0350s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=3 ) ORDER BY a.bid_times + 7 desc LIMIT 6   [ RunTime:0.0220s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '10:13:01' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-10-07'  ) )  [ RunTime:0.0220s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'history'  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0230s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 36 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 86 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 87 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 88 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 90 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 91 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 93 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 96 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 111 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 118 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 131 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 131 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 132 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 132 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 133 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 133 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 134 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 134 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 135 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 135 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 137 行.
+NOTIC: [8] Undefined variable: minmile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 140 行.
+NOTIC: [8] Undefined variable: maxmile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 142 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 152 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 152 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 153 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 153 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 154 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 154 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 155 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 155 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 156 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 156 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 157 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 157 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 159 行.
+NOTIC: [8] Undefined variable: minage E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 161 行.
+NOTIC: [8] Undefined variable: maxage E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 163 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 173 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 173 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 174 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 174 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 175 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 175 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 176 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 176 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 177 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 177 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 178 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 178 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 179 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 179 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 181 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 181 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 184 行.
+NOTIC: [8] Undefined variable: minprice E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 187 行.
+NOTIC: [8] Undefined variable: maxprice E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 189 行.
+NOTIC: [8] Undefined variable: age E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 242 行.
+NOTIC: [8] Undefined variable: mile E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 243 行.
+NOTIC: [8] Undefined variable: price E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 245 行.
+NOTIC: [8] Undefined variable: brand E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 246 行.
+NOTIC: [8] Undefined variable: model E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 247 行.
+NOTIC: [8] Undefined variable: series E:\www\www\Application\Runtime\Cache\Home\fc3d0a8a50a7a3bb4adf41426038b291.php 第 248 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T10:13:05+08:00 ] ::1 /www/store.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0290s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'store'  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0240s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\StoreController.class.php 第 25 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\46262555db768db222dbace1c7130a17.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T10:13:09+08:00 ] ::1 /www/valuate-index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\ValuateController.class.php 第 13 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_valuaterecord` [ RunTime:0.0170s ]
+SQL: SELECT `url`,`title` FROM `fecar_valuaterecord` ORDER BY rand() LIMIT 0,18   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: keywords E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 9 行.
+NOTIC: [8] Undefined variable: description E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 10 行.
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 38 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 43 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 44 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 45 行.
+NOTIC: [8] Undefined variable: queryString E:\www\www\Application\Runtime\Cache\Home\cf378f1aec25bd211f8633714beb9464.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:13:10+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0180s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:13:19+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `fecar_article` [ RunTime:0.0210s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '10:13:18' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-10-07'  ) )  [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0450s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0210s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0250s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` WHERE `recomm_index` = 1 ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_article_pic` [ RunTime:0.0210s ]
+SQL: SELECT `first`,`second`,`third` FROM `fecar_article_pic` WHERE `id` = 2  [ RunTime:0.0210s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'index'  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T10:13:23+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_article` [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE (  `isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < '10:13:22' ) OR ( ( `isfake` = 0 AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = '2016-10-07'  ) )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0200s ]
+NOTIC: [8] Undefined variable: limit E:\www\www\Application\Home\Controller\IndexController.class.php 第 52 行.
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0380s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0220s ]
+SQL: SELECT `articleid`,`title`,`abstract`,`prepic` FROM `fecar_article` WHERE `recomm_index` = 1 ORDER BY `date` desc LIMIT 0,3   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `fecar_article_pic` [ RunTime:0.0220s ]
+SQL: SELECT `first`,`second`,`third` FROM `fecar_article_pic` WHERE `id` = 2  [ RunTime:0.0210s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'index'  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T13:46:04+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T13:47:18+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T13:48:25+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T14:03:28+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T14:05:02+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:05:15+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T14:05:23+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:05:44+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0290s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:05:50+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:06:15+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:06:53+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T14:07:03+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:07:18+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T14:07:27+08:00 ] ::1 /www/appoint/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T18:07:02+08:00 ] ::1 /www/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_consult` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0170s ]
+SQL: SELECT count(*) as `count` FROM `fecar_consult` WHERE `verify` = 1  [ RunTime:0.0170s ]
+SQL: SELECT `name`,`sex`,`mobile`,`ask-time`,`ask`,`answer` FROM `fecar_consult` WHERE `verify` = 1 ORDER BY `ask-time` desc LIMIT 0,8   [ RunTime:0.0170s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=1 ) ORDER BY d.endtime desc LIMIT 3   [ RunTime:0.1010s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'sale'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0170s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\82fa936df17faa42f3c40b0878c97ca8.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T18:46:36+08:00 ] ::1 /www/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_consult` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0170s ]
+SQL: SELECT count(*) as `count` FROM `fecar_consult` WHERE `verify` = 1  [ RunTime:0.0160s ]
+SQL: SELECT `name`,`sex`,`mobile`,`ask-time`,`ask`,`answer` FROM `fecar_consult` WHERE `verify` = 1 ORDER BY `ask-time` desc LIMIT 0,8   [ RunTime:0.0170s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=1 ) ORDER BY d.endtime desc LIMIT 3   [ RunTime:0.0950s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'sale'  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0160s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\82fa936df17faa42f3c40b0878c97ca8.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T18:46:38+08:00 ] ::1 /www/sale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_consult` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_seo` [ RunTime:0.0170s ]
+SQL: SELECT count(*) as `count` FROM `fecar_consult` WHERE `verify` = 1  [ RunTime:0.0160s ]
+SQL: SELECT `name`,`sex`,`mobile`,`ask-time`,`ask`,`answer` FROM `fecar_consult` WHERE `verify` = 1 ORDER BY `ask-time` desc LIMIT 0,8   [ RunTime:0.0180s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=1 ) ORDER BY d.endtime desc LIMIT 3   [ RunTime:0.1000s ]
+SQL: SELECT `title`,`keywords`,`description` FROM `fecar_seo` WHERE `ident` = 'sale'  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0170s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc  [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: param E:\www\www\Application\Runtime\Cache\Home\82fa936df17faa42f3c40b0878c97ca8.php 第 37 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-07T18:49:11+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0150s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T19:16:16+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0190s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T19:17:21+08:00 ] ::1 /www/carmodel/brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_carmodel` [ RunTime:0.0200s ]
+SQL: SELECT distinct `brandid`,`brandname` FROM `fecar_carmodel`  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T19:18:27+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0170s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T19:18:31+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0170s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T19:18:35+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0140s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-07T19:18:39+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0160s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T19:18:42+08:00 ] ::1 /www/valuate/count.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_valuate` [ RunTime:0.0180s ]
+SQL: SELECT `count` FROM `fecar_valuate`  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-10-07T19:29:01+08:00 ] ::1 /www/carmodel/brand.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_carmodel` [ RunTime:0.0170s ]
+SQL: SELECT distinct `brandid`,`brandname` FROM `fecar_carmodel`  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

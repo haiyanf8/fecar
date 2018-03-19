@@ -1,0 +1,23 @@
+<div class="tip js-box-check-more">
+
+    <div class="wrap--tip">
+
+        <p class="tip-tt">
+            左后尾灯
+        </p>
+
+		<div class="tip-slide js-tip-slide">
+
+		</div>
+
+		<div class="tip-desc">
+			<span class="tt js-tip-desc-tt"></span>
+			<span>：</span>
+			<span class="ct js-tip-desc-ct"></span>
+		</div>
+
+
+		<div class="close js-close"></div>
+    </div>
+
+</div>

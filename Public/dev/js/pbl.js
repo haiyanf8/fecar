@@ -1,0 +1,766 @@
+
+
+$(function(){
+
+    initPblMsgAlertBox();
+
+    hiddenFriendLink();
+
+    fixPlaceHolder([
+        $(".js-historysale-tel"),
+    ]);
+
+    asideNavService();
+
+    pyecIM();
+
+});
+
+
+// newer FullPage constructor like MsgPage
+// 16.04.06
+function FullPage(o){
+	this.el = $(o.el);
+	this.ctrlClass = o.ctrlClass || "active";
+
+	// avoid using this.ctrlClass(active) on children elements,
+	// if it is necessary, set the hideClassHad yourself.
+	this.hideClassHad = o.hideClassHad || ["js-close", "js-btn--no", this.ctrlClass];
+
+	this.showCallBack = o.showCallBack;
+	this.hideCallBack = o.hideCallBack;
+
+	this.init();
+}
+
+FullPage.prototype.show = function(args){
+	this.el.addClass(this.ctrlClass);
+
+	if(typeof this.showCallBack === "function"){
+        this.showCallBack(args);
+    }
+};
+
+FullPage.prototype.hide = function(args){
+	this.el.removeClass(this.ctrlClass);
+
+	if(typeof this.hideCallBack === "function"){
+        this.hideCallBack(args);
+    }
+};
+
+FullPage.prototype.init = function(){
+	var _ = this;
+
+    _.el.on("click", function(event){
+        var $target = $(event.target);
+
+		for(var i = _.hideClassHad.length; i-- > 0; ){
+			if( $target.hasClass(_.hideClassHad[i]) ){
+				_.hide();
+				return;
+			}
+		}
+    });
+};
+
+
+function SwitchTabs(o) {
+	this.$lsReference = $(o.reference);
+	this.$lsTarget = $(o.target);
+
+	this.referencesSelector = o.referencesSelector;
+	this.targetsSelector = o.targetsSelector;
+
+	this.$itemsReference = this.$lsReference.find(this.referencesSelector);
+	this.$itemsTarget = this.$lsTarget.find(this.targetsSelector);
+
+    this.eventType = o.eventType || "click";
+	this.callBack = o.callBack;
+
+	if(this.$itemsReference.length >= 2){
+		this.init();
+	}
+}
+
+SwitchTabs.prototype.init = function(){
+    var _ = this;
+
+    _.$lsReference.on(_.eventType, _.referencesSelector, function(){
+        var index = $(this).index();
+
+        _.$itemsReference.eq(index).addClass("current").siblings().removeClass("current");
+        _.$itemsTarget.eq(index).addClass("active").siblings().removeClass("active");
+
+        if ( typeof _.callBack === "function") {
+            _.callBack(index);
+        }
+    });
+
+
+    $(_.$itemsReference).eq(0).trigger('click');
+};
+
+
+function SlideItems(o) {
+	this.$elBox = $(o.box);
+	this.itemsSelector = o.itemsSelector;
+	this.$elItems = this.$elBox.find(this.itemsSelector);
+	this.$elPrev = $(o.prev);
+	this.$elNext = $(o.next);
+
+	this.speed = o.speed || 3000;
+    this.isAuto = (o.isAuto === undefined || o.isAuto === null) ? false : o.isAuto;
+	this.isHoverStop = (o.isHoverStop === undefined || o.isHoverStop === null) ? true : o.isHoverStop;
+    this.callBack = o.callBack;
+
+	this.slideFinal = this.$elItems.length - 1;
+	this.slideNow = 0;
+	this.autoCounter = 0;
+
+	if(this.$elItems.length > 0){
+		this.init();
+	}
+}
+
+SlideItems.prototype = {
+	jump: function(next){
+	    this.$elItems.eq(next).addClass("active").siblings().removeClass("active");
+	    this.slideNow = next;
+
+	    if(typeof this.callBack === "function"){
+	        this.callBack(this.slideNow);
+	    }
+	},
+	leftJump: function(){
+		if(this.slideNow === 0){
+			this.jump(this.slideFinal);
+		} else {
+			this.jump(this.slideNow - 1);
+		}
+	},
+	rightJump: function(){
+		if(this.slideNow === this.slideFinal){
+			this.jump(0);
+		} else {
+			this.jump(this.slideNow + 1);
+		}
+	},
+	autoJump: function(direction){
+		// var fn = null;
+		// if(direction === "left"){
+		// 	fn = this.leftJump.bind(this);
+		// }else{
+		// 	fn = this.rightJump.bind(this);
+		// }
+		// if(this.isAuto === true){
+		// 	this.autoCounter = setInterval(function(){
+		// 		fn();
+		// 	}, this.speed);
+		// }
+		//
+		// IE8- do not support function.bind ........
+
+		var _ = this;
+		if(_.isAuto === true){
+			_.autoCounter = setInterval(function(){
+				if(direction === "left"){
+					_.leftJump();
+				}else{
+					_.rightJump();
+				}
+			}, _.speed);
+		}
+	},
+	init: function(){
+		var _ = this;
+
+		_.$elPrev.on("click", function(){
+			if(_.isAuto === true){
+				clearInterval(_.autoCounter);
+				if(_.isHoverStop === false){
+					_.autoJump();
+				}
+			}
+			_.leftJump();
+		});
+
+		_.$elNext.on("click", function(){
+			if(_.isAuto === true){
+				clearInterval(_.autoCounter);
+				if(_.isHoverStop === false){
+					_.autoJump();
+				}
+			}
+			_.rightJump();
+		});
+
+		if(_.isHoverStop === true && _.isAuto === true){
+			_.$elBox.on("mouseover", function(){
+				clearInterval(_.autoCounter);
+			});
+			_.$elBox.on("mouseout", function(){
+				clearInterval(_.autoCounter);
+				_.autoJump();
+			});
+		}
+
+		_.jump(0);
+
+		_.autoJump();
+	}
+};
+
+
+
+function ScrollSwitching(o){
+	this.$elReference = $(o.reference);
+    this.$elFinishReference = $(o.finishReference);
+    this.$elTarget = $(o.target);
+
+    this.callBack = o.callBack;
+
+    this.referenceScrollTop = 0;
+    this.finishReferenceScrollTop = 0;
+
+    this.isTargetActive = false;
+
+    this.init();
+}
+
+ScrollSwitching.prototype.init = function(){
+    var _ = this;
+	var windowScrollTop = 0;
+
+	var referenceScroll = $(_.$elReference).offset();
+	var finishReferenceScroll = $(_.$elFinishReference).offset();
+
+	_.referenceScrollTop = (referenceScroll) ? Math.floor(referenceScroll.top) : 1000000;
+    _.finishReferenceScrollTop = (finishReferenceScroll) ? Math.floor(finishReferenceScroll.top) - $(_.targetEl).height() : 1000000;
+
+    function eventFn(){
+        windowScrollTop = $(window).scrollTop();
+
+        if(windowScrollTop > _.referenceScrollTop && windowScrollTop < _.finishReferenceScrollTop){
+            if(_.isTargetActive === false){
+                _.$elTarget.addClass('active');
+                _.isTargetActive = true;
+            }
+        }else{
+            if(_.isTargetActive === true){
+                _.$elTarget.removeClass('active');
+                _.isTargetActive = false;
+            }
+        }
+
+		if(typeof _.callBack === "function"){
+			_.callBack(windowScrollTop);
+		}
+    }
+
+	$(window).on("scroll", eventFn);
+
+    eventFn();
+};
+
+
+// function SelectItemFocus(o){
+//     this.triggerEl = o.triggerEl || "";
+//     this.targetEl = o.targetEl || "";
+
+// 	this.focusCB = o.focusCB || null;
+// 	this.blurCB = o.blurCB || null;
+
+//     this.isChanging = false;
+
+//     this.init();
+// }
+
+// SelectItemFocus.prototype.init =  function(){
+//     var _ = this;
+//     $(this.targetEl).attr("tabindex", 0);
+
+//     $(this.triggerEl).on("click", function(){
+//         if(!_.isChanging){
+//             $(_.triggerEl).addClass('active');
+//             $(_.targetEl).addClass('active').trigger('focus');
+
+// 			if(_.focusCB !== null){
+// 				_.focusCB();
+// 			}
+//         }
+//     });
+
+//     $(this.targetEl).on("blur", function(event){
+// 		$(_.triggerEl).removeClass('active');
+
+       
+//         $(_.targetEl).removeClass('active');
+        
+	
+// 		if(_.blurCB !== null){
+// 			_.blurCB();
+// 		}
+
+// 		_.isChanging = true;
+// 		setTimeout(function() {
+// 			_.isChanging = false;
+// 		}, 200);
+//     });
+// };
+
+
+function initPblMsgAlertBox(){
+    var $alertEl = $(".js-pbl-msg-alert");
+	var $titleEl = $alertEl.find(".js-title");
+	var $contentEl = $alertEl.find(".js-content");
+
+	var opt = {
+		ct : "",
+		tt : "温馨提示"
+	};
+
+	var alertFullPage = new FullPage({
+		el : $alertEl,
+		showCallBack : null,
+		hideCallBack : null
+	});
+
+	function newAlert(content, title, showCallBack, hideCallBack){
+		var ct = content || opt.ct;
+		var tt = title || opt.tt;
+
+		$contentEl.html(ct);
+		$titleEl.html(tt);
+
+		// if want to use these callback, do not forget the arg title.
+		if(typeof showCallBack === "function"){
+			alertFullPage.showCallBack = function(){
+				showCallBack();
+
+				// this callback would run once
+				alertFullPage.showCallBack = null;
+			};
+		}
+
+		if(typeof hideCallBack === "function"){
+			alertFullPage.hideCallBack = function(){
+				hideCallBack();
+
+				// the same as showCallBack
+				alertFullPage.hideCallBack = null;
+			};
+		}
+
+		alertFullPage.show();
+	}
+
+	window.newAlert = newAlert;
+}
+
+
+function initGReg(){
+	var reg = {};
+
+	reg.phone = /^1\d{10}$/;
+
+	reg.posFloat = /^[1-9]\d*\.?\d*[1-9]$|^0\.\d*[1-9]$/;
+
+	window.gReg = reg;
+}
+
+
+function getScriptObj(selector){
+	return $.parseJSON(
+		$(selector).text()
+	);
+}
+
+
+function ChangeRadioStyle(selector){
+    var $radioEl = $(selector);
+    $radioEl.click(function(){
+		$radioEl.removeClass("checked");
+		$(this).addClass("checked");
+    });
+}
+
+
+function QuickSale(o){
+    this.$elBtn = $(o.elBtn);
+    this.$elInput = $(o.elInput);
+
+    this.$elWrong = $(o.elWrong);
+    this.$elWrongContent = $(o.elWrongContent);
+
+	this.opt = {
+		upload : {},
+		src : "",
+		alertType : ""
+	};
+	this.opt.alertType = o.opt.alertType || "newAlert";
+	this.opt.upload.city = this.city;
+	this.opt.upload = $.extend(this.opt.upload, o.opt.upload);
+
+	this.alert = null;
+
+    this.init();
+}
+
+QuickSale.prototype = {
+	url : getScriptObj(".js-be-api").quickSale,
+	wechatSrc : $(".js-ft-wechat").attr("src"),
+	city : $(".js-hd-city").text(),
+	init : function(){
+		var _ = this;
+
+		_.alert = getAlert(_.opt.alertType, _.$elWrong, _.$elWrongContent);
+
+		_.$elBtn.on('click', function(){
+			var telReg = /^1\d{10}$/;
+			var tel = _.opt.upload.tel = _.$elInput.val();
+
+			if(!telReg.test(tel)){
+				_.alert("请填写正确的手机号码");
+			}else{
+				$.ajax({
+					url: _.url,
+					type: "POST",
+					dataType: "json",
+					data: _.opt.upload
+				}).done(function(data) {
+					if(data.status === 0 || data.status === 2){
+						initSuccessAlert();
+                        _.$elInput.val("");
+					}else if(data.status === 1){
+                        _.alert("填写正确的手机号码");
+                    }
+				}).fail(function() {
+					newAlert("网络好像开了会小差，请刷新重试");
+				});
+			}
+		});
+
+		function getAlert(alertType, $elWrong, $contentEl){
+			var thisWarn = {
+				$el : $elWrong,
+				show : function(){
+					this.$el.addClass("active");
+				},
+				hide : function(){
+					this.$el.removeClass("active");
+				}
+			};
+
+			function thisAlert(ct){
+				var $el = $contentEl;
+
+				$el.html(ct);
+				thisWarn.show();
+
+				setTimeout(function(){
+					thisWarn.hide();
+				},3000);
+			}
+
+			if(alertType === "thisAlert"){
+				return thisAlert;
+			}else if(alertType === "newAlert"){
+				return newAlert;
+			}
+		}
+	}
+};
+
+function initQuickSale(origin){
+    var historyS = new QuickSale({
+        elBtn : $(".js-historysale-btn"),
+        elInput : $(".js-historysale-tel"),
+        opt : {
+            alertType : "newAlert",
+            upload : {
+                origin : origin
+            }
+        }
+    });
+}
+
+function fixPlaceHolder(arr){
+	var isSupport = true;
+
+	isSupport = (function(){
+		var ipt = document.createElement("input");
+		return ("placeholder" in ipt);
+	}());
+
+	if( !isSupport ){
+		for(var i = arr.length; i-- > 0; ){
+			placeEvent(arr[i]);
+		}
+	}
+
+    function placeEvent(o){
+		var $o = $(o);
+		var pText = $o.attr("placeholder");
+
+		$o.val(pText).css({ "color" : "#808080" });
+
+        $o.on("focus", function(){
+			if( $o.val() === pText){
+                $o.val("").css({ "color" : "inherit" });
+            }
+		});
+
+        $o.on("blur", function(){
+			if( $o.val() === ""){
+                $o.val(pText).css({ "color" : "#808080" });
+            }
+		});
+    }
+}
+
+// //提交留言处理
+// function subPblComment(){
+// 	var msgFullPage = new FullPage({
+// 		el : $(".onlineMsg-wrap")
+// 	});
+
+// 	var msg = $(".js-aside-msg");
+
+// 	msg.on("click",function(){
+// 		msgFullPage.show();
+// 	});
+
+//     var commentBtn = $(".js-pbl-consule-btn");
+
+// 	ChangeRadioStyle(".js-pbl-consuleRadio");
+
+//     commentBtn.on('click', function(event){
+
+//         var telReg = /^1\d{10}$/;
+//         var tel = $(".js-pbl-consule-tel").val();
+
+//         var sex = $(".js-pbl-consuleRadio.checked").text();
+
+//         var name = $(".js-pbl-consule-username").val();
+//         var ask = $(".js-pbl-consule-comment").val();
+
+//         var url = getScriptObj(".js-be-api").faq;
+
+//         if( !tel.match(telReg) ){
+//             newAlert("请输入正确的手机号方便我们与您取得联系");
+
+//         }else if( ask.length === 0){
+//             newAlert("请输入留言信息");
+
+//         }else{
+
+//             $.ajax({
+//                 url: url,
+//                 type: "POST",
+//                 dataType: "json",
+//                 data: {
+//                     sex : sex,
+//                     tel : tel,
+//                     name : name,
+//                     ask : ask
+//                 }
+//             }).done(function(data) {
+//                 if(data.status === 0){
+//                     newAlert("<p>您的问题已收到，我们竭诚为您答疑。如还有疑问请拨打：<span class='strong-red'>400-9907-999</span></p>");
+// 					reset();
+// 					msgFullPage.hide();
+//                 }else{
+//                     newAlert(data.msg);
+//                 }
+//             }).fail(function() {
+//                 newAlert("网络好像开了会小差，请刷新重试");
+//             });
+//         }
+//     });
+
+// 	// function thisNewAlert(ct){
+// 	// 	newAlert(
+// 	// 		ct,
+// 	// 		"温馨提示",
+// 	// 		function(){
+// 	// 			msgFullPage.hide();
+// 	// 		},
+// 	// 		function(){
+// 	// 			msgFullPage.show();
+// 	// 		}
+// 	// 	);
+// 	// }
+
+// 	function reset(){
+// 		$(".js-pbl-consule-tel").val("");
+// 		$(".js-pbl-consule-username").val("");
+// 		$(".js-pbl-consule-comment").val("");
+// 	}
+// }
+
+//全站底部悬浮留资
+function quicksalepop(origin){
+    var closeEl = $(".js-quicksale-close");
+    var quicksaleEl = $(".js-quicksale");
+    var quicksalePopEl = $(".js-quicksale-pop");
+    // var quicksaleUpEl = $(".js-quicksale-up");
+    var quicksaleBtn = $(".js-quicksale-salebtn");
+    var quicksaleTel = $(".js-quicksale-tel");
+    var errorInfo = $(".js-ipt-info");
+    var clearError = $(".js-quicksale-error");
+    var url = getScriptObj(".js-be-api").quickSale;
+    var wechatSrc = $(".js-ft-wechat").attr("src");
+    quicksaleEl.addClass('active');
+    quicksaleEl.animate({
+        left: "0"
+    },1200);
+    
+    quicksaleBtn.on("click", function(){
+        var tel = $(".js-quicksale-tel").val();
+        var error = "";
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "json",
+                data: {
+                    tel: tel,
+                    origin: origin
+                }
+            }).done(function(data){
+                if(data.status === 0 || data.status === 2){
+                    initSuccessAlert();
+                    quicksaleTel.val("").trigger('onblur');
+                }else{
+                    quicksaleTel.val(data.msg);
+
+                    errorInfo.addClass('active');
+                    quicksaleTel.css("color", "red");
+
+                    quicksaleTel.on("click", function(){
+                        quicksaleTel.val("").css("color", "").trigger('onblur');
+                        errorInfo.removeClass('active');
+                    });
+
+                    clearError.on("click", function(){
+                        quicksaleTel.val("");
+                        errorInfo.removeClass('active');
+                        quicksaleTel.css("color", "").val("").trigger('onblur');
+                    });
+                }
+            }).fail(function() {
+                newAlert("网络好像开了会小差，请刷新重试");
+            });
+    });
+
+    closeEl.on("click", function(){
+        quicksaleEl.removeClass("now");
+        quicksaleEl.animate({
+            left: "-2000px"
+        },1200,function(){
+            quicksaleEl.removeClass("active,now").addClass('hidden');
+        });
+    });
+
+    // quicksaleUpEl.on("click", function(){
+    //     quicksaleEl.animate({
+    //         left: "0"
+    //     },1200);
+
+    //     quicksaleEl.removeClass("hidden").addClass('active');
+    // });
+}
+
+//友情链接隐藏和显示
+function hiddenFriendLink(){
+    var flag = true;
+    
+    $(".js-hidden-friendlink").on("click", function(){
+        if( flag === true ){
+            $(".js-hidden-friendlink").addClass('show');
+            flag = false;
+        }else{
+            $(".js-hidden-friendlink").removeClass('show');
+            flag = true;
+        }
+    });
+}
+
+
+//右侧客户服务改成点击事件
+
+
+function asideNavService(){
+    var flag = true;
+    var serviceIconClick = $(".js-service-icon");
+    var serviceContent = $(".js-service-content");
+    var serviceHead = $(".js-service-head");
+    var serviceWindow = $(".js-service-chatwindow");
+
+    serviceIconClick.on("click", function(){
+    
+        if(flag===true){
+           serviceContent.addClass('active'); 
+           flag = false;
+        }else{
+           serviceContent.removeClass('active'); 
+           flag = true;  
+        }
+    });
+
+    serviceContent.on("click", function(e){
+        e.stopPropagation();
+    });
+
+    serviceHead.find('span').click(function(){
+        serviceContent.removeClass('active');
+        flag = true;
+    });
+}
+
+
+
+function pyecIM(){
+    var url = "http://www.fecar.com/register.php";
+    $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        data: {}
+    }).done(function(res){
+        if(res.code === 200){
+             WKIT.init({
+                uid: res.data.userid,
+                appkey: res.data.key,
+                credential: res.data.password,
+                touid: res.data.touid,
+                theme: "orange",
+                msgBgColor: "",
+                width: 444,
+                height: 429,
+                sendBtn: true,
+                placeholder:"您可以问小迈，例如：你们有免费提供上门检测吗？",
+                avatar:'http://test.www.fecar.com/Public/dev/img/pbl/avatar-consult-user.png',
+                toAvatar:'http://test.www.fecar.com/Public/dev/img/pbl/avatar-consult-call.png',
+                container: document.getElementById('J_lightDemoWrapMain'),
+                sendMsgToCustomService: true,
+                onLoginSuccess: function(){
+                    document.getElementById('J_wkitChatWrap').style.borderRadius = "0 0 4px 4px";  
+                }
+            });
+        }
+    });
+}
+
+//留资成功弹出的对话框
+function initSuccessAlert(){
+    var $successAlert = $(".js-success-alert");
+    var successAlertWin = new FullPage({
+        el : $successAlert,
+        showCallBack : null,
+        hideCallBack : null
+    });
+
+    successAlertWin.show();
+}
+

@@ -1,0 +1,20 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class AddressModel extends Model
+{
+    /**
+     * 根据城市获取门店
+     * @param  text $city 城市名：拼音或者汉字
+     * @return array      门店列表（一个城市可能存在多个门店）
+     */
+    public function getStore($city)
+    {
+        return $this->alias('a')
+                    ->join('left join fecar_city c on a.cityid = c.id')
+                    ->where("c.pinyin = $city or c.city = $city")
+                    ->field('a.city, a.storename, a.address, a.image, a.lot, a.lat')
+                    ->select();
+    }
+}

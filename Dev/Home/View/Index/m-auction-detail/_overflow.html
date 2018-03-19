@@ -1,0 +1,119 @@
+<div class="auction-wrapper">
+	<div class="auction-overflow">
+
+		<div class="auction-overflow-container">
+
+			<div class="auction-overflow-left">
+				
+				<p class="auction-overflow-left-path">
+					<a href="../index.html">首页</a><span>&gt;</span> <a href="../history.html"
+						class="hot">竞拍历史</a><span>&gt;</span> <a href="#">{$carDetailInfo['brand']}{$carDetailInfo['model']}{$carDetailInfo['style_sell_name']}</a>
+				</p>
+
+				<!--左侧轮播图-->
+
+				<div class="slide js-overview-lazy">
+
+					<span id="prev" class="smallbtn smallpre"></span> 
+					<span id="next" class="smallbtn smallnext"></span> 
+
+					<span id="prevTop" ></span> 
+					<span id="nextTop"></span>
+
+					<div id="picBox" class="slide-picbox">
+						<!-- <span class="carsource">车源编号：<em>{$carDetailInfo[0][0]['no']}</em></span> -->
+						<ul>
+							<volist name="img" id="value">
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/dev/img/source/pbl/history-detail-default.jpg"
+									data-origin="{:C('CHECK_URL')}{$value['url']}" alt="" />
+								</div>
+							</li>
+							</volist>
+						</ul>
+					</div>
+
+					<div id="listBox" class="slide-listbox">
+
+						<ul class="cf">
+							<volist name="img" id="value">
+								<li class="on">
+									<div class="wrap-img">
+										<img
+										src="__PUBLIC__/dev/img/source/pbl/history-detail-default.jpg"
+										data-origin="{:C('CHECK_URL')}{$value['url']}" alt="" />
+									</div>
+								</li>
+							</volist>
+						</ul>
+					</div>
+				</div>
+
+				<!--左侧轮播图-->
+
+			</div>
+
+			
+			<!--右侧车辆信息-->
+
+			<div class="info">
+
+				<div class="info-title">
+					<h1>
+					<if condition="$carDetailInfo['city_name']">
+						【{$carDetailInfo['city_name']}】
+					</if>
+						{$carDetailInfo['brand']}{$carDetailInfo['model']}{$carDetailInfo['style_sell_name']}</h1>
+
+				</div>
+
+				<div class="info-auction">
+					<ul>
+						<li><em class="ct">竞价价格：</em> <span class="price">高于市场价{$carDetailInfo['rate']}%</b></span></li>
+						<li><em class="ct">竞价时间：</em> <span class="date">{$carDetailInfo['bid_time']|date='Y-m-d',###}</span></li>
+						<li><em class="ct">出价人数：</em> <span class="count">{$carDetailInfo['bid_times']}</span></li>
+						<li><em class="ct">车辆评级：</em> <span class="score">{$carDetailInfo['score']}</span></li>
+					</ul>
+				</div>
+
+				<div class="info-tag info-tagline">
+					<ul>
+						<li class="item first">
+							<p class="title">出厂日期</p>
+							<p class="content">{$carDetailInfo['production_date']|date='Y-m',###}</p>
+						</li>
+						<li class="item">
+							<p class="title">上牌日期</p>
+							<p class="content">{$carDetailInfo['regist_date']|date='Y-m',###}</p>
+						</li>
+						<li class="item">
+							<p class="title">排量</p>
+							<p class="content">{$learge}L</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="info-tag">
+					<ul>
+						<li class="item first">
+							<p class="title">表显里程</p>
+							<p class="content">{:round($carDetailInfo['kilometers']/10000,2)}万公里</p>
+						</li>
+						<li class="item">
+							<p class="title">环保标准</p>
+							<p class="content">{$carDetailInfo['discharge_standard']}</p>
+						</li>
+						<li class="item">
+							<p class="title">车辆归属</p>
+							<p class="content">{$carDetailInfo['car_belong']}</p>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!--右侧车辆信息-->
+		</div>
+	</div>
+</div>

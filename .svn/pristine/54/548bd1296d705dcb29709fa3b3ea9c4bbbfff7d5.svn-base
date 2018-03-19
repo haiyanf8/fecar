@@ -1,0 +1,39 @@
+<div class="list">
+    <ul class="list-history">
+        <volist name="sellData" id="vo">
+            <li class="item m-history-item">
+                <div class="img">
+                        <a target="_blank" href="./history-detail/{$vo['carid']}.html">
+                        <img alt="" data-origin="http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/{$vo['img00']}" src="__PUBLIC__/dev/img/source/pbl/history-detail-default.png">
+                    </a>
+                </div>
+                <div class="info">
+                    <h4 class="info-model">
+                        <a target="_blank" href="./history-detail/{$vo['carid']}.html">{$vo['info']}</a>
+                    </h4>
+                    <p class="info-desc">
+                        <span class="date">{$vo['regist_date']}上牌</span>
+                        <span class="mileage">里程{:round($vo['kilometer']/10000,2)}万公里</span>
+                    </p>
+                </div>
+                <div class="bidders"><span>{$vo['num']}</span>人竞拍</div>
+            </li>
+        </volist>
+    </ul>
+
+    <div class="blank30"></div>
+    <empty name="sellData">
+    	<div class="nocar">
+	        <div class="nocar-pic">
+	            <img src="__PUBLIC__/dev/img/history/nocar.png">
+	        </div> 
+	        <div class="nocar-txt">
+	            <p class="txt">暂时没有找到您想要的相关车辆</p>
+	            <p class="pic">您可以调整<em>筛选条件</em>重新查找</p>
+	        </div> 
+    	</div>
+    </empty>
+    <if condition="$sellData">
+   		 <include file="Index/m-pbl:_source-paging"/>
+    </if> 
+</div>

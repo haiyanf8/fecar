@@ -1,0 +1,47 @@
+<div class="deal">
+
+	<div class="deal-txt">
+		<h2>
+			<p class="tten">LATEST DEALS</p>
+			<p class="ttcn">最新成交</p>
+		</h2>
+		<span class="more"><a href="./history.html" target="_blank">更多&gt;&gt;</a></span>
+	</div>
+
+	<div class="deal-box">
+		
+	    <div class="deal-box-btn js-choosen">
+	        <ul>
+	            <li class="current item"></li>
+	            <li class="item"></li>
+	            <li class="item"></li>
+	            <li class="item"></li>
+	            <li class="item"></li>
+	        </ul>
+	    </div>
+		
+		<div class="deal-box-wrap">
+		    <div class="deal-box-content js-target">
+		    	<ul>
+					<volist name="bidedData" id="vo">
+						
+						<li class="item deal-box-item">
+							<div class="img">
+								<a href="./history-detail/{$vo['carid']}.html">
+									<img src="__PUBLIC__/dev/img/source/pbl/history-detail-default.jpg" data-origin="{:C('CHECK_URL')}/{$vo['url']}" >
+								</a>
+							</div>
+	                    	<div class="info">
+	                    		<h3><a href="./history-detail/{$vo['carid']}.html">{$vo['info']}</a></h3>
+		                        <p><span>{$vo['regist_date']|date='Y-m',###}</span>上牌</p>
+		                        <p>行驶里程<span>{:round($vo['kilometers']/10000,2)}</span>万公里</p>
+	                    	</div>
+	                    	<div class="audition">{$vo['bid_times']}人竞拍</div>
+						</li>
+
+					</volist>
+		    	</ul>
+		    </div>
+	    </div>
+	</div>
+</div>

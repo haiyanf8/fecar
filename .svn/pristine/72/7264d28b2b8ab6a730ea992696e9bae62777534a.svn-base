@@ -1,0 +1,145 @@
+<div class="checkup">
+	<div class="checkup-testman">
+		<if condition="$carDetailInfo['car_area'] eq '350200'">
+			<img src="__PUBLIC__/prd/img/source/surveyor/xm.jpg" alt="">
+			<p class="ct">马腾辉</p>
+		<elseif condition="$carDetailInfo['car_area'] eq '310100'"/>
+			<img src="__PUBLIC__/prd/img/source/surveyor/sh.jpg" alt="">
+			<p class="ct">张家伟</p>
+		<else/>
+			<img src="__PUBLIC__/prd/img/source/surveyor/fz.jpg" alt="">
+			<p class="ct">刘勋麒</p>
+		</if>
+		<p class="tt">资深二手车检测师</p>
+	</div>
+	
+	<ul class="checkup-situation js-checkup-box">
+		
+		<li class="item">
+			<div class="ct"><i class="icon i-appearance"></i><em clsss="appearance-ps">
+			<if condition="$report['outter_decorate'] == '无'">
+				{$report['outter_decorate']=''}
+				<i class="flag normal"></i>
+			<elseif condition="$report['outter_decorate'] == ''" />
+				<i class="flag normal"></i>
+			<else />
+				<i class="flag bad"></i>
+			</if>
+			</em></div>
+			<div class="title">外观</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['outter_decorate']?mb_substr($report['outter_decorate'],0,50,'utf-8'):'正常'}
+				<if condition="mb_strlen($report['outter_decorate'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+							<i class='i-down'></i>
+								<div class='more-box'><i class='i-tringle'></i>
+								<div class='more-box-ct'>{$report['outter_decorate']}</div>
+							</div>
+						</div>
+				</if>
+
+				</span>
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-interior"></i><em class="interior-ps">
+			<if condition="$report['inner_decorate'] == '无'">
+				{$report['inner_decorate'] = ''}
+				<i class="flag normal"></i>
+			<elseif condition="$report['inner_decorate'] == ''" />
+				<i class="flag normal"></i>
+			<else />
+				<i class="flag bad"></i>
+			</if>
+			</em></div>
+			<div class="title">内饰</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['inner_decorate']?mb_substr($report['inner_decorate'],0,50,'utf-8'):'正常'}
+				<if condition="mb_strlen($report['内饰'],'utf-8') gt 50">
+					<div class="checkup-overflow">
+						<i class='i-down'></i>
+						<div class='more-box'>
+							<i class='i-tringle'></i>
+							<div class='more-box-ct'>{$report['inner_decorate']}</div>
+						</div>
+					</div>
+				</if>
+				</span>			
+			</div>
+		</li>
+
+
+		<li class="item">
+			<div class="ct"><i class="icon i-carcondition"></i><em class="carcondition-ps ">
+				<if condition="$report['structure_note'] == '无'">
+					{$report['structure_note']=''}
+					<i class="flag normal"></i>
+				<elseif condition="$report['structure_note'] == ''" />
+					<i class="flag normal"></i>
+				<else />
+					<i class="flag bad"></i>
+				</if>
+			</em></div>
+			<div class="title">结构</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['structure_note']?mb_substr($report['structure_note'],0,50,'utf-8'):'正常'}
+					<if condition="mb_strlen($report['structure_note'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['structure_note']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-wcondition"></i><em class="wcondition-ps">
+				<if condition="$report['engine'] == '无'">
+					{$report['engine']=''}
+					<i class="flag normal"></i>
+				<elseif condition="$report['engine'] == ''" />
+					<i class="flag normal"></i>
+				<else />
+					<i class="flag bad"></i>
+				</if>
+			</em></div>
+			<div class="title">机电</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['engine']?mb_substr($report['engine'],0,50,'utf-8'):'正常'}
+					<if condition="mb_strlen($report['engine'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['engine']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-note"></i></div>
+			<div class="title">备注</div>
+			<div class="tt js-one-word">
+				<span class="js-checkup-text">{$report['other']?mb_substr($report['other'],0,50,'utf-8'):'无'}</span>
+					<if condition="mb_strlen($report['other'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['other']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+	</ul>
+</div>

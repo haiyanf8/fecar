@@ -1,0 +1,458 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+
+<!--[if lt IE 8]>
+<script src="/www/Public/dev/lib/js/json2.js"></script>
+<![endif]-->
+
+        <title><?php echo ($title); ?></title>
+        <meta name="keywords" content="<?php echo ($keywords); ?>">
+        <meta name="description" content="<?php echo ($description); ?>">
+        <link rel="stylesheet" href="/www/Public/dev/css/pbl.css">
+        <link rel="stylesheet" href="/www/Public/dev/css/index.css">
+    </head>
+    <body>
+
+        <div class="header">
+    <div class="header-info main-container">
+
+        <div class="header-local">
+            <div class="local">
+                <div class="local-area">
+
+                    <i class="local-img"></i>
+                    <p class="local-txt">
+                        [<span class="js-hd-city"><?php echo session('city');?></span>]
+                    </p>
+
+                </div>
+                <ul class="local-citys">
+                    <?php if((session('city') != '福州') AND (session('city') != '厦门') AND (session('city') != '上海')): ?><li class="current item"><a href="/<?php echo ($action_name); ?>?city=other"><?php echo session('city');?></a></li><?php endif; ?>
+                    <?php if($action_name == 'history'): if($true_action_name): ?><li class="<?php echo session('city') == '福州' ? 'current' : '';?> item"><a href="/detail/<?php echo ($carDetailInfo[0][0]['carid']); ?>?city=fuzhou">福州</a></li>
+                    		<li class="<?php echo session('city') == '厦门' ? 'current' : '';?> item"><a href="/detail/<?php echo ($carDetailInfo[0][0]['carid']); ?>?city=xiamen">厦门</a></li>
+                    		<li class="<?php echo session('city') == '上海' ? 'current' : '';?> item"><a href="/detail/<?php echo ($carDetailInfo[0][0]['carid']); ?>?city=shanghai">上海</a></li>
+                    	<?php else: ?>
+                    		<li class="<?php echo session('city') == '福州' ? 'current' : '';?> item"><a href="/history/history?city=fuzhou">福州</a></li>
+                    		<li class="<?php echo session('city') == '厦门' ? 'current' : '';?> item"><a href="/history/history?city=xiamen">厦门</a></li>
+                    		<li class="<?php echo session('city') == '上海' ? 'current' : '';?> item"><a href="/history/history?city=shanghai">上海</a></li><?php endif; ?>
+                    <?php else: ?>
+                    	<li class="<?php echo session('city') == '福州' ? 'current' : '';?> item"><a href="/<?php echo ($action_name); ?>?city=fuzhou">福州</a></li>
+                    	<li class="<?php echo session('city') == '厦门' ? 'current' : '';?> item"><a href="/<?php echo ($action_name); ?>?city=xiamen">厦门</a></li>
+                    	<li class="<?php echo session('city') == '上海' ? 'current' : '';?> item"><a href="/<?php echo ($action_name); ?>?city=shanghai">上海</a></li><?php endif; ?>
+                </ul>
+
+            </div>
+            <div class="header-txt">
+                欢迎来到朋友e车
+            </div>
+        </div>
+        <div class="header-wechat">
+            <i class="wechat"></i>
+            <span class="txt">关注微信</span>
+            <div class="erweima">
+                <img class="img js-hd-wechat" src="/www/Public/dev/img/source/pbl/qr--wechat.jpg" alt="朋友e车二维码" />
+                <p class="txt">扫描关注微信号</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="nav">
+    <div class="nav-con">
+
+        <h1 class="logo">
+            <a href="/">
+                <img src="/www/Public/dev/img/index/logo.png" alt="朋友e车logo" />
+            </a>
+        </h1>
+        <div class="nav-list">
+            <a href="/" class="item <?php echo ($action_name==''? 'current':''); ?>">
+			<span>首页</span>
+			</a>
+            <a href="/sale.html" class="item <?php echo ($action_name=='sale'? 'current':''); ?>">
+			<span>卖车</span>
+			</a>
+            <a href="/history.html" class="item <?php echo ($action_name=='history'? 'current':''); ?>">
+			<span>竞拍历史</span>
+			</a>
+            <a href="/store.html" class="item <?php echo ($action_name=='store'? 'current':''); ?>">
+			<span>服务网点</span>
+			</a>
+        </div>
+
+        <div class="tel">
+           <img src="/www/Public/dev/img/pbl/head-tel.png" alt="朋友e车客服电话" /> 
+        </div>
+
+    </div>
+</div>
+
+
+        
+
+<div class="pbl-aside-nav aside-nav">
+	<ul>
+		<li class="qq">
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=2545559352&site=qq&menu=yes" target="_blank">
+				<i class="i qq-icon"></i>
+			</a>
+
+			<!-- <span class="txt">咨询热线</span> -->
+			<!-- <div class="tel-ct">
+				400-9907-999
+			</div> -->
+		</li>
+		<li class="msg js-aside-msg">
+			<a href="javascript:;">
+				<i class="i msg-icon"></i>
+				<!-- <span class="txt">QQ联系</span> -->
+			</a>
+
+		</li>
+		<li class="goto js-aside-nav-goto_top">
+			<i class="i goto-icon"></i>
+			<!-- <span class="txt">返回顶部</span> -->
+		</li>
+	</ul>
+</div>
+
+<div class="onlineMsg-wrap">
+	<div class="onlineMsg">
+		<h2>在线留言</h2>
+		<div class="onlineMsg-box">
+
+			<p class="onlineMsg-box-radio first">
+				<span class="onlineMsgRaido js-pbl-consuleRadio">
+					<input type="radio" id="male" checked="checked" name="sex" value="male">
+					<label name="man" class="checked" for="male">先生</label>
+				</span>
+
+		        <span class="onlineMsgRaido js-pbl-consuleRadio">
+		            <input type="radio" id="female" name="sex" value="female">
+		            <label name="female" for="female">女士</label>
+		   		</span>
+			</p>
+
+			<p class="onlineMsg-box-name">
+				<em>姓名 :</em><input type="text" name="username" class="js-pbl-consule-username" autocomplete="off">
+
+			</p>
+
+			<p class="onlineMsg-box-name">
+				<em>电话 :</em><input maxlength="11" type="text" name="usertel" class="js-pbl-consule-tel" autocomplete="off">
+			</p>
+
+			<p class="onlineMsg-box-content">
+				<em>咨询内容 :</em><textarea name="commentct" class="js-pbl-consule-comment  messagect" maxlength="2000" autocomplete="off"></textarea>
+			</p>
+
+			<p class="onlineMsg-box-btn">
+				<button class="js-pbl-consule-btn" >提交</button>
+			</p>
+		</div>
+		<div class="onlineMsg-close js-close"></div>
+
+	</div>
+</div>
+
+
+
+        <div class="banner">
+	<div class="banner-img">
+		<div class="banner-img-in">
+			<div class="banner-test">
+				<img src="/www/Public/dev/img/index/banner-index-bg.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="main_container">
+		<div class="banner-box js-referenceselector-box">
+
+			<span class="freeorder">免费预约卖车<i class="i-bannerarrow"></i></span>
+
+			<input type="text" class="phone js-bannersale-tel" placeholder="请输入车主手机号" autocompelete="off" maxlength=11>
+
+			<button class="salebtn js-bannersale-btn">我要卖车</button>
+
+
+			<div class="confirm js-banner-wrong-box">
+
+				<i class="i-triangle"></i>
+
+				<div class="confirm-box">
+					<i class="i-mark">!</i>
+					<p class="ct js-banner-confirm-ct"></p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+        <div class="appointwrap">
+	<div class="main_container appoint">
+			<div class="appoint-title">今日已经有<em><?php echo ($appointCount); ?></em>人预约卖车:</div>
+		
+			<ul class="appoint-list js-appoint-list">
+				<?php for ($i=0; $i < $appoint[1]; $i++) { ?>
+					<li class="item">
+						<?php $__FOR_START_10698__=0;$__FOR_END_10698__=3;for($j=$__FOR_START_10698__;$j < $__FOR_END_10698__;$j+=1){ $time = abs(time() - strtotime($appoint[0][3*$i+$j]['appointtime'])) / 60; $time = floor($time); if ($time == 0) { $time = "刚刚"; } elseif ($time < 60) { $time = $time . '分钟前'; } else { $time = floor($time/60) . '小时' . floor($time%60) . '分钟前'; } ?>
+							<div class="appoint-list-detail">
+								<p class="time"><?php echo ($time); ?></p>
+								<p class="info"><span><?php echo substr_replace($appoint[0][3*$i + $j]['mobile'], '****', 3, 4);?></span><em>预约卖车</em><span>成功</span></p>
+							</div><?php } ?>
+					</li>
+				<?php } ?>
+			</ul>
+			<ul class="appoint-copy appoint-list js-appoint-copy"></ul>
+	</div>
+</div>
+
+        
+<div class="feature">
+	<div class="main_container">
+	<ul class="feature-icon">
+
+		<li class="item">
+			<i class="i-quickliy"></i>
+			<p class="tt">高效卖车 足不出户</p>
+		</li>
+
+		<li class="item">
+			<i class="i-savemoney"></i>
+			<p class="tt">价比千家 省时省心</p>
+		</li>
+
+		<li class="item">
+			<i class="i-safe"></i>
+			<p class="tt">安全保障 极速打款</p>
+		</li>
+
+		<li class="item">
+			<i class="i-free"></i>
+			<p class="tt">全程免费 优质服务</p>
+		</li>
+
+		</ul>
+	</div>
+</div>
+
+
+        
+<div class="deal">
+	<div class="main_container">
+
+		<h2 class="deal-tt">
+			<img src="/www/Public/dev/img/index/deal-tt.png" alt="" />
+		</h2>
+
+		<div class="deal-more">
+			<a href="/history.html">更多>></a>
+		</div>
+
+		<div class="deal-ct">
+			<ul>
+				<?php if(is_array($bidedData)): $i = 0; $__LIST__ = $bidedData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><li class="m-history-item <?php echo ($action_name=='history'? 'no-success-icon':''); ?>">
+	<div class="img">
+		<?php $dataArr=explode('/',$data['img00']); $dataArr[count($dataArr)-1]='thumb_0_'.$dataArr[count($dataArr)-1]; $dataPic=implode('/',$dataArr); ?>
+		<a href="<?php echo U('detail/'.$data['carid']);?>" target="_blank"><img
+			src="/www/Public/dev/img/source/pbl/source-default.jpg"
+			data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/<?php echo ($dataPic); ?>" alt="" /></a> <i class="i"></i>
+	</div>
+	<div class="info">
+		<h4 class="info-model">
+			<a href="<?php echo U('detail/'.$data['carid']);?>" target="_blank"><?php echo ($data['info']); ?></a>
+		</h4>
+		<p class="info-desc">
+			<span class="date"> <i class="i"></i> <span><?php echo ($data['regist_date']); ?>上牌</span>
+			</span> <span class="mileage"> <i class="i"></i> <span>里程<?php echo round($data['kilometer']/10000,2);?>万公里</span>
+			</span>
+		</p>
+	</div>
+	<div class="count">
+		<i class="i"></i> <span class="count-ct"><span class="red"><?php echo ($data['num'] + 7); ?></span>人竞拍</span>
+	</div>
+</li><?php endforeach; endif; else: echo "" ;endif; ?>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+
+        <div class="faq">
+	<div class="main_container">
+		<h2 class="faq-title"><img src="/www/Public/dev/img/index/faq-title.png"></h2>
+		
+		<div class="faq-box">
+
+			<div class="faq-box-small">
+				<h3 class="tt"><i class="i-note"></i>朋友e车怎么帮您卖车？</h3>
+				<p class="ct ct60">朋友e车是第三方二手车竞拍平台，通过上门检测，组织3000家买家线上竞拍，提供免费过户代办，为您提供高效便捷安全的卖车服务，帮您足不出户把车卖出最高价。</p>
+			</div>
+
+			<div class="faq-box-small">
+				<h3 class="tt"><i class="i-gold"></i>交易过程中需要哪些费用？</h3>
+				<p class="ct ct60">对于车主卖家，朋友e车在整个的服务过程中（包括上门检测、手续代办过户等一系列服务）都是免费的。</p>
+			</div>
+
+
+			<div class="faq-box-small">
+				<h3 class="tt"><i class="i-bidding"></i>如果对竞价价格不满意怎么办？</h3>
+				<p class="ct ct80">当您收到朋友e车的竞拍报价后，如果对价格不满意，请拨打客户服务热线400-9907-999反映您的疑虑，您可申请重新竞拍。</p>
+			</div>
+
+
+			<div class="faq-box-small">
+				<h3 class="tt"><i class="i-deal"></i>确认价格后如何成交？</h3>
+				<p class="ct ct80">当您收到朋友e车的竞拍价格信息，客服会尽快与您联系，预约成交，成交手续在朋友e车检测中心门店办理，工作人员一站式全程代办过户相关手续。如果您对地址或前往路线有任何问题，可随时拨打客户服务热线400-9907-999，我们期待您的到来！</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div class="flink">
+    <div class="flink-con">
+        <p class="flink-tt">友情链接 :</p>
+        <ul class="flink-list">
+            <?php if(is_array($links)): $i = 0; $__LIST__ = $links;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="flink-item"><a href="<?php echo ($vo['site']); ?>"><?php echo ($vo['sitename']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+</div>
+
+
+        <div class="footer">
+    <div class="footer-con">
+        <div class="footer-left">
+            <img class="img" src="/www/Public/dev/img/pbl/logo-gray.png" alt="" />
+            <p class="txt">全国服务热线：<span class="strong">400-9907-999</span></p>
+        </div>
+        <div class="footer-right">
+            <!-- <dl class="footer-dl download">
+                <dd class="footer-tt">手机客户端下载</dd>
+                <dd class="download-dd"><a class="d1" href="#"></a></dd>
+                <dd class="download-dd"><a class="d2" href="#"></a></dd>
+            </dl> -->
+
+            <dl class="footer-dl footer-txt">
+                <dd class="footer-tt">卖车指南</dd>
+                <dd class="item-txt" ><a href="<?php echo U('static/process');?>" target="_blank">卖车流程</a></dd>
+                <dd class="item-txt"><a href="<?php echo U('static/introduction');?>" target="_blank">卖车须知</a></dd>
+            </dl>
+            <dl class="footer-dl footer-txt">
+                <dd class="footer-tt">关于我们</dd>
+                <dd class="item-txt"><a href="<?php echo U('static/intro');?>" target="_blank">公司简介</a></dd>
+                <dd class="item-txt"><a href="<?php echo U('static/business');?>" target="_blank">商务合作</a></dd>
+            </dl>
+            <dl class="footer-dl footer-txt">
+                <dd class="footer-tt">新闻中心</dd>
+                <dd class="item-txt"><a style="cursor:pointer" onclick="newAlert('暂未开放')">企业资讯</a></dd>
+				<dd class="item-txt"><a style="cursor:pointer" onclick="newAlert('暂未开放')">市场分析</a></dd>
+            </dl>
+            <dl class="footer-dl ewm">
+                <!-- <dd class="footer-tt">微信公众号</dd> -->
+                <dd class="ewm-img">
+                    <img src="/www/Public/dev/img/source/pbl/qr--wechat.jpg" alt="" />
+                </dd>
+                <dd class="ewm-txt">扫描二维码了解卖车进度</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!-- <div class="flink">
+    <div class="flink-con">
+        <p class="flink-tt">友情链接 :</p>
+        <ul class="flink-list">
+            <?php if(is_array($links)): $i = 0; $__LIST__ = $links;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="flink-item"><a href="<?php echo ($vo['site']); ?>"><?php echo ($vo['sitename']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+</div>
+ -->
+<div class="footer-record">
+     <p class="record-txt">
+     	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258281401'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258281401%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+         Copyright© 2016 fecar.com All Right Reserved | 闽ICP备14020087号-1        福建朋友亿车网络科技有限公司          福州市晋安区福新东路370号中海联汽车创意展示园3#楼1层
+     </p>
+</div>
+
+
+        
+<div class="pbl-msg-alert js-pbl-msg-alert">
+    <div class="wrap--content content--success">
+    	<div class="title js-title"></div>
+        <div class="content js-content"></div>
+        <div class="btn--yes js-btn--no">确定</div>
+        <div class="close js-close"></div>
+    </div>
+</div>
+
+
+        <div class="asidesale js-targetselector-box">
+
+	<div class="asidesale-big">
+
+		<div class="asidesale-box">
+
+			<span class="freeorder">免费预约卖车<i class="i-bannerarrow"></i></span>
+
+			<input type="text" class="phone js-levitatesale-tel" placeholder="请输入车主手机号" autocompelete="off" maxlength=11>
+
+			<button class="salebtn js-levitatesale-btn">我要卖车</button>
+
+			<div class="confirm js-levitatesale-wrong-box">
+				<i class="i-triangle"></i>
+				<div class="confirm-box">
+					<i class="i-mark">!</i>
+					<p class="ct js-levitatesale-confirm-ct"></p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="tel">
+			<i class="i-tel"></i>
+			400-9907-999
+		</div>
+
+	</div>
+
+</div>
+
+
+
+		
+<div class="js-be-api m-be" >
+
+	{
+		"quickSale" : "<?php echo U('appoint/insert');?>",
+		"faq" : "<?php echo U('consult/insert');?>",
+		"getBrand" : "<?php echo U('car/brand');?>",
+		"getSeries" : "<?php echo U('car/series');?>",
+		"getModel" : "<?php echo U('car/model');?>"
+	}
+</div>
+
+
+        <script src="/www/Public/dev/lib/js/jquery-1.11.3.min.js" charset="utf-8"></script>
+        <script src="/www/Public/dev/js/pbl.js" charset="utf-8"></script>
+        <script src="/www/Public/dev/js/index.js" charset="utf-8"></script>
+		
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?99e243f83b4397c489bac65ecc7f9aa8";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+    </body>
+</html>

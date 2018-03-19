@@ -1,0 +1,194 @@
+
+.tip{
+    width: 100%;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+
+	background-repeat: repeat;
+	background-image: url(../img/pbl/tspr-50.png);
+
+	display: none;
+
+	&.active{
+		display: block;
+	}
+
+	.wrap--tip{
+	    position: fixed;
+	    left: 50%;
+	    top: 50%;
+
+	    margin-left: -340px;
+	    margin-top: -225px;
+
+	    width: 680px;
+
+	    background: $cl-bg;
+	}
+
+	.close{
+		width: 22px;
+		height: 22px;
+
+		background: url(../img/auction-detail/box-check-close.png) center center no-repeat;
+
+		position: absolute;
+		top: 12px;
+		right: 12px;
+
+		cursor: pointer;
+	}
+
+
+	&-tt{
+		width: 100%;
+		height: 46px;
+		line-height: 46px;
+
+		font-size: 17px;
+		text-align: center;
+
+		color: $cl-wt;
+		background-color: $cl-yl;
+
+		position: relative;
+	}
+
+	&-slide{
+		margin-top: 17px;
+
+		border-left: 1px solid $cl-bd;
+		border-right: 1px solid $cl-bd;
+
+		@include clearfix();
+
+		&-overview{
+			width: 145px;
+			height: 346px;
+
+			float: left;
+
+			margin-left: 15px;
+			margin-right: 15px;
+
+			overflow: hidden;
+
+			ul{
+				width: 145px;
+				height: 312px;
+
+				li{
+					width: 145px;
+					height: 104px;
+
+					padding-top: 2px;
+					padding-bottom: 2px;
+
+					&.active{
+						img{
+							border-color: $cl-yl;
+						}
+					}
+
+					img{
+						display: block;
+						width: 141px;
+						height: 102px;
+
+						border: 2px solid transparent;
+					}
+				}
+			}
+
+			.btn{
+				width: 23px;
+				height: 8px;
+
+				margin-left: auto;
+				margin-right: auto;
+
+				cursor: pointer;
+
+				background-repeat: no-repeat;
+
+				&.btn-top{
+					margin-bottom: 2px;
+					background-position: center top;
+					background-image: url(../img/auction-detail/tip-top.png);
+				}
+				&.btn-down{
+					margin-top: 2px;
+					background-position: center bottom;
+					background-image: url(../img/auction-detail/tip-down.png);
+				}
+			}
+		}
+
+		&-main{
+			height: 346px;
+
+			overflow: hidden;
+			margin-right: 15px;
+
+			ul{
+				width: 100%;
+				height: 100%;
+
+				position: relative;
+
+				li{
+					width: 100%;
+					height: 100%;
+
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					display: none;
+
+					&.active{
+						display: block;
+					}
+
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&-desc{
+		margin-top: 15px;
+		padding: 7px 0 7px 15px;
+
+		line-height: 36px;
+
+		border: 1px solid $cl-bd;
+
+		.tt{
+			color: #f69f00;
+
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+
+				margin-right: 5px;
+
+				border-radius: 50%;
+
+				background: $cl-yl;
+			}
+		}
+		.ct{
+			color: $cl-aux;
+		}
+	}
+}

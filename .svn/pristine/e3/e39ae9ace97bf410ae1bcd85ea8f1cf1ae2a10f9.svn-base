@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2016/11/24
+ * Time: 14:23
+ */
+
+namespace Home\Model;
+use Think\Model;
+class AuctionModel extends Model{
+    protected $connection = 'DB_CONFIG3';
+    protected $tablePrefix = 'fecar_';
+    protected $tableName = 'merchant_auction';
+
+    public function getHisSellDataList($where = null, $order = null, $limit = null,$isCount=null){
+        $where['auction.status'] = 1;
+        $where['img.part'] = 'left_front_45';
+        $res = $this->alias('auction')
+            ->join('fecar_merchant_bid_time as bid on auction.id=bid.auction_id')
+            ->join('fecar_car_base as base on auction.car_base_id=base.id')
+            ->join('fecar_car_base_img as img on img.car_base_id=base.id')
+            ->group('bid.auction_id')
+            ->field('concat(base.brand," ",base.model," ",base.style_sell_name) as info,base.regist_date,base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,img.url')
+            ->where($where)
+            //->order($order);
+        if($isCount){
+            return count($res->select());
+        }
+        return $res->limit($limit)->select();
+    }
+
+
+    public function getHisSellDetail($carid){
+        $where['auction.car_base_id'] = intval($carid);
+        $where['city.pid'] =array('NEQ','');
+        $res = $this->alias('auction')
+            ->join('fecar_merchant_bid_time as bid on auction.id=bid.auction_id')
+            ->join('fecar_car_base as base on auction.car_base_id=base.id')
+            ->join('fecar_merchant_season as season on auction.season_id=season.id')
+            ->join('fecar_car_config as config on base.id=config.car_base_id')
+            ->join('fecar_admin_city as city on base.car_area=city.id')
+            ->group('bid.auction_id')
+            ->field('base.brand,base.model,base.style_sell_name,base.regist_date,city.name as city_name,
+                    base.kilometers,(5*count(bid.auction_id)+12) as bid_times,base.id as carid,MOD(base.id, 5) + 1 as rate
+                    ,base.car_belong,season.start_time as bid_time,base.score,base.production_date,base.discharge_standard,base.report,base.car_area
+                    ,config.car_model,config.fuel_type,config.body_style,config.drive_style,config.door_num,config.front_wheel,config.rear_wheel,config.seat_num
+                    ,config.wheel_hub,config.max_power,config.max_housepower,config.speaker_num,config.configuration,config.choose_conf,config.fuel_supply'
+            )
+            ->where($where)
+            ->find();
+        return $res;
+    }
+
+    public function getCarImg($carid){
+       return  $this->table('fecar_car_base_img')->field('url')->where('car_base_id=%d',$carid)->select();
+    }
+}

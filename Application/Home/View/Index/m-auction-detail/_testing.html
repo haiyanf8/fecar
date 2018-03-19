@@ -1,0 +1,206 @@
+<div class="testing item--target js-testing-lazy">
+    <p class="title-line">
+        外观<span class="desc">针对车辆外观的整体描述</span>
+    </p>
+    <div class="con js-ls-check-more">
+		<volist  name="carDetailInfo['1']" id='data' offset="0" length='4'>
+        <div class="testing-con">
+
+            <div class="testing-img">
+                <div class="testing-img-in">
+                    <img src="http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/{$data['pic']}" />
+                </div>
+            </div>
+            <div class="testing-desc">
+                <p class="accout">共有<span>{:count($data['data'])}</span>项目错误</p>
+                <table>
+                    <tr>
+                        <td>序号</td>
+                        <td>部位</td>
+                        <td>检测说明</td>
+                    </tr>
+                    <volist name="data['data']" id='value'>
+                    <tr>
+                        <td class="num"><span>{$i}</span></td>
+                        <td>{$value['name']}</td>
+                        <td class='more'>
+                        	<php>
+                        		$strArr=array();
+                        		for($k=1;$k<6;$k++){
+                        			if($value['img'.$k]){
+                        				$strArr[]=C('imgPath').$value['img'.$k];
+                        			}
+                        		}
+                        		$str=json_encode($strArr);
+                        	</php>
+                        	 <span class="js-item-check-more">                        	 	
+								<div class="js-check-more m-be" >
+									{
+										"img" : {$str},
+										"text" : {"name":"<?php echo $value['name'] ?>","desc": "<?php echo $value['value'] ?>"}
+									}
+								</div>
+                            </span>
+                        </td>
+                    </tr>
+                    </volist>
+                </table>
+            </div>
+        </div>
+        </volist>
+    </div>
+    <!-- 骨架 -->
+    <p class="title-line">
+        骨架<span class="desc">针对车辆骨架的整体描述</span>
+    </p>
+    <div class="con js-ls-check-more">
+		<volist  name="carDetailInfo['1']" id='data' offset="4" length='2'>
+        <div class="testing-con">
+
+            <div class="testing-img">
+                <div class="testing-img-in">
+                    <img src="http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/{$data['pic']}" />
+                </div>
+            </div>
+            <div class="testing-desc">
+                <p class="accout">共有<span>{:count($data['data'])}</span>项目错误</p>
+                <table>
+                    <tr>
+                        <td>序号</td>
+                        <td>部位</td>
+                        <td>检测说明</td>
+                    </tr>
+                    <volist name="data['data']" id='value'>
+                    <tr>
+                        <td class="num"><span>{$i}</span></td>
+                        <td>{$value['name']}</td>
+                        <td class='more'>
+                        	<php>
+                        		$strArr=array();
+                        		for($k=1;$k<6;$k++){
+                        			if($value['img'.$k]){
+                        				$strArr[]=C('imgPath').$value['img'.$k];
+                        			}
+                        		}
+                        		$str=json_encode($strArr);
+                        	</php>
+                        	 <span class="js-item-check-more">                        	 	
+								<div class="js-check-more m-be" >
+									{
+										"img" : {$str},
+										"text" : {"name":"<?php echo $value['name'] ?>","desc": "<?php echo $value['value'] ?>"}
+									}
+								</div>
+                            </span>
+                        </td>
+                    </tr>
+                    </volist>
+                </table>
+            </div>
+        </div>
+        </volist>
+    </div>
+     <!-- 内饰 -->
+    <p class="title-line">
+        内饰<span class="desc">针对车辆内饰的整体描述</span>
+    </p>
+    <div class="con js-ls-check-more">
+		<volist  name="carDetailInfo['1']" id='data' offset="6" length='1'>
+        <div class="testing-con">
+
+            <div class="testing-img">
+                <div class="testing-img-in">
+                    <img src="http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/{$data['pic']}" />
+                </div>
+            </div>
+            <div class="testing-desc">
+                <p class="accout">共有<span>{:count($data['data'])}</span>项目错误</p>
+                <table>
+                    <tr>
+                        <td>序号</td>
+                        <td>部位</td>
+                        <td>检测说明</td>
+                    </tr>
+                    <volist name="data['data']" id='value'>
+                    <tr>
+                        <td class="num"><span>{$i}</span></td>
+                        <td>{$value['name']}</td>
+                        <td class='more'>
+                        	<php>
+                        		$strArr=array();
+                        		for($k=1;$k<6;$k++){
+                        			if($value['img'.$k]){
+                        				$strArr[]=C('imgPath').$value['img'.$k];
+                        			}
+                        		}
+                        		$str=json_encode($strArr);
+                        	</php>
+                        	 <span class="js-item-check-more">                        	 	
+								<div class="js-check-more m-be" >
+									{
+										"img" : {$str},
+										"text" : {"name":"<?php echo $value['name'] ?>","desc": "<?php echo $value['value'] ?>"}
+									}
+								</div>
+                            </span>
+                        </td>
+                    </tr>
+                    </volist>
+                </table>
+            </div>
+        </div>
+        </volist>
+    </div>
+    <!-- 内饰 -->
+    <p class="title-line">
+        其他<span class="desc">针对车辆其他部位的整体描述</span>
+    </p>
+    <div class="con js-ls-check-more">
+		<volist  name="carDetailInfo['1']" id='data' offset="7" length='3'>
+        <div class="testing-con">
+
+            <div class="testing-img">
+                <div class="testing-img-in">
+                    <img src="http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/{$data['pic']}" />
+                </div>
+            </div>
+            <div class="testing-desc">
+                <p class="accout">共有<span>{:count($data['data'])}</span>项目错误</p>
+                <table>
+                    <tr>
+                        <td>序号</td>
+                        <td>部位</td>
+                        <td>检测说明</td>
+                    </tr>
+                    <volist name="data['data']" id='value'>
+                    <tr>
+                        <td class="num"><span>{$i}</span></td>
+                        <td>{$value['name']}</td>
+                        <td class='more'>
+                        	<php>
+                        		$strArr=array();
+                        		for($k=1;$k<6;$k++){
+                        			if($value['img'.$k]){
+                        				$strArr[]=C('imgPath').$value['img'.$k];
+                        			}
+                        		}
+                        		$str=json_encode($strArr);
+                        	</php>
+                        	 <span class="js-item-check-more">                        	 	
+								<div class="js-check-more m-be" >
+									{
+										"img" : {$str},
+										"text" : {"name":"<?php echo $value['name'] ?>","desc": "<?php echo $value['value'] ?>"}
+									}
+								</div>
+                            </span>
+                        </td>
+                    </tr>
+                    </volist>
+                </table>
+            </div>
+        </div>
+        </volist>
+    </div>
+</div>
+

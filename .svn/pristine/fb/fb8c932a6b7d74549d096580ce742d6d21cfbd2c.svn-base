@@ -1,0 +1,50 @@
+
+<div class="bread-nav">
+    <a class="idx" href="/">首页</a>
+    <span>></span>
+    <a href="./valuate-index.html">估价</a>
+    <span>></span>
+    <a href="#">{$modelData[0]['modelname']} {$modelData[0]['stylename']}</a>
+</div>
+
+<div class="infodetail">
+
+    <div class="infodetail-pic">
+        <img src="{$modelData[0]['modelpic']}">
+    </div>
+
+    <div class="infodetail-desc">
+        <h3 class="tt">{$modelData[0]['modelname']} {$modelData[0]['stylename']}</h3>
+        <ul class="param">
+            <li class="item">
+                <p class="title">车辆归属</p>
+                <p class="content">{$city[0]['city']}</p>
+            </li>
+            <li class="item">
+                <p class="title">上牌日期</p>
+                <p class="content">{$date}</p>
+            </li>
+            <li class="item">
+                <p class="title">表显里程</p>
+                <p class="content">{$mile}万公里</p>
+            </li>
+            <li class="item">
+                <p class="title">环保标准</p>
+                <p class="content">{$modelData[0]['emission']}</p>
+            </li>
+            <li class="item diff">
+                <p class="title">变速箱</p>
+                <p class="content">{$modelData[0]['gearbox']}</p>
+            </li>
+            <li class="item diff">
+                <p class="title">汽车排量</p>
+                <p class="content">{$modelData[0]['volume']}T</p>
+            </li>
+            <li class="item diff">
+                <p class="title">新车售价</p>
+                <p class="content">{$priceData['price_bn']}万</p>
+            </li>
+            <li class="item diff"></li>
+        </ul>
+    </div>
+</div>

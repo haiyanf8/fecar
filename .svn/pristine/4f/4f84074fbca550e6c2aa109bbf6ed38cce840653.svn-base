@@ -1,0 +1,29 @@
+<div class="valuate">
+	<div class="main_container">
+		<div class="valuate-describ js-valuate-feature">
+			<ul class="list">
+				<li class="item">
+					<p class="item-img item-img1"></p>
+					<p class="item-title">真实可靠100%</p>
+					<p class="item-text">
+						基于大量真实成交记录，结合朋友e车权威分析模型，保证估值的真实性与可靠性
+					</p>
+				</li>
+				<li class="item item-2">
+					<p class="item-img item-img2"></p>
+					<p class="item-title">及时有效100%</p>
+					<p class="item-text">
+						采用人工智能和大数据，及时反映市场动态配合人工智能顾问团队保证了估值方面无可比拟的及时有效
+					</p>
+				</li>
+				<li class="item item-3">
+					<p class="item-img item-img3"></p>
+					<p class="item-title">公正透明100%</p>
+					<p class="item-text">
+						不参与交易，只做独立第三方服务平台，保证公正透明度是我们永恒的承诺
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

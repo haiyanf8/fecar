@@ -1,0 +1,89 @@
+.configure{
+
+	margin-top: 10px;
+
+	&-nav{
+		width: 1200px;
+		height: 48px;
+
+		border-bottom: 2px solid $cl-bd;
+
+		.item{
+			float: left;
+
+			width: 132px;
+			height: 48px;
+
+			line-height: 48px;
+
+			color: #353535;
+			font-size: 20px;
+			text-align: center;
+
+			cursor: pointer;
+
+			&.current{
+				display: block;
+				color: $cl-yl;
+				border-bottom: 2px solid $cl-yl;
+			}
+		}
+	}
+
+	&-content{
+		width: 1200px;
+		padding: 30px 0;
+		margin-bottom: 60px;
+
+		border-bottom: 1px solid $cl-bd;
+
+		@include clearfix();
+
+		.config{	
+			width: 1200px;
+			margin: 0 auto;
+			display: none;
+
+			&.active{
+				display: block;
+			}
+
+			.config-list{
+				width: 1200px;
+				margin: 0 auto;
+				font-size: 14px;
+
+				border-spacing:0;
+				@include clearfix();
+
+				li{
+					width: 400px;
+					float: left;
+
+					span{
+						display: block;
+						float: left;
+
+						padding-left: 30px;
+
+						width: 370px;
+						height: 38px;
+						line-height: 38px;
+
+						&.tt{
+							width: 120px;
+							color: #000;
+							text-align: left;
+						}
+
+						&.ct{
+							width: 125px;
+							color: #979797;
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}

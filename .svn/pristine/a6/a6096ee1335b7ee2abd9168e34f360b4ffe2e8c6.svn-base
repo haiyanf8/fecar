@@ -1,0 +1,11 @@
+<div class="valuate-salecar-wrap">
+    <div class="valuate-salecar-box">
+        <div class="valuate-salecar-box-close js-close"></div>
+        <div class="valuate-salecar-box-small">
+            <input class="js-tel" maxlength="11" type="text" placeholder="请输入手机号">
+            <div class="valuate-salecar-box-small-btn js-salebtn">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>

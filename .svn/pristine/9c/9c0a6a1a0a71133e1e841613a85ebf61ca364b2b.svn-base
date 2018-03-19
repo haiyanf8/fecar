@@ -1,0 +1,323 @@
+<div class="auction-wrapper">
+	<div class="auction-overflow">
+
+		<div class="auction-overflow-container">
+
+			<div class="auction-overflow-left">
+				
+				<p class="auction-overflow-left-path">
+					<a href="../index.html">首页</a><span>&gt;</span> <a href="../history.html"
+						class="hot">竞拍历史</a><span>&gt;</span> <a href="#">{$carDetailInfo[0][0]['info']}</a>
+				</p>
+
+				<!--左侧轮播图-->
+
+				<div class="slide js-overview-lazy">
+
+					<span id="prev" class="smallbtn smallpre"></span> 
+					<span id="next" class="smallbtn smallnext"></span> 
+
+					<span id="prevTop" ></span> 
+					<span id="nextTop"></span>
+
+					<div id="picBox" class="slide-picbox">
+						<!-- <span class="carsource">车源编号：<em>{$carDetailInfo[0][0]['no']}</em></span> -->
+						<ul>
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img00']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img01']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img02']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img10']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img11']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img12']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img20']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img21']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img22']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img30']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img31']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img32']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img40']}" alt="" />
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img41']}" alt="" />
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div id="listBox" class="slide-listbox">
+
+						<ul class="cf">
+							<li class="on">
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img00']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img01']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img02']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img10']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img11']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img12']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img20']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img21']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img22']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img30']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img31']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img32']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img40']}" alt="" />
+								</div>
+							</li>
+
+							<li>
+								<div class="wrap-img">
+									<img
+									src="__PUBLIC__/prd/img/source/pbl/history-detail-default.png"
+									data-origin="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$carDetailInfo[0][0]['img41']}" alt="" />
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--左侧轮播图-->
+
+			</div>
+
+			
+			<!--右侧车辆信息-->
+
+			<div class="info">
+
+				<div class="info-title">
+					<h1>
+					<if condition="$carDetailInfo[0][0]['area']">
+						【{$carDetailInfo[0][0]['area']}】
+					</if>
+						{$carDetailInfo[0][0]['info']}</h1>
+
+				</div>
+
+				<div class="info-auction">
+					<ul>
+						<li><em class="ct">竞价价格：</em> <span class="price">高于市场价{$carDetailInfo[0][0]['rate']}%</b></span></li>
+						<li><em class="ct">竞价时间：</em> <span class="date">{$carDetailInfo[0][0]['bid_time']}</span></li>
+						<li><em class="ct">出价人数：</em> <span class="count">{$carDetailInfo[0][0]['num']}</span></li>
+						<li><em class="ct">车辆评级：</em> <span class="score">{$carDetailInfo[0][0]['score']}</span></li>
+					</ul>
+				</div>
+
+				<div class="info-tag info-tagline">
+					<ul>
+						<li class="item first">
+							<p class="title">出厂日期</p>
+							<p class="content">{$carDetailInfo[0][0]['production']}</p>
+						</li>
+						<li class="item">
+							<p class="title">上牌日期</p>
+							<p class="content">{$carDetailInfo[0][0]['regist_date']}</p>
+						</li>
+						<li class="item">
+							<p class="title">排量</p>
+							<p class="content">{$learge}L</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="info-tag">
+					<ul>
+						<li class="item first">
+							<p class="title">表显里程</p>
+							<p class="content">{:round($carDetailInfo[0][0]['kilometer']/10000,2)}万公里</p>
+						</li>
+						<li class="item">
+							<p class="title">环保标准</p>
+							<p class="content">{$carDetailInfo[0][0]['discharge_standard']}</p>
+						</li>
+						<li class="item">
+							<p class="title">车辆归属</p>
+							<p class="content">{$carDetailInfo[0][0]['belong']}</p>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!--右侧车辆信息-->
+		</div>
+	</div>
+</div>

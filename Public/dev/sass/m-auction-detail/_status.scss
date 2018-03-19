@@ -1,0 +1,40 @@
+.status{
+    width: 560px;
+    margin-left: 40px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    @include clearfix();
+    >.item{
+        float: left;
+        font-size: 14px;
+        color: $cl-main;
+        span{
+            float: left;
+
+            &.rank{
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+
+                margin-right: 5px;
+                margin-top: 2px;
+                margin-left: 40px;
+
+                // &.rank1{
+                //     background-color: #22ac38;
+                // }
+                &.rank2{
+                    background-color: #f1ee5e;
+                }
+                &.rank3{
+                    background-color: #ec7d19;
+                }
+                &.rank4{
+                    background-color: #ed0b09;
+                }
+            }
+        }
+
+    }
+}

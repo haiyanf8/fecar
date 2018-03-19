@@ -1,0 +1,419 @@
+
+@import "_onlineMsg";
+
+
+.pbl-aside-nav{
+    width: 42px;
+
+    position: fixed;
+	top: 50%;
+    right: 10px;
+
+    z-index: 99;
+
+	margin-top: ((73px * 4) / -2);
+
+	ul{
+		text-align: center;
+
+		li{
+            position: relative;
+
+            margin-bottom: 5px;
+
+			width: 42px;
+			height: 42px;
+
+			cursor: pointer;
+
+            background: #fff;
+
+            i{
+                width: 42px;
+                height: 42px;
+            }
+
+			a{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+
+			.txt{
+				display: block;
+
+				width: 100%;
+
+				position: absolute;
+				left: 0;
+				bottom: 9px;
+			}
+
+			&.tel{
+				color: $cl-wt;
+                background: $cl-yl;
+
+                &:active{
+                    
+                    .tel-icon{
+                        background-color: #fff;
+                        background: url(../img/pbl/aside-nav-tel.png) #fff;
+                    }
+                }
+
+                
+                &:hover{
+
+                    .tel-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-tel.png);
+                    }
+                }
+
+                .tel-icon{
+                    background: url(../img/pbl/aside-nav-tel-toggle.png);
+                }
+
+                .tel-box{
+                    position: absolute;
+                    left: -315px;
+                    top: 0;
+                    z-index: 999;
+
+                    display: none;
+
+                    width: 315px;
+                    cursor: default;
+
+                    .flow{
+                        padding-top: 45px;
+                        padding-left: 40px;
+                        
+                        width: 260px;
+                        height: 95px;
+
+                        background: #fff;
+                        border-radius: 5px;
+                        border: 1px solid $cl-bd;
+                        border-top: 3px solid $cl-yl;
+
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+
+                        .img{
+                            float: left;
+                            display: block;
+
+                            width: 47px;
+                        }
+
+                        .info{
+                            float: left;
+                            
+                            margin-left: 5px;
+                            width: 168px;
+
+                            .title{
+                                float: left;
+
+                                width: 153px;
+                                
+                                font-size: 14px;
+                                color: #333;
+                            }
+                            
+                            .te2lnum{
+                                width: 153px;
+                                height: 32px;
+                                line-height: 32px;
+
+                                font-size: 21px;
+                                color: #f69f00;
+                            }
+                        }
+                    }
+                }
+
+                &:hover{
+                   .tel-box{
+                        display: block;
+                   } 
+                }
+
+			}
+
+			&.msg{
+                
+                &.active{
+                    .msg-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-service.png);
+                    }
+                }
+
+
+                &:hover{
+                    .msg-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-service.png);
+                    }
+                }
+
+                .msg-icon{
+                    background: $cl-yl;
+                    background-image: url(../img/pbl/aside-nav-service-toggle.png);
+                }
+
+                .msg-box{
+                    position: absolute;
+                    left: -459px;
+                    top: 0;
+
+                    z-index: 999;
+                    width: 459px;
+                    height: 439px;
+
+                    cursor: default;
+
+                    display: none;
+
+                    .title{
+                        position: relative; 
+
+                        height: 42px; 
+                        width: 445px;
+
+                        line-height: 38px; 
+                        color: #fff; 
+                        border-radius: 4px 4px 0px 0px; 
+                       
+                        background: $cl-yl; 
+                        z-index: 1001; 
+                       
+                        display: block;
+                        
+                        label{
+                            padding-left: 15px;
+
+                            float: left;
+                            display: inline-block;
+
+                            height: 42px;
+
+                            font-size: 18px;
+                            letter-spacing: 2px;
+
+                            em{
+                                font-style: normal;
+                                font-size: 24px;
+                            }
+                        }
+
+                        span{
+                            cursor: pointer;
+
+                            float: right;
+
+                            padding-right: 18px;
+
+                            img{
+                                width: 16px;
+                                height: 16px;
+
+                                float: right;
+
+                                margin-top: 14px;
+                            }
+                        }
+                    }
+
+                    .service{
+                        width: 444px;
+                        height: 429px;
+
+                        background: #fff;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+                    }
+                }
+
+                .active{
+                    &.msg-box{
+                        display: block;
+                    }
+                }
+			}
+
+			&.wx{
+
+                &.active{
+					border-color: $cl-yl;
+
+                    .wx-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-wx.png);
+                    }
+                }
+
+
+                &:hover{
+                    .wx-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-wx.png);
+                    }
+                }
+
+                .wx-icon{
+                    background-color: $cl-yl;
+                    background-image: url(../img/pbl/aside-nav-wx-toggle.png);
+                }
+
+                .wx-ewmbox{
+                    position: absolute;
+                    left: -155px;
+                    top: 0;
+                    z-index: 999;
+
+                    display: none;
+
+                    width: 155px;
+                    height: 153px;
+
+                    cursor: default;
+
+                    .wx-ewm{
+                        padding: 10px 0;
+
+                        width: 141px;
+                        height: 158px;
+
+                        background: #fff;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+                        border: 1px solid #e5e5e5;
+
+                        img{
+                            display: block;
+                            margin: 5px auto;
+
+                            width: 109px;
+                            height: 109px;
+                        }
+
+                        p{
+                            font-size: 14px;
+                            color: $cl-yl;
+                        }
+                    }
+                }
+
+                &:hover{
+                   .wx-ewmbox{
+                        display: block;
+                   } 
+                }           
+			}
+
+            &.app{
+
+                &.active{
+                    border-color: $cl-yl;
+
+                    .app-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-app.png);
+                    }
+                }
+
+                &:hover{
+                    .app-icon{
+                        width: 38px;
+                        height: 38px;
+
+                        border: 2px solid $cl-yl;
+
+                        background-color: #fff;
+                        background-image: url(../img/pbl/aside-nav-app.png);
+                    }
+                }
+
+                .app-icon{
+                    background-color: $cl-yl;
+                    background-image: url(../img/pbl/aside-nav-app-toggle.png);
+                }
+
+                .app-ewmbox{
+                    position: absolute;
+                    left: -155px;
+                    top: 0;
+                    z-index: 999;
+
+                    display: none;
+
+                    width: 155px;
+                    height: 153px;
+
+                    cursor: default;
+
+                    .app-ewm{
+                        padding: 10px 0;
+
+                        width: 141px;
+                        height: 158px;
+
+                        background: #fff;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+                        border: 1px solid #e5e5e5;
+
+                        img{
+                            display: block;
+                            margin: 5px auto;
+
+                            width: 109px;
+                            height: 109px;
+                        }
+
+                        p{
+                            font-size: 14px;
+                            color: $cl-yl;
+                        }
+                    }
+                }
+
+                &:hover{
+                   .app-ewmbox{
+                        display: block;
+                   } 
+                }  
+            }
+		}
+	}
+}
+
+#wkit-content .wkit-chat-wrap .wkit-msg-input textarea{
+    font-size: 12px;
+}

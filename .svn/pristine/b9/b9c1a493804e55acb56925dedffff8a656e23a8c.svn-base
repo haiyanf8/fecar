@@ -1,0 +1,84 @@
+<?php
+return array(
+	
+	// 正式
+    'DB_CONFIG3' =>  array(
+        'DB_TYPE'          => 'mysql',          //数据库类型
+        'DB_HOST'          => '127.0.0.1',       //服务器地址
+        'DB_NAME'          => 'fecar_main',          // 数据库名
+        'DB_USER'          => 'jingpai',      // 用户名
+        'DB_PWD'           => 'tlRryARtOUXE',
+        'DB_PORT'          => 3306,               //端口
+        'DB_PREFIX'        =>'fecar_',
+        'DB_CHARSET'       => 'utf8',               //字符集
+    ),
+    
+    'DB_CONFIG2' =>  array(
+        'DB_TYPE'          => 'mysql',          //数据库类型
+        'DB_HOST'          => '127.0.0.1',       //服务器地址
+        'DB_NAME'          => 'fecar_www',          // 数据库名
+        'DB_USER'          => 'pyecgw',      // 用户名
+        'DB_PWD'           => 'JuSLVGW7xYexUUDz',
+        'DB_PORT'          => 3306,               //端口
+        'DB_PREFIX'        =>   'fecar_',           
+        'DB_CHARSET'       => 'utf8',               //字符集
+    ),
+
+	'city2ip'	           => 'http://api.map.baidu.com/location/ip?ak=94a72387dc856a07e440cc12269b05fd&ip=',
+    'API_TOKEN'            => '41f0fe201e44ae9fdd12c15d2be7344e',
+    'imgPath'    =>'http://imgam.fecar.cn/fecar_mk/auction/Public/uploads/',    
+    'GPJ_API_URL'  => 'http://openapi.gongpingjia.com/api/cars/evaluation/fecar/',
+	//检测端图片地址
+	'CHECK_URL' => 'http://res.fecar.com/static/',
+	
+	//多模块访问
+	'MULTI_MODULE'         => false,
+	//默认模块
+	'DEFAULT_MODULE'       => 'Home',
+        
+	//URL地址不区分大小写
+	'URL_CASE_INSENSITIVE' => true,
+	
+	//URL模式
+	'URL_MODEL' => 2,
+    //URL 改写
+    'URL_ROUTER_ON'   => true,
+    'URL_ROUTE_RULES' =>array(
+         ''        =>'Index/index',
+         //'history/:'  =>'History/history',
+         'sale'     =>'sale/index',
+         'store'    =>'store/index',
+         'store-info' => 'store/info',
+         'store-coord' => 'store/coord',
+         'store-get' => 'store/get',
+         'history'  => 'history/index',
+         'history-detail/:carid'=>'history/detail',
+         'article'  => 'article/index',
+         //'article-cate' => 'article/index',
+         'article-cate/:id' => 'article/index',
+         'article-detail/:id' => 'article/detail',
+         'valuate-index'      => 'valuate/index',
+         'valuate-detail'     => 'valuate/detail',
+         'valuate-submit'     => 'valuate/submit',
+         'intro'              => 'static/intro',
+         'business'           => 'static/business',
+         'process'            => 'static/process',
+         'introduction'       => 'static/introduction',
+         //'article/listing/:id' => 'article/listing',
+    ),
+        
+    /* 'HTML_CACHE_ON'     =>    true, // 开启静态缓存
+    'HTML_CACHE_TIME'   =>    3600,   // 全局静态缓存有效期（秒）
+    'HTML_FILE_SUFFIX'  =>    '.html', // 设置静态缓存文件后缀
+    'HTML_CACHE_RULES'  =>     array(  
+            'Index:index'    =>     array('index{city}', '3600'),
+			'Store:index'    =>     array('store', '3600')
+             ) */
+        
+        
+        
+        
+        
+        
+        
+);

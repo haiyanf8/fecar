@@ -1,0 +1,97 @@
+
+.aside{
+    &-hotsale{
+        width: 245px;
+
+        h2{
+            margin-bottom: 20px;
+            padding-bottom: 20px;  
+
+            border-bottom: 1px solid #dbdbdb;
+            color: #353535;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        &-list{
+            margin-bottom: 10px;
+
+            .item{
+                width: 245px;
+
+                overflow: hidden;
+                padding-bottom: 22px;
+                position: relative;
+
+                .ct{
+                    padding-left: 22px;
+                    overflow: hidden;
+
+                    width: 223px;
+                    height: 20px;
+
+                    color: #323232;
+                    font-size: 16px;
+                    line-height: 20px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+
+                    a{
+                        &:hover{
+                        color: $cl-yl;
+                        }    
+                    }
+                    
+                    ::before {
+                        content: "";
+                        display: block;
+                        
+                        left: 0;
+                        position: absolute;
+                        top: 7px;
+
+                        width: 5px;
+                        height: 5px;
+
+                        background: #808080 none repeat scroll 0 0;
+                        border-radius: 50%;
+                        
+                    }
+                }
+
+                .info{
+                    padding-left: 22px;
+                    padding-top: 10px;
+                    
+                    width: 223px;  
+
+                    .txt{
+                        float: left;
+                        width: 115px;
+
+                        color: #8e8e8e;
+
+                        p{
+                            line-height: 20px;
+                        }
+                    }
+
+                    .auction{
+                        width: 69px;
+                        height: 25px;
+                        
+                        float: right;
+                        margin-top: 6px;
+                        padding: 0 6px;
+
+                        background: rgba(0, 0, 0, 0) url("../img/article/aside-btn.jpg") no-repeat scroll 0 0;
+                        color: $cl-wt;
+                        font-size: 14px;
+                        line-height: 25px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,313 @@
+
+
+@import "../m-pbl/m-select";
+
+.history-left{
+    width: 933px;
+    float: left;
+}
+
+.choosewrapper{
+    padding: 20px 0;
+    
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.choose{
+    width: 1185px;
+    margin: 0 auto;
+    padding-left: 15px;
+
+    font-size: 12px;
+
+    .choose-item{
+        height: 50px;
+        line-height: 50px;
+
+        color: #333;
+        
+        clear: both;
+
+		&.type{
+			overflow: visible;
+		}
+
+		.type-form{
+            padding: 0 10px;
+
+            float: left;
+            white-space: -6px;
+
+            border: 1px solid transparent;
+
+			input[type="submit"]{
+				width: 100px;
+				height: 28px;
+				padding: 0;
+
+				text-indent: 18px;
+				font-size: 14px;
+				color: $cl-wt;
+
+				background-color: $cl-yl;
+				background-repeat: no-repeat;
+				background-position: 19px;
+				background-image: url("../img/history/search.png");
+
+				border: none;
+				outline: none;
+
+				user-select: none;
+				cursor: pointer;
+			}
+		}
+
+        .tt{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+        }
+
+        .con{
+            height: 50px;
+            line-height: 50px;
+
+            float: left;
+            @include clearfix();
+            
+            a{
+                display: block;
+                float: left;
+                padding: 0 12px;
+
+                margin-right: 20px;
+
+                &.current{
+                    color: $cl-yl;
+                }
+                &:hover{
+                    color: $cl-yl;
+                }
+            }
+        }
+
+        .form-mile{
+            padding: 0 10px;
+
+            height: 50px;
+
+            float: left;
+            white-space: -6px;
+
+            border: 1px solid transparent;
+
+            &:hover{
+                background: #fff;
+                border-color: #d8d8d8;
+                box-shadow: 0 0px 8px rgba(0,0,0,.1);
+
+                .ensure{
+                    display: inline-block;
+                    
+                    background: $cl-yl;
+                    cursor: pointer;
+                    color: $cl-wt;
+                }
+            }
+
+            .inp-txt{
+                width: 54px;
+                height: 24px;
+
+                border: 1px solid $cl-bd;
+
+                outline: none;
+                padding-left: 5px;
+                box-sizing: border-box;
+            }
+
+            .inp-submit{
+                width: 52px;
+                height: 24px;
+                line-height: 22px;
+
+                color: #333;
+                background-color: #ccc;
+
+                outline: none;
+                cursor: pointer;
+
+                display: none;
+            }
+
+            .inp-line{
+                color: #999;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
+            .inp-unit{
+                color: #999;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+.line{
+    margin-top: 30px;
+    margin-bottom: 22px;
+
+    border: 1px solid #ffa200;
+}
+
+.m-select{
+    margin-top: 11px;
+
+	float: left;
+	width: 118px;
+    
+    background: none;
+
+	&-tt{
+		height: 26px;
+
+		padding-left: 10px;
+		padding-right: 16px;
+
+		line-height: 26px;
+        color: #333;
+		border: 1px solid $cl-bd;
+        text-align: center;
+
+		background-position: 100px center;
+
+        &.border{
+            border: 1px solid $cl-bd;
+        }
+	}
+
+	&-ct{
+		width: 100%;
+		height: 200px;
+
+		top: 27px;
+		left: 0;
+
+		border: 1px solid $cl-bd;
+		box-sizing: border-box;
+
+		ul{
+			line-height: 27px;
+
+            li{
+                a{
+                    display: block;
+                }
+            }
+		}
+	}
+
+    &-newseries{
+        left: -32px;
+        width: 150px;
+    }
+
+    &-wrap{
+        position: absolute;
+        z-index: 10;
+        width: 210px;
+        height: 404px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .big{
+            height: 404px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .tit{
+            padding-left: 10px;
+
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+
+            font-size: 14px;
+
+            a{
+                display: block;
+            }
+        }
+
+        .letter{
+            float: left;
+            padding: 0;
+
+            width: 18px;
+            margin-left: 10px;
+            text-align: center;
+            cursor: pointer;
+
+            li{
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+
+                &:hover{
+                    background-color: #ff3000;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .brandname{
+            position: absolute;
+            top: 40px;
+            left: 46px;
+            overflow-y: auto;
+
+            float: left;
+
+            width: 164px;
+            height: 404px;
+
+            .group{
+                width: 100%;
+                white-space: nowrap;
+
+                .init{
+                    width: 100%;
+                    height: 24px;
+
+                    font-size: 14px;
+                    text-align: center;
+
+                    color: grey;
+                    line-height: 24px;
+                    background-color: #dbdbdb;
+                }
+
+                .list{
+                    padding: 0;
+
+                    width: 146px;
+        
+                    font-size: 12px;
+                    line-height: 22px;
+                    text-indent: 8px;
+                }
+            }
+        }
+    }
+}
+
+input[type="submit"]{
+	box-sizing: content-box;
+
+    margin-left: 10px;
+}

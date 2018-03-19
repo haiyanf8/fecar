@@ -1,0 +1,27 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/mx";
+
+@import "m-history/choose";
+@import "m-history/list";
+
+.history{
+    margin-top: 18px;
+    padding-bottom: 50px;
+
+    @include clearfix();
+    
+    >.history-left{
+        float: left;
+    }
+
+    >.history-right{
+        float: right;
+    }
+}
+
+.getstyle{
+    display: none;
+}

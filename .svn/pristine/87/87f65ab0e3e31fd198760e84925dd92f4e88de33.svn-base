@@ -1,0 +1,19 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class ArticlePicModel extends Model
+{
+    protected $connection = 'DB_CONFIG2';
+    protected $tablePrefix = "fecar_";
+
+    public function getAll()
+    {
+        return $this->where('')->select();
+    }
+
+    public function getPic($where, $field)
+    {
+        return $this->where($where)->field($field)->select();
+    }
+}

@@ -1,0 +1,145 @@
+.main_container {
+  overflow: hidden;
+  _zoom: 1;
+}
+
+.mapbox {
+  height: 636px;
+}
+
+.main {
+  margin-top: 63px;
+  margin-bottom: 87px;
+}
+.main-left {
+  padding: 40px 20px 20px;
+  float: left;
+  width: 378px;
+  height: 568px;
+  border: 1px solid #cacaca;
+  border-radius: 6px;
+  box-shadow: 0 1px 10px 2px rgba(235, 235, 235, 0.9);
+}
+.main-left-nav {
+  overflow: hidden;
+  _zoom: 1;
+}
+.main-left-nav .item {
+  float: left;
+  margin-bottom: 30px;
+  width: 93px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 20px;
+  border-right: 1px solid #dbdbdb;
+  text-align: center;
+  cursor: pointer;
+}
+.main-left-nav .item:nth-child(4n) {
+  border-right: none;
+}
+.main-left-nav .item.current {
+  color: #ff3000;
+}
+.main-left-content {
+  overflow: hidden;
+  _zoom: 1;
+}
+.main-left-content .item {
+  display: none;
+}
+.main-left-content .item .img {
+  display: block;
+  margin: 5px auto 35px;
+  width: 373px;
+  height: 282px;
+}
+.main-left-content .item .img img {
+  border-radius: 5px;
+}
+.main-left-content .item .txt {
+  width: 373px;
+  height: 55px;
+}
+.main-left-content .item .txt .icon {
+  margin-right: 15px;
+  float: left;
+  width: 44px;
+  height: 55px;
+  background: url("../img/store/m-city-map.png") no-repeat center center;
+}
+.main-left-content .item .txt .address {
+  width: 314px;
+  height: 55px;
+  font-size: 20px;
+  color: #717171;
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.main-left-content .item .txt span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+.main-left-content .item.active {
+  display: block;
+}
+.main-right {
+  width: 750px;
+  height: 628px;
+  float: right;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+}
+
+.m-map {
+  position: relative;
+}
+.m-map-fake {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../img/store/m-map-fake.png) center center no-repeat;
+}
+.m-map-fake .point {
+  position: absolute;
+  width: 62px;
+  height: 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.m-map-baidu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.second {
+  overflow: hidden;
+  _zoom: 1;
+}
+.second-item {
+  float: left;
+  width: 68px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.second-item.current {
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  background: #ff6b1d;
+}
+
+/*# sourceMappingURL=store.css.map */

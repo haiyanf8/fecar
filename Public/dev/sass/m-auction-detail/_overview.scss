@@ -1,0 +1,388 @@
+.auction{
+	&-wrapper{
+		width: 100%;
+		height: 548px;
+
+		background: #e5e6e6;
+
+		@include clearfix();
+	}
+	&-overflow{
+
+		width: 1190px;
+		height: 548px;
+
+		margin: 0 auto;
+
+		@include clearfix();
+		
+		&-left{
+			width: 785px;
+			float: left;
+
+			&-path{
+				color: #606060;
+
+				margin: 14px 0;
+
+				>a{
+					color: #606060;
+				}
+			}
+
+		}
+
+		
+		&-container{
+
+			height: 470px;
+
+			.slide{
+
+				width: 785px;
+				height: 470px;
+
+				position: relative;
+
+				float: left;
+
+				.bigbtn{
+
+					position:absolute;
+
+					width:43px;
+					height:87px;
+
+					top:365px;
+					cursor:pointer;
+					z-index:5;
+					top: 140px;
+					user-select: none;
+				}
+
+
+				.bigpre{
+					left:0;
+					background:url(../img/auction-detail/slide-big-pre.png) no-repeat;
+				}
+
+				.bignext{
+					right:0;
+					background:url(../img/auction-detail/slide-big-next.png) no-repeat;
+				}
+
+				.smallbtn{
+
+					position:absolute;
+
+					width:80px;
+					height:22px;
+
+					right:0;
+					cursor:pointer;
+					z-index:5;
+
+					user-select: none;
+				}
+
+				.smallpre{
+					top:0px;
+					background:url(../img/auction-detail/slide-small-pre.png) no-repeat;
+				}
+
+				.smallnext{
+					bottom:0;
+					background:url(../img/auction-detail/slide-small-next.png) no-repeat;
+				}
+
+				&-picbox{
+
+					height:470px;
+
+					position:relative;
+
+					overflow:hidden;
+
+					.carsource{
+
+						font-size: 14px;
+						position: absolute;
+
+						width: 180px;
+						height: 25px;
+						line-height: 25px;
+
+						text-align: center;
+
+						position: absolute;
+
+						right: 15px;
+						bottom: 15px;
+						z-index: 5;
+
+						background-image: url(../img/pbl/tspr-50.png);
+						color: #fff;
+
+						overflow: hidden;
+
+						>em{
+							font-style: normal;
+						}
+
+					}
+
+					ul{
+						height:470px;
+						position:absolute;
+					}
+
+					.item{
+						width:685px;
+						height:470px;
+
+						float:left;
+
+						position:relative;
+						color:#fff;
+
+						overflow: hidden;
+
+						cursor: pointer;
+
+						.wrap-img{
+							display:block;
+
+							width: 690px;
+							height: 470px;
+
+							line-height: 470px;
+
+							position:absolute;
+							color:#fff;
+						}
+						img{
+							width: 100%;
+							vertical-align: middle;
+						}
+					}
+
+				}
+
+				&-listbox{
+
+					width: 80px;
+					height: 410px;
+
+					margin: 0 auto;
+
+					margin-top: -440px;
+					float: right;
+
+					position: relative;
+
+					overflow: hidden;
+
+					ul{
+						height:410px;
+						position:absolute;
+
+						li{
+							margin-bottom: 10px;
+
+							width: 78px;
+							height: 58px;
+
+							float: left;
+
+							cursor:pointer;
+
+							border: 1px solid transparent;
+							overflow: hidden;
+
+							position:relative;
+
+							.wrap-img{
+								height: 157px;
+								line-height: 157px;
+
+								margin-top: -51px;
+							}
+
+							img{
+								width: 78px;
+
+								vertical-align: middle;
+
+								-ms-interpolation-mode: bicubic;
+							}
+
+							&.on{
+								border-color: $cl-yl;
+
+								i{
+									display:block;
+									*display:inline-block!important;
+								}
+							}
+						}
+					}
+
+				}
+			}
+			.info{
+				float: right;
+				padding: 40px 0;
+
+				width: 384px;
+				height: 466px;
+
+				border: 1px solid $cl-bd;
+
+				background: #fff;
+
+				
+				&-title{
+					margin-bottom: 15px;
+					height: 65px;
+
+					h1{
+						float: left;
+						padding: 0 20px;
+
+						width: 344px;
+						height: 65px;
+
+						font-size: 24px;
+						color: $cl-main;
+						font-weight: bold;
+
+						line-height: 35px;
+
+						@include text-overflow-multi(2);
+			
+					}
+
+				}
+
+				&-auction{
+					padding: 0 20px 25px;
+					margin-top: 40px;
+					border-bottom: 1px solid $cl-bd;
+
+					li{
+						height: 30px;
+						line-height: 30px;
+						font-size: 16px;
+
+						clear: both;
+
+						margin: 10px 0;
+
+						em{
+
+							&.ct{
+								display: block;
+								float: left;
+
+								color: #404040;
+								font-style: normal;
+							}
+						}
+
+						span{
+							margin-left: 10px;
+
+							float: left;
+							display: block;
+
+							color: #808080;
+
+							&.ct{
+								width: 90px;
+								font-size: 18px;
+								color: #404040;
+							}
+							
+							&.price{
+								margin-top: 3px;
+								padding: 0 5px;
+								width: 125px;
+								height: 24px;
+
+								line-height: 24px;
+								color: #fff;
+								text-align: center;
+								background: url(../img/auction-detail/info-up.png) no-repeat 0 0;
+							}
+
+							&.score{
+								margin-top: 3px;
+								padding: 0 5px;
+
+								width: 68px;
+								height: 24px;
+
+								line-height: 24px;
+								text-align: center;
+								color: #fff;
+
+								background: url(../img/auction-detail/info-score.png) no-repeat 0 0;
+							}
+						}
+					}
+				}
+
+				&-tag{
+					margin: 0 auto;
+
+					width: 345px;
+					overflow: hidden;
+
+
+					 .item{
+				 	   	float: left;
+				 	  	text-align: center;
+
+				 	   	width: 114px;
+				 	   	padding: 15px 0;
+
+				 	   	&.first{
+				 	   		border-left: none;
+				 	   	}
+
+				 	   	.title{
+
+				 	   		color: #666;
+				 	   		font-size: 14px;
+
+				 	   		height: 30px;
+				 	   		line-height: 30px;
+
+							@include text-overflow();
+				 	   	}
+
+				 	   	.content{
+				 	   		font-size: 16px;
+
+				 	   		height: 30px;
+				 	   		line-height: 30px;
+
+				 	   		color: #999;
+
+				 	   		@include text-overflow();
+				 	   	}
+
+					}
+
+				}
+
+				&-tagline{
+					border-bottom: 1px solid $cl-bd;
+				}
+
+			}
+
+		}
+	}
+
+}

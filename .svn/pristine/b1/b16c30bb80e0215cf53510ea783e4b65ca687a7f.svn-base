@@ -1,0 +1,195 @@
+
+
+.quicksale{
+	position: fixed;
+	left: -2000px;
+	bottom: 0;
+	z-index: 98;
+
+	width: 100%;
+	height: 122px;
+
+	background: url("../img/pbl/quicksale-transparent.png");
+
+    margin: 0 auto;
+
+    &.active{
+		
+		.quicksale-up{
+			display: none;
+		}
+
+		.quicksale-pop{
+			display: block;
+			position: relative;
+		}
+    }
+
+    &.now{
+    	left: 0;
+    }
+
+
+    &.hidden{
+
+    	background: none;
+		
+		.quicksale-up{
+			display: block;
+		}
+
+		.quicksale-pop{
+			display: none;
+		}
+    }
+
+    &-up{
+    	position: fixed;
+    	left: 0;
+    	z-index: 10000;
+    	bottom: 0;
+
+    	width: 348px;
+    	height: 220px;
+
+    	cursor: pointer;
+    }
+
+    &-pop{
+
+	    &-yl{
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+
+		    width: 10px;
+		    height: 122px;
+
+		    background: $cl-yl;
+	  	}
+		
+		&-wrap{
+			position: absolute;
+			left: 50%;
+
+			width: 1200px;
+
+			margin-left: -600px;
+
+			.people{
+				position: absolute;
+
+				float: left;
+				margin-top: -93px;
+
+				width: 328px;
+			}
+
+			.form{
+				position: relative;
+				margin-left: 235px;
+
+				width: 750px;
+				padding-top: 30px;
+				
+				.tel{
+					float: left;
+
+					padding-left: 30px;
+					padding-top: 18px;
+					padding-bottom: 18px;
+
+					width: 526px;
+					height: 28px;
+					line-height: 28px;
+
+					font-size: 20px;
+	
+					border-radius: 337px 0 0 337px;
+				}
+
+				.salebtn{
+					display: block;
+					float: left;
+
+					height: 64px;
+					width: 180px;
+					
+					background: #ff6b1d none repeat scroll 0 0;
+					border-radius: 0 90px 90px 0;
+					color: #fff;
+					cursor: pointer;
+					font-family: "Microsoft Yahei";
+					font-size: 26px;
+				}
+
+				&-ipt{
+					position: absolute;
+					right: 210px;
+					top: 34px;
+
+					width: 16px;
+					height: 16px;
+		
+
+					cursor: pointer;
+
+					.error{				
+						display: none;
+						img{
+							margin-top: 22px;
+						}
+					}
+
+					&.active{
+						.error{
+							display: block;
+						}
+					}
+				}
+
+				&-intro{
+					width: 200px;
+					height: 63px;
+
+					float: right;
+					
+					.pic{
+						width: 70px;
+						height: 16px;
+						margin-bottom: 5px;
+					}
+
+					.txt{
+						font-size: 32px;
+						color: $cl-yl;
+					}
+				}
+			}
+		}
+
+		&-close{
+			position: absolute;
+			right: 20px;
+			top: 50px;
+
+			cursor: pointer;
+
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+  .quicksale-pop-close {
+        position: absolute;
+		right: 10px;
+		top: 10px;
+
+		cursor: pointer;
+
+		width: 30px;
+		height: 30px;
+    }
+}

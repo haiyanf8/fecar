@@ -1,0 +1,28 @@
+
+
+.security{
+	width: 600px;
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 95px;
+
+	text-align: center;
+
+	&-tt{
+		margin-top: 25px;
+		margin-bottom: 45px;
+
+		font-size: 40px;
+		line-height: 100px;
+
+		background: url(../img/info/security-tt.png) center center no-repeat;
+	}
+
+	&-ct{
+		img{
+			width: 100%;
+		}
+	}
+}

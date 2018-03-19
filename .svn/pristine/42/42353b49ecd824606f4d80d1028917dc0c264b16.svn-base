@@ -1,0 +1,33 @@
+.business{
+	padding-top: 25px;
+	padding-bottom: 250px;
+	padding-left: 24px;
+
+	&-box{
+		margin-bottom: 40px;
+		@include clearfix();
+		>h2{
+			font-size: 20px;
+			color: $cl-yl;
+
+			margin-bottom: 10px;
+		}
+		.content{
+			>p{
+				line-height: 40px;
+
+				color: $cl-main;
+				font-size: 20px;
+				
+				.strong {
+					font-style: normal;
+					color: $cl-yl;
+
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+

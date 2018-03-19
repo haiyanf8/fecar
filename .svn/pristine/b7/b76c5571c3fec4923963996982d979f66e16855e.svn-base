@@ -1,0 +1,165 @@
+
+
+.m-paging{
+	margin-top: 22px;
+    margin-bottom: 30px;
+
+	font-size: 12px;
+	text-align: center;
+	color: $cl-aux;
+	line-height: 0;
+
+	clear: both;
+
+	.wrap{
+		display: inline-block;
+
+		white-space: nowrap;
+		vertical-align: top;
+
+		@include clearfix();
+	}
+
+	&-link{
+		display: inline-block;
+		float: left;
+
+		height: 30px;
+
+		color: $cl-main;
+		line-height: 30px;
+
+		word-spacing: -6px;
+
+		a{
+			display: inline-block;
+			width: 28px;
+
+			margin-left: 5px;
+			margin-right: 5px;
+
+			line-height: 28px;
+
+			border: 1px solid $cl-bd;
+
+			&.current{
+				color: $cl-wt;
+
+				background-color: $cl-yl;
+				border-color: $cl-yl;
+			}
+
+			&.dots{
+				margin-left: 3px;
+				margin-right: 1px;
+
+				letter-spacing: 5px;
+				border: none;
+			}
+
+			&.end{
+				width: 72px;
+
+				position: relative;
+
+				&:after{
+					content: "";
+					display: block;
+
+					width: 0;
+					height: 0;
+
+					border-top: 7px solid transparent;
+					border-bottom: 7px solid transparent;
+
+					position: absolute;
+					top: 7px;
+				}
+
+				&.pre{
+					padding-right: 14px;
+					text-align: right;
+
+					&:after{
+						border-right: 7px solid $cl-aux;
+						left: 12px;
+					}
+				}
+
+				&.next{
+					padding-left: 14px;
+					text-align: left;
+
+					&:after{
+						border-left: 7px solid $cl-aux;
+						right: 12px;
+					}
+				}
+
+				&.not{
+					color: #ccc;
+
+					&:after{
+						border-left-color: #ccc;
+						border-right-color: #ccc;
+					}
+				}
+			}
+		}
+	}
+
+	&-total{
+		float: left;
+		margin-left: 8px;
+
+		line-height: 30px;
+	}
+
+	form{
+		display: inline-block;
+		margin-left: 40px;
+
+		@include clearfix();
+
+		span{
+			float: left;
+			line-height: 30px;
+		}
+
+		input{
+			float: left;
+			height: 28px;
+
+			border: 1px solid $cl-bd;
+
+			color: inherit;
+			text-align: center;
+
+			&[type="text"]{
+				width: 28px;
+
+				margin-left: 10px;
+				margin-right: 10px;
+
+				line-height: 28px;
+
+				&:focus{
+					color: $cl-main;
+				}
+			}
+			&[type="submit"]{
+				width: 58px;
+
+				margin-left: 12px;
+
+				box-sizing: content-box;
+				cursor: pointer;
+				background-color: $cl-bg;
+
+				&:hover{
+					color: $cl-main;
+				}
+			}
+		}
+	}
+}

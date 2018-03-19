@@ -1,0 +1,114 @@
+<?php
+/**
+* Copyright (c) 2016, 福建朋友亿车网
+* All rights reserved.
+* 文件名称： ArticleModel.class.php 
+* 摘    要： 资讯模型类
+* 作    者： 肖庆平
+* 修改日期:　2016.7.1
+*/
+namespace Home\Model;
+use Think\Model;
+
+class ArticleModel extends Model
+{
+    protected $connection = 'DB_CONFIG2';
+    protected $tablePrefix = "fecar_";
+
+    /*
+     * 获取文章，公共方法
+     */
+    public function getArticles($where, $field, $order, $limit)
+    {
+        return $this->where($where)->field($field)->order($order)->limit($limit)->select();
+    }
+
+    //获取文章总数
+    public function getArticlesCount($where)
+    {
+        $field = "count(`articleid`) as `count`";
+        return $this->where($where)->field($field)->select();
+    }
+
+    public function getShowArticlesCount()
+    {
+        $where['show'] = 1;
+        return $this->getArticlesCount($where);
+    }
+
+    //根据类别id获取文章总数
+    public function getArticlesCountByCateid($cateid)
+    {
+        $where['cateid'] = $cateid;
+        $where['show'] = 1;
+        return $this->getArticlesCount($where);
+    }
+
+    /*
+     * 获取文章列表
+     */
+    public function getArticleList($limit)
+    {
+        $where['show'] = 1;
+        $field = "`articleid`, `cateid`, `title`, DATE_FORMAT(`date`, '%Y年%m月%d日') as `smp_date`, `pageview`, `abstract`, `prepic`";
+        $order = "`date` desc";
+        return $this->getArticles($where, $field, $order, $limit);
+    }
+
+    /*
+     * 根据文章列表获取文章列表
+     */
+    public function getArticleListByCateid($cateid, $limit)
+    {
+        $where['show'] = 1;
+        $where['cateid'] = $cateid;
+        $field = "`articleid`, `cateid`, `title`, DATE_FORMAT(`date`, '%Y年%m月%d日') as `smp_date`, `pageview`, `abstract`, `prepic`";
+        $order = "`date` desc";
+        return $this->getArticles($where, $field, $order, $limit);
+    }
+
+    /*
+     * 根据文章id获取文章数据
+     */
+    public function getOneArticle($where)
+    {
+        $field = "`cateid`, `title`, DATE_FORMAT(`date`, '%Y-%m-%d %H:%i') as `smp_date`, `pageview`, `author`, `abstract`, `article`, `page_keywords`, `page_description`";
+        $order = "";
+        $limit = "";
+        return $this->getArticles($where, $field, $order, $limit);
+    }
+
+    public function getRecommArticle()
+    {
+        $where['show'] = 1;
+        $where['recomm'] = 1;
+        $field = "`articleid`, `title`";
+        $order = "rand()";
+        $limit = "6";
+
+        return $this->getArticles($where, $field, $order, $limit);
+    }
+
+    public function addArticle($data)
+    {
+        return $this->add($data);
+    }
+
+    public function deleteArticle($where)
+    {
+        return $this->where($where)->delete();
+    }
+
+    public function updateArticle($where, $data)
+    {
+        return $this->where($where)->save($data);
+    }
+
+    /*
+     * 更新文章浏览量，每次加1
+     */
+    public function updatePageview($where)
+    {
+        return $this->where($where)->setInc('pageview', 1);
+    }
+}

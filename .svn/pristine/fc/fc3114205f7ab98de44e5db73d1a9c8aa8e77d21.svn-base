@@ -1,0 +1,122 @@
+<?php
+/**
+* Copyright (c) 2016, 福建朋友亿车网
+* All rights reserved.
+* 文件名称： ConsultController.class.php 
+* 摘    要： 预约控制器
+* 作    者： 肖庆平(xiaoqingping@qq.com)
+* 修改日期:　2016.6.24
+*/
+namespace Home\Controller;
+
+class AppointController extends BaseController
+{
+    private $_model = null;
+    private $_originModel = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_model = D('appoint');
+        $this->_originModel = D('origin');
+    }
+
+    public function appointCount()
+    {
+        return $this->_model->appointCount();
+    }
+
+    /**
+     * 返回今天所有的预约数据
+     */
+    public function appoint()
+    {
+        $field = "`mobile`, DATE_FORMAT(`appoint-time`, '%H:%i:%s') as `appointtime`";
+        $order = "DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc";
+
+        return $this->_model->getTodayAppoint($field, $order);
+    }
+
+    /**
+     * 插入预约数据
+     */
+    public function insert()
+    {
+        $data['city'] = I('opencity') ? I('opencity') : session('opencity');
+        $data['mobile'] = I('tel');
+
+        if ($data['mobile'] == '') {
+            echo json_encode(array('status' => 1, 'msg' => '请输入正确的手机号码'));
+            return;
+        }
+        if (!checkTel(trim($data['mobile']))) {
+            echo json_encode(array('status' => 1, 'msg' => '请输入正确的手机号码'));
+            return;
+        }
+
+        if ($_SERVER['SERVER_NAME'] === 'www.fecar.com') {
+            $data['note'] = '';
+        } else {
+            $data['note'] = '测试数据';
+        }
+
+        $curres=cur_post('http://api.fecar.com/msg/sell', array('token' => C("API_TOKEN"), 
+                'phone' => $data['mobile'], 'car_area' => $data['city'], 'note' => $data['note']));
+        $deres = json_decode($curres, TRUE);
+        if ($deres['status_code'] == '1') {
+            echo json_encode(array('status' => 0));
+            //插入预约数据
+            $data['isfake'] = 0;
+            $data['appoint-time'] = date('Y-m-d H:i:s', time());
+            $result = $this->_model->insertAppoint($data);
+            if ($result) {
+                //来源统计表记录用户预约数据
+                $stat['city'] = $data['city'];
+                $stat['mobile'] = $data['mobile'];
+                $stat['origin'] = I('origin');
+
+                $this->insertSource($stat);
+
+            }
+        } elseif ($deres['status_code'] == '-3') {    //信息重复
+            echo json_encode(array('status' => 2, 'msg' => '您已提交过号码，请勿重复提交'));
+        } else {   //其他错误
+            echo json_encode(array('status' => 3, 'msg' => '内部错误，请联系客服'));
+        }
+    }
+    
+    protected  function insertSource($stat)
+    {
+        $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    
+        $this->_originModel->insertOrigin(
+                array(
+                        'sessionid' => $this->_uuid,
+                        'access_time' => date('Y-m-d H:i:s'),
+                        'ipaddr' => get_client_ip(),
+                        'channel' => $this->_channel,
+                        'agent' => $userAgent,
+                        'url' => $this->_url,
+                        'city' => $stat['city'],
+                        'mobile'=>$stat['mobile'],
+                        'origin'=>$stat['origin']
+                ));
+    }
+    
+    /**
+     * 判断是否已将添加了来源
+     * @param  $session
+     * @return boolean
+     */
+    protected function isAdd($session)
+    {
+        $isAdd =  $this->_originModel->field('id')
+                        ->where("sessionid='%s'", $this->_uuid)
+                        ->find();
+        if ($isAdd) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}

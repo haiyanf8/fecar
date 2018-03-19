@@ -1,0 +1,12 @@
+[ 2016-12-19T12:35:17+08:00 ] ::1 /www/store-index.html
+ERR: 1054:Unknown column 'a.priority' in 'order clause'
+ [ SQL语句 ] : SELECT c.city,c.pinyin,a.storename,a.address,a.image FROM fecar_address a left join fecar_city c on a.cityid = c.id  WHERE ( a.open='1' and c.id is not null ) ORDER BY a.priority desc 
+ERR: 1054:Unknown column 'a.priority' in 'order clause'
+ [ SQL语句 ] : SELECT c.city,c.pinyin,a.storename,a.address,a.image FROM fecar_address a left join fecar_city c on a.cityid = c.id  WHERE ( a.open='1' and c.id is not null ) ORDER BY a.priority desc 
+
+[ 2016-12-19T12:35:19+08:00 ] ::1 /www/store-index.html
+ERR: 1054:Unknown column 'a.priority' in 'order clause'
+ [ SQL语句 ] : SELECT c.city,c.pinyin,a.storename,a.address,a.image FROM fecar_address a left join fecar_city c on a.cityid = c.id  WHERE ( a.open='1' and c.id is not null ) ORDER BY a.priority desc 
+ERR: 1054:Unknown column 'a.priority' in 'order clause'
+ [ SQL语句 ] : SELECT c.city,c.pinyin,a.storename,a.address,a.image FROM fecar_address a left join fecar_city c on a.cityid = c.id  WHERE ( a.open='1' and c.id is not null ) ORDER BY a.priority desc 
+

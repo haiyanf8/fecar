@@ -1,0 +1,148 @@
+.news{
+	width: 1200px;
+	margin: 0 auto;
+	
+	@include clearfix();
+
+	&-title{
+		padding: 40px 0;
+		overflow: hidden;
+
+		h2{
+			float: left;
+
+			width: 320px;
+
+			font-size: 20px;
+			color: #0a0a0a;
+			font-weight: bold;
+			letter-spacing: 2px;
+			
+			p{
+				&.ttcn{
+					margin-top: -4px;
+
+					font-size: 14px;
+					color: #3b3b3b;
+				}
+			}
+		}
+
+		.more{
+			float: right;
+
+			padding-top: 20px;
+
+			a{
+				font-size: 16px;
+				color: $cl-yl;
+			}
+		}
+	}
+	
+	&-content{
+		
+		width: 1200px;
+		margin: 0 auto;
+
+		overflow: hidden;
+		clear: both;
+
+		.item{
+			padding-right: 46px;
+
+			float: left;
+
+			width: 340px;
+
+			border-right: 1px solid $cl-bd;
+
+			.img{
+				width: 340px;
+				height: 227px;
+
+				border-radius: 5px;
+				display: block;
+
+				overflow:hidden;
+
+				img{
+					width: 340px;
+					height: 227px;
+
+					transition: all 1s ease 0s;
+
+					&:hover{
+						transform: scale(1.1);
+					}
+				}
+			}
+
+			.tt{
+				margin: 20px 0 22px 0;
+				
+				height: 30px;
+				line-height: 30px;
+
+				font-size: 18px;
+
+				@include text-overflow();
+
+				a{
+					&:hover{
+						color: $cl-yl;
+					}
+				}
+			}
+
+			p{
+				&.ct{
+					color: #999;
+					font-size: 14px;
+
+					height: 106px;
+					overflow: hidden;
+
+					line-height: 25px;
+
+					@include text-overflow-multi(4);
+				}
+
+				&.more{
+					color: $cl-yl;
+
+					text-align: right;
+
+					a{
+						color: $cl-yl;
+
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			&.twopadding{
+				padding-left: 42px;
+
+				.tt{
+					padding: 5px 0 22px 0;
+					margin: 0;
+				}
+				
+				p{
+					&.more{
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+			&.nomargin{
+				padding: 0 0 0 42px;
+
+				border-right: none;
+			}
+		}
+	}
+}

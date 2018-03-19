@@ -1,0 +1,190 @@
+.article{
+
+    &-header{
+
+        padding: 30px 0;
+        width: 100%;
+        background: #f7f7f7;
+
+        @include clearfix();
+
+        &-pic{
+            width: 1200px;
+            height: 417px;
+
+            margin: 0 auto;
+
+            .left{
+                position: relative;
+                
+                float: left;
+
+                width: 734px;
+                height: 417px;
+
+                ul{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+
+                    .item{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                       
+                        width: 734px;
+                        height: 417px;
+
+                        opacity: 0;
+
+                        float: left;
+
+                        transition: all 0.5s ease 0s;
+
+                        &.active{
+                            opacity: 1;
+                            top: 0;
+                        }
+
+                        .img{
+                            position: absolute;
+                            z-index: 1;
+                            
+                            width: 734px;
+                            height: 417px;
+                        }
+
+                        .txt{
+                            position: absolute;
+                            bottom: 0;
+                            z-index: 2;
+                            overflow: hidden;
+
+                            padding: 22px 25px 15px;
+
+                            width: 684px;
+                            height: 27px;
+                            font-size: 24px;
+                            color: $cl-wt;
+
+                            background: url(../img/pbl/tspr-50.png);
+
+                            transition: all 1s ease 0s;
+
+                            .tt{
+                                width: 685px;
+                                height: 25px;
+                                line-height: 25px;
+                                
+                                @include text-overflow();   
+                            }
+                            
+                            .ct{
+                                padding-top: 15px;
+
+                                width: 678px;
+                                height: 35px;
+                            
+                                color: $cl-wt;
+                                font-size: 12px;
+
+                                @include clearfix();
+                            }
+                        }
+
+
+                        &:hover{
+                            .txt{
+                                height: 85px;
+                            }
+                        }
+
+                    }
+                }
+
+                .btn{
+                    position: absolute;
+                    bottom: 20px;
+                    right: 25px;
+                    z-index: 3;
+
+                    a{
+                        margin-right: 5px;
+                        width: 20px;
+                        height: 3px;
+
+                        display: inline-block;
+
+                        background: #666;
+
+                        cursor: pointer;
+
+                        &.current{
+                            background: $cl-wt;
+                        }
+                    }
+                }
+            }
+
+            .right{
+                float: right;
+
+                width: 437px;
+
+                .top{
+                    position: relative;
+
+                    width: 437px;
+                    height: 198px;
+
+                    a{
+                        .img{
+                            position: absolute;
+                            z-index: 1;
+
+                            width: 437px;
+                            height: 198px;
+                        }
+
+                        .txt{
+                            position: absolute;
+                            bottom: 0;
+                            z-index: 2;
+
+                            padding: 10px 25px;
+
+                            width: 387px;
+
+                            font-size: 18px;
+                            color: #ececec;
+                            
+                            transition: all 0.5s ease 0s;
+                            background: url(../img/pbl/tspr-50.png);
+
+                            @include text-overflow();
+
+                            .tt{
+                                width: 387px;
+                                height: 25px;
+                                line-height: 25px;
+                                
+                                @include text-overflow();   
+                            }
+                        }
+
+                        &:hover{
+                            .tt{
+                                color: $cl-wt;
+                            }
+                        }
+                    }
+
+                    &.diff{
+                        margin-top: 21px;
+                    }
+                }
+            }
+        }
+    }
+}

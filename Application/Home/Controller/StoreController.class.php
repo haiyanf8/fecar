@@ -1,0 +1,88 @@
+<?php
+namespace Home\Controller;
+
+class StoreController extends BaseController
+{
+    private $_seoModel = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_seoModel = D('seo');
+    }
+
+    public function index()
+    {
+        $seoData = $this->_seoModel->getSeoByIdent('store');
+        //标题关键字  描述
+        $this->assign('title', $seoData[0]['title']);
+        $this->assign('keywords', $seoData[0]['keywords']);
+        $this->assign('description', $seoData[0]['description']);
+        $this->assign('action_name','store');
+
+        $hcwhere['open'] = '1';
+        $hotcity = D('gpjcity')->getCities($hcwhere, 'rank desc');
+        foreach ($hotcity as &$value) {
+            if ($value['city'] == session('opencity')) {
+                $value['current'] = 1;
+            } else {
+                $value['current'] = 0;
+            }
+        }
+        $this->assign('hotcity', $hotcity);
+        
+        $field = '`site`, `sitename`, `rank`';
+        $order = '`rank` desc';
+        $links = D('link')->getLinks($field, $order, $limit);
+        $this->assign('links', $links);
+
+        $info = D('address')->getStoreInfo();
+        foreach ($info as &$value) {
+            $value['image'] = $this->img_url . $value['image'];
+        }
+
+        $this->assign('store', $info);
+
+        $this->assign('level', 'top');
+
+        $this->display('Index:store');       
+    }
+
+    public function info()
+    {
+        $info = D('address')->getStoreInfo();
+        foreach ($info as &$value) {
+            if ($value['image'] == '') {
+                $value['image'] = '/Public/dev/img/store/nostoreimg.jpg';
+            } else {
+                $value['image'] = $this->img_url . $value['image'];
+            }
+        }
+
+        if ($info) {
+            echo json_encode(array('status' => 0, 'msg' => "成功获取门店信息", 'data' => $info));
+        } else {
+            echo json_encode(array('status' => 1, 'msg' => '未获取到门店信息'));
+        }
+    }
+
+    public function coord()
+    {
+        $city = I('city');
+        $coord = D('address')->getStoreCoord($city);
+        if ($coord) {
+            echo json_encode(array('status' => 0, 'msg' => "成功获取门店信息", 'data' => $coord));
+        } else {
+            echo json_encode(array('status' => 1, 'msg' => '未获取到门店信息'));
+        }
+    }
+    
+    /**
+     * 空操作
+     */
+    protected  function _empty()
+    {
+        $this->index();
+        return ;
+    }
+}

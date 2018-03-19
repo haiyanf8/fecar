@@ -1,0 +1,58 @@
+<div class="article-list">
+    <div class="article-list-nav">
+        <ul class="js-articlelist-choose">
+            <if condition="$_active == '0'">
+                <if condition="$level == 'top'">
+                    <li class="item current"><a href="./article.html">全部</a></li>
+                <else />
+                    <li class="item current"><a href="../article.html">全部</a></li>
+                </if>
+            <else />
+                <if condition="$level == 'top'">
+                    <li class="item"><a href="./article.html">全部</a></li>
+                <else />
+                    <li class="item"><a href="../article.html">全部</a></li>
+                </if>
+            </if>
+            <volist name="category" id="vo">
+                <if condition="$_active == $vo['cateid']">
+                    <if condition="$level == 'top'">
+                        <li class="item current"><a href="./article-cate/{$vo['cateid']}.html" javascript:void(0)>{$vo['category']}</a></li>
+                    <else />
+                        <li class="item current"><a href="../article-cate/{$vo['cateid']}.html">{$vo['category']}</a></li>
+                    </if>
+                <else />
+                    <if condition="$level == 'top'">
+                        <li class="item"><a href="./article-cate/{$vo['cateid']}.html">{$vo['category']}</a></li>
+                    <else />
+                        <li class="item"><a href="../article-cate/{$vo['cateid']}.html">{$vo['category']}</a></li>
+                    </if>
+                </if>
+            </volist>
+        </ul>
+    </div>
+    <div class="article-list-content">
+        <ul class="js-articlelist-target">
+                <volist name="_list" id="vo">
+                <li class="item">
+                    <a href="../article-detail/{$vo['articleid']}.html">
+                        <img src="{$vo['prepic']}" class="img">
+                    </a>
+                    <div class="txt">
+                        <h3 class="tt"><a href="../article-detail/{$vo['articleid']}.html">{$vo['title']}</a></h3>
+                        <p class="info">
+                            <span class="time">时间：{$vo['smp_date']}</span>
+                            <span class="hit">阅读：{$vo['pageview']}</span>
+                        </p>
+                        <p class="desc">
+                            {$vo['abstract']}
+                        </p>
+                    </div>
+                    </a>
+                </li>
+            </volist>
+        </ul>
+    </div>
+
+    <include file="Index/m-pbl:_source-paging"/>
+</div>

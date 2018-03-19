@@ -1,0 +1,75 @@
+<div class="wrapper">
+    <div class="header">
+        <h1 class="logo">
+            <if condition="$level == 'top'">
+                <a href="./">
+            <else />
+                <a href="../">
+            </if>
+                <img src="__PUBLIC__/prd/img/source/pbl/logo.png" />
+            </a>
+        </h1>
+
+        <div class="local">
+            <div class="local-area">
+                <i class="local-img"></i>
+                <p class="local-txt">
+                    <span class="js-hd-city">{:session('opencity')}</span>
+                </p>
+            </div>
+            
+            <div class="local-box">
+                <div class="local-box-arrow"></div>
+                <ul class="local-box-citys">
+                	<if condition="$param['page']">
+                		<volist name="hotcity" id="vo">
+                            <if condition="$vo.current == 1">
+                                <li class="{$vo.city} current item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            <else />
+                                <li class="{$vo.city} item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            </if>
+                        </volist>
+                	<elseif condition="$action_name eq 'valuate' "/>
+                		<volist name="hotcity" id="vo">
+                            <if condition="$vo.current == 1">
+                                <li class="{$vo.city} current item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            <else />
+                                <li class="{$vo.city} item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            </if>
+                        </volist>
+                	<else/>
+                		<volist name="hotcity" id="vo">
+                            <if condition="$vo.current == 1">
+                                <li class="{$vo.city} current item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            <else />
+                                <li class="{$vo.city} item"><a href="?opencity={$vo.pinyin}">{$vo.city}</a></li>
+                            </if>
+                        </volist>
+                	</if>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav-item">
+                <if condition="$level == 'top'">
+                    <a href="./" class="item">首页</a>
+                    <a href="./sale.html" class="item {$action_name=='sale'? 'current':''}">卖车</a>
+                    <a href="./valuate-index.html" class="item {$action_name=='valuate'? 'current':''}">估价</a>
+                    <a href="./history.html" class="item {$action_name=='history'? 'current':''}">竞拍历史</a>
+                    <a href="./store-index.html" class="item {$action_name=='store'? 'current':''}">服务网点</a>
+                <else />
+                    <a href="../" class="item">首页</a>
+                    <a href="../sale.html" class="item {$action_name=='sale'? 'current':''}">卖车</a>
+                    <a href="../valuate.html" class="item {$action_name=='valuate'? 'current':''}">估价</a>
+                    <a href="../history.html" class="item {$action_name=='history'? 'current':''}">竞拍历史</a>
+                    <a href="../store-index.html" class="item {$action_name=='store'? 'current':''}">服务网点</a>
+                </if>
+            </div>
+        </div>
+
+        <div class="tel">
+         400-9907-999
+        </div>
+    </div>
+</div>

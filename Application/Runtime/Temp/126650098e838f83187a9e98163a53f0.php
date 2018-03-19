@@ -1,0 +1,3 @@
+<?php
+//000000000360a:3:{i:0;a:4:{s:9:"articleid";s:3:"247";s:5:"title";s:63:"重磅 | 网约车新政落地！看看你的车还能跑么？";s:8:"abstract";s:165:"近期，福州市交通运输委员会对外发布了《福州市网络预约出租汽车管理实施细则》（征求意见稿），即福州版网约车新政。";s:6:"prepic";s:67:"http://admin.fecar.com/Picture/Ueditor/2016-11-16/582bc97360524.jpg";}i:1;a:4:{s:9:"articleid";s:3:"235";s:5:"title";s:76:"【送福利】车展门票免费送！朋友e车助您卖旧车、买新车";s:8:"abstract";s:24:"有猛料！有福利！";s:6:"prepic";s:67:"http://admin.fecar.com/Picture/Ueditor/2016-11-16/582bc973608a0.jpg";}i:2;a:4:{s:9:"articleid";s:3:"224";s:5:"title";s:57:"卖车就像嫁女儿，靠谱的“媒人”很重要！";s:8:"abstract";s:61:"​听说,女儿最近谈了一个不靠谱的男朋友......";s:6:"prepic";s:67:"http://admin.fecar.com/Picture/Ueditor/2016-11-16/582bc97360bee.jpg";}}
+?>

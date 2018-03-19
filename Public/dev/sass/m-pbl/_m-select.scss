@@ -1,0 +1,80 @@
+
+
+.m-select{
+	background-color: $cl-bg;
+
+	position: relative;
+
+	&.active{
+		.m-select-tt{
+			background-image: url(../img/pbl/m-select-up.png);
+		}
+		.m-select-ct{
+			display: block;
+		}
+	}
+
+	&-tt{
+		color: $cl-aux;
+
+		@include text-overflow();
+
+		background: url(../img/pbl/m-select-down.png) right center no-repeat;
+
+		cursor: pointer;
+		user-select: none;
+
+		&.chosen{
+			color: $cl-main;
+		}
+
+		&.hint{
+			color: $cl-yl;
+		}
+	}
+
+	&-ct{
+		width: auto;
+		height: auto;
+
+		color: #666;
+
+		background-color: $cl-bg;
+		outline: none;
+
+		overflow-y: auto;
+
+		position: absolute;
+
+		display: none;
+		&.active{
+			display: block;
+		}
+
+		&:focus{
+			outline: none;
+		}
+
+		ul{
+			padding: 10px 10px 20px 10px;
+
+			overflow-y: auto;
+			outline: none;
+
+			@include clearfix();
+
+			li{
+				@include text-overflow();
+				cursor: pointer;
+
+				&:hover{
+					color: $cl-yl;
+				}
+
+				&.current{
+					color: $cl-yl;
+				}
+			}
+		}
+	}
+}

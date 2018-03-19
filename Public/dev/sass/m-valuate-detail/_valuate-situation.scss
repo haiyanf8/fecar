@@ -1,0 +1,381 @@
+.situation{
+    
+    &-price{
+        margin-top: 10px;
+        
+        @include clearfix();
+
+        .access{
+            float: left;
+        }
+        
+        em{
+            font-style: normal;
+            
+            &.money{
+                color: $cl-yl;
+                font-size: 36px;
+            }
+
+            &.line{
+                width: 15px;
+                height: 30px;
+                padding: 0 5px;
+
+                line-height: 30px;
+                
+                font-size: 35px;
+                color: $cl-yl;
+                text-align: center;
+            }
+
+            &.unit{
+                color: $cl-yl;
+            }
+        }
+
+        .from{
+            padding-top: 20px;
+
+            float: right;
+
+            width: 137px;
+            height: 26px;
+        }
+    }
+
+    &-desc{
+
+        .ct{
+           font-size: 14px;
+           color: #353535;
+
+           padding: 20px 0 17px 0; 
+        }
+        
+        .detail{
+            padding: 12px 0 10px 0;
+            width: 900px;
+            height: 121px;
+
+            background: url("../img/valuate-detail/situation-line.png") no-repeat 0 0;
+
+            .item{
+                float: left;
+                padding: 0 34px;
+               
+                h3{
+                    position: relative;
+
+                    padding-left: 35px;
+                    margin-bottom: 5px;
+
+                    font-size: 18px;
+                    color: #555;
+                    
+                    .icon{
+                        position: absolute;
+                        top: 2px;
+                        left: 0;
+                        
+                        width: 28px;
+                        height: 22px;
+
+                        &.appearance{
+                            background: url(../img/valuate-detail/valuate-detail-appearance.png) no-repeat 0 0;
+                        }
+
+                        &.case{
+                            background: url(../img/valuate-detail/valuate-detail-case.png) no-repeat 0 0;
+                        }
+
+                        &.upholstery{
+                            background: url(../img/valuate-detail/valuate-detail-upholstery.png) no-repeat 0 0;
+                        }
+
+                        &.other{
+                            background: url(../img/valuate-detail/valuate-detail-other.png) no-repeat 0 0;
+                        }
+                    }
+                }
+
+                p{
+                    position: relative;
+                    color: #999;
+
+                    padding-left: 10px;
+
+                    line-height: 30px;
+
+                    font-size: 14px;
+
+                    &::before{
+                        position: absolute;
+                        top: 14px;
+                        left: 0;
+
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+
+                        border-radius: 50%;
+                        background: #999;
+                    }
+                }
+            }
+        }
+    }
+
+    &-sale{
+
+        width: 900px;
+        padding-top: 53px;
+
+        .item{
+            position: relative;
+
+            float: left;
+            width: 246px;
+            
+            .icon{
+                width: 57px;
+                height: 57px;
+
+                float: left;
+
+                display: inline-block;
+
+                &.tel{
+                    background: url(../img/valuate-detail/valuate-detail-tel.png) no-repeat 0 0;
+                }
+
+                &.door{
+                    background: url(../img/valuate-detail/valuate-detail-door.png) no-repeat 0 0;
+                }
+
+                &.auction{
+                    background: url(../img/valuate-detail/valuate-detail-auction.png) no-repeat 0 0;
+                }
+
+                &.deal{
+                    background: url(../img/valuate-detail/valuate-detail-deal.png) no-repeat 0 0;
+                }
+            }
+
+            .title{
+                float: left;
+                padding-left: 17px;
+                padding-top: 5px;
+
+                .tt{
+                    width: 87px;
+                    font-size: 18px;
+                    color: #555;
+                }
+
+                .ct{
+                    padding-top: 5px;
+                    color: #666;
+                    text-align: center;
+                }
+            }
+
+            &::after{
+                position: absolute;
+                top: 15px;
+                right: 30px;
+                content: "";
+                
+                width: 24px;
+                height: 21px;
+
+                display: inline-block;
+
+                background: url(../img/valuate-detail/valuate-detail-arrow.png) no-repeat right 0;
+            }
+
+            &.diff{
+                width: 162px;
+                &::after{
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+.situation-know{
+    margin-top: 30px;
+
+    .txt{
+        padding-top: 5px;
+        float: left;
+
+        width: 113px;
+
+        .txt{
+            float: left;
+
+            font-size: 18px;
+            color: #8a8a8a;
+
+            em{
+                font-style: normal;
+
+                &.yl{
+                    color: $cl-yl;
+                }
+            }
+        }
+    }
+
+    .icon{
+        margin: 12px 14px 0 15px;
+
+        float: left;
+    }
+
+    .btn{
+        float: left;
+        span{
+            display: inline-block;
+            
+            padding: 10px 30px;
+    
+            transition: all 400ms ease 0s;
+
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            color: $cl-wt;
+            font-weight: bold;
+
+            background: $cl-yl;
+            border-radius: 5px;
+            box-shadow: 4px 4px 0 #e9cabf;
+
+            &:hover{
+                transform: scale3d(1.05,1.05,1);
+            }
+        }
+
+        
+    }
+}
+
+.ourfeature{
+    clear: both;
+
+    h2{
+        margin-bottom: 20px;
+        padding-top: 42px;
+
+        font-size: 16px;
+        color: #707070;
+        height: 45px;
+        background: url(../img/valuate-detail/ourfeature-title.png) no-repeat 0 bottom;
+    }
+
+    .item{
+        width: 225px;
+        float: left;
+
+        .img{
+            float: left;
+
+            width: 80px;
+            height: 71px;
+        }
+
+        .txt{    
+            float: left;
+            padding-top: 12px;
+        
+            width: 140px;
+            color: #999;
+            font-size: 14px;
+
+            p{
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.valuate-salecar{
+
+    &-wrap{
+        background-image: url("../img/pbl/tspr-50.png");
+        background-repeat: repeat;
+        display: none;
+      
+        left: 0;
+        position: fixed;
+        top: 0;
+        z-index: 70;
+
+        width: 100%;
+        height: 100%;
+
+        &.active{
+            display: block;
+        }
+    }
+
+
+    &-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding-left: 72px;
+
+        background: url(../img/valuate-detail/valueate-salecar-box.png) no-repeat 0 bottom;
+        border-radius: 0;
+
+        width: 438px;
+        height: 350px;
+   
+        margin-left: -255px;
+        margin-top: -176px;
+
+        &-close{
+            width: 43px;
+            height: 43px;
+
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            
+            background: url(../img/valuate-detail/valueate-salecar-close.png) no-repeat 0 bottom;
+        }
+
+        &-small{
+            padding-top: 154px;
+
+            &-btn{
+                margin-top: 78px;
+
+                width: 270px;
+            
+                span{
+                    margin: 0 auto;
+                    display: block;
+                    cursor: pointer;
+
+                    width: 130px;
+                    height: 40px;
+                }
+            }
+        }
+
+        input{
+            padding: 12px 0 10px 8px;
+
+            width: 270px;
+            line-height: 12px;
+     
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+}

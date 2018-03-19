@@ -1,0 +1,149 @@
+<div class="checkup">
+	<div class="checkup-testman">
+		<if condition="$carDetailInfo['car_area'] eq '350200'">
+			<img src="__PUBLIC__/dev/img/source/surveyor/xm.jpg" alt="">
+			<p class="ct">马腾辉</p>
+		<elseif condition="$carDetailInfo['car_area'] eq '310100'"/>
+			<img src="__PUBLIC__/dev/img/source/surveyor/sh.jpg" alt="">
+			<p class="ct">张家伟</p>
+		<else/>
+			<img src="__PUBLIC__/dev/img/source/surveyor/fz.jpg" alt="">
+			<p class="ct">刘勋麒</p>
+		</if>
+		<p class="tt">资深二手车检测师</p>
+	</div>
+	
+	<ul class="checkup-situation js-checkup-box">
+		
+		<li class="item">
+			<div class="ct"><i class="icon i-appearance"></i><em clsss="appearance-ps">
+			<if condition="$report['外观'] == '正常'">
+				<i class="flag normal"></i>
+			<elseif condition="$report['外观'] == '正常。'" />
+				<i class="flag normal"></i>
+			<elseif condition="$report['外观'] == ''" />
+				<i class="flag normal"></i>
+			<else />
+				<i class="flag bad"></i>
+			</if>
+			</em></div>
+			<div class="title">外观</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['外观']?mb_substr($report['外观'],0,50,'utf-8'):'正常'}
+				<if condition="mb_strlen($report['外观'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+							<i class='i-down'></i>
+								<div class='more-box'><i class='i-tringle'></i>
+								<div class='more-box-ct'>{$report['外观']}</div>
+							</div>
+						</div>
+				</if>
+
+				</span>
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-interior"></i><em class="interior-ps">
+			<if condition="$report['内饰'] == '正常'">
+				<i class="flag normal"></i>
+			<elseif condition="$report['内饰'] == '正常。'" />
+				<i class="flag normal"></i>
+			<elseif condition="$report['内饰'] == ''" />
+				<i class="flag normal"></i>
+			<else />
+				<i class="flag bad"></i>
+			</if>
+			</em></div>
+			<div class="title">内饰</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['内饰']?mb_substr($report['内饰'],0,50,'utf-8'):'正常'}
+				<if condition="mb_strlen($report['内饰'],'utf-8') gt 50">
+					<div class="checkup-overflow">
+						<i class='i-down'></i>
+						<div class='more-box'>
+							<i class='i-tringle'></i>
+							<div class='more-box-ct'>{$report['内饰']}</div>
+						</div>
+					</div>
+				</if>
+				</span>			
+			</div>
+		</li>
+
+
+		<li class="item">
+			<div class="ct"><i class="icon i-carcondition"></i><em class="carcondition-ps ">
+				<if condition="$report['结构'] == '正常'">
+					<i class="flag normal"></i>
+				<elseif condition="$report['结构'] == '正常。'" />
+					<i class="flag normal"></i>
+				<elseif condition="$report['结构'] == ''" />
+					<i class="flag normal"></i>
+				<else />
+					<i class="flag bad"></i>
+				</if>
+			</em></div>
+			<div class="title">结构</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['结构']?mb_substr($report['结构'],0,50,'utf-8'):'正常'}
+					<if condition="mb_strlen($report['结构'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['结构']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-wcondition"></i><em class="wcondition-ps">
+				<if condition="$report['工况'] == '正常'">
+					<i class="flag normal"></i>
+				<elseif condition="$report['工况'] == '正常。'" />
+					<i class="flag normal"></i>
+				<elseif condition="$report['工况'] == ''" />
+					<i class="flag normal"></i>
+				<else />
+					<i class="flag bad"></i>
+				</if>
+			</em></div>
+			<div class="title">工况</div>
+			<div class="tt">
+				<span class="js-checkup-text">{$report['工况']?mb_substr($report['工况'],0,50,'utf-8'):'正常'}
+					<if condition="mb_strlen($report['工况'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['工况']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+
+		<li class="item">
+			<div class="ct"><i class="icon i-note"></i></div>
+			<div class="title">备注</div>
+			<div class="tt js-one-word">
+				<span class="js-checkup-text">{$report['备注']?mb_substr($report['备注'],0,50,'utf-8'):'无'}</span>
+					<if condition="mb_strlen($report['备注'],'utf-8') gt 50">
+						<div class="checkup-overflow">
+								<i class='i-down'></i>
+								<div class='more-box'>
+									<i class='i-tringle'></i>
+									<div class='more-box-ct'>{$report['备注']}</div>
+								</div>
+						</div>
+					</if>
+				</span>	
+			</div>
+		</li>
+	</ul>
+</div>

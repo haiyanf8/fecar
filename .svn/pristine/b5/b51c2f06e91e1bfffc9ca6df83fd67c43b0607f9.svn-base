@@ -1,0 +1,220 @@
+.wrapper{
+    width: 100%;
+    height: 60px;
+    
+    background: $cl-yl;
+
+    .header{
+        width: 1200px;
+        height: 60px;
+
+        margin: 0 auto;
+
+        .logo{
+            float: left;
+            padding-top: 7px;
+
+            a{
+                display: block;
+                
+                img{
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        .local{
+            position: relative;
+            top: 13px;
+            left: 30px;
+            z-index: 20;
+
+            float: left;
+
+            font-size: 14px;
+        
+            cursor: pointer;
+
+            &-bg{
+                position: absolute;
+                top: 1px;
+                z-index: 1;
+
+                width: 76px;
+                height: 30px;
+                line-height: 30px;
+
+                background: $cl-bg;
+                opacity: 0.3;
+                filter: alpha(opacity=30);
+                border-radius: 38px;
+
+            }
+
+            &-area{
+                position: absolute;
+                z-index: 2;
+
+                //padding: 0 10px;
+
+                width: 66px;
+                height: 50px;
+
+                line-height: 30px;
+
+                color: $cl-wt;
+
+                .local-img{
+                    display: block;
+                    float: left;
+
+                    width: 18px;
+                    height: 20px;
+
+                    margin-top: 6px;
+
+                    background: url(../img/pbl/new-local.png) center center no-repeat;
+                }
+                .local-txt{
+                    float: left;
+                    margin-left: 3px;
+        
+                    font-size: 16px;
+                }
+            }
+
+            &-box{
+                position: absolute;
+                top: 33px;
+                z-index: 50;
+
+                display: none;
+
+                &-arrow{
+                    margin-left: 27px;
+                    margin-top: 6px;
+                    display: block;
+                    
+                    width: 0;
+                    height: 0;
+                    
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid #fff;
+                }
+
+                &-citys{
+                    padding: 10px 0 5px 15px;
+                    width: 190px;
+
+                    border: 1px solid #dfdfdf;
+                    border-top: none;
+                    border-radius: 0 0 3px 3px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+                    background: $cl-bg;
+
+                    @include clearfix();
+
+                    >.item{
+                        width: 48px;
+                        height: 23px;
+                        line-height: 23px;
+
+                        text-align: center;
+                        float: left;
+
+                        color: $cl-main;
+                        
+                        margin: 0 15px 10px 0;
+            
+                        a{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            
+                            &:hover{
+                                background-color: $cl-yl;
+                                color: $cl-wt;
+                            }
+                        }
+
+                        &.current{
+                            background-color: $cl-yl;
+                            color: $cl-wt;
+                        }
+
+                    }
+
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover{
+                .local-box{
+                    display: block;
+
+                }
+
+                .local-img{
+                    background: url(../img/pbl/new-local.png) center center no-repeat;
+                }
+            }
+        }
+
+        .nav{
+            float: left;
+            position: relative;
+
+            width: 564px;
+            height: 60px;
+            line-height: 60px;
+
+            margin-left: 276px;
+
+            &-item{
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                .item{
+                    font-size: 20px;
+                    float:left;
+
+                    padding-left: 28px;
+                    padding-right: 28px;
+
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    color: $cl-wt;
+
+                    &:hover{
+                        color: $cl-wt;
+                        background: #ff5900;
+                    }
+
+                    &.current{
+                        color: $cl-wt;
+                        background: #ff5900;
+                    }
+                }
+            }    
+        }
+
+        .tel{
+            padding: 12px 0 0 40px;
+            margin-top: 10px;
+
+            width: 105px;
+            height: 30px;
+            font-size: 14px;
+            color: $cl-wt;
+
+            background: url(../img/pbl/hd-phone.png) no-repeat 0 0;
+            float: right;
+        }
+    }
+}

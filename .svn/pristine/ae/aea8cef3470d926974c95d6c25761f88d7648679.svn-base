@@ -1,0 +1,174 @@
+<?php
+namespace Common\Common\Util;
+
+class CarBrand 
+{
+    protected function getModel($table)
+    {
+        $connection = array(
+                'db_type'    =>   'mysql',
+                'db_host'    =>   '120.27.162.40',
+                'db_user'    =>   'zhaoyang',
+                'db_pwd'     =>   'SnhQ7w9HrCRXsYEJ',
+                'db_port'    =>    3306,
+                'db_name'    =>    'fe_test_online',
+                'db_charset' =>    'utf8',
+        );
+
+        return M('fe_test_online.' . $table, 'fecar_', $connection);
+    }
+
+    /*
+    *取车品牌
+    */
+    public function getBrandList() 
+    {
+        $lyDataM = $this->getModel("ly_data");
+        $lyData = $lyDataM->field('c2')->group('c2')->select();
+
+        foreach ($lyData as &$value) {
+            if ($value['c2'] == "讴歌") {
+                $value['initial'] = 'O';
+            } else {
+                $value['initial'] = $this->getFirstCharter($value['c2']);
+            }   
+        }
+        
+        usort($lyData, function($a, $b) {
+            return ($a['initial'] > $b['initial']);
+        });
+
+        $result = array();
+        $result = $lyData;
+
+        return $result;
+    }
+
+    private function getFirstCharter($str)
+    {
+        if(empty($str)) {
+            return '';
+        }
+
+        $fchar = ord($str{0});
+
+        if($fchar >= ord('A') && $fchar <= ord('z')) {
+            return strtoupper($str{0});
+        } 
+
+        $s1 = iconv('UTF-8', 'gb2312', $str);
+        $s2 = iconv('gb2312', 'UTF-8', $s1);
+        $s = ($s2 == $str) ? $s1 : $str;
+
+        $asc = ord($s{0}) * 256 + ord($s{1}) - 65536;
+        if($asc >= -20319 && $asc <= -20284) {
+            return 'A';
+        }
+        if($asc >= -20283 && $asc <= -19776) {
+            return 'B';
+        }
+        if($asc >= -19775 && $asc <= -19219) {
+            return 'C';
+        }
+        if($asc >= -19218 && $asc <= -18711) {
+            return 'D';
+        }
+        if($asc >= -18710 && $asc <= -18527) {
+            return 'E';
+        }
+        if($asc >= -18526 && $asc <= -18240) {
+            return 'F';
+        }
+        if($asc >= -18239 && $asc <= -17923) {
+            return 'G';
+        }
+        if($asc >= -17922 && $asc <= -17418) {
+            return 'H';
+        }
+        if($asc >= -17417 && $asc <= -16475) {
+            return 'J';
+        }
+        if($asc >= -16474 && $asc <= -16213) {
+            return 'K';
+        }
+        if($asc >= -16212 && $asc <= -15641) {
+            return 'L';
+        }
+        if($asc >= -15640 && $asc <= -15166) {
+            return 'M';
+        }
+        if($asc >= -15165 && $asc <= -14923) {
+            return 'N';
+        }
+        if($asc >= -14922 && $asc <= -14915) {
+            return 'O';
+        }
+        if($asc >= -14914 && $asc <= -14631) {
+            return 'P';
+        }
+        if($asc >= -14630 && $asc <= -14150) {
+            return 'Q';
+        }
+        if($asc >= -14149 && $asc <= -14091) {
+            return 'R';
+        }
+        if($asc >= -14090 && $asc <= -13319) {
+            return 'S';
+        }
+        if($asc >= -13318 && $asc <= -12839) {
+            return 'T';
+        }
+        if($asc >= -12838 && $asc <= -12557) {
+            return 'W';
+        }
+        if($asc >= -12556 && $asc <= -11848) {
+            return 'X';
+        }
+        if($asc >= -11847 && $asc <= -11056) {
+            return 'Y';
+        }
+        if($asc >= -11055 && $asc <= -10247) {
+            return 'Z';
+        }
+
+        return null;
+    }
+
+    public function getCarSeries() 
+    {
+        if (!I('get.c2')) {
+            $this->tFail('参数缺失！');
+        }
+
+        $c2 = I ('get.c2');
+        $data['c2'] = $c2;
+
+        $lyDataM = $this->getModel("ly_data");
+        $lyData = $lyDataM->field('c4')->where($data)->group('c4')->select();
+
+        $result = array();
+        $result = $lyData;
+
+        return $result;
+    }
+
+    public function getCarModel() 
+    {
+        if (!I('get.c2') || !I('get.c4')) {
+            $this->tFail('参数缺失！');
+        }
+
+        $c2 = I ('get.c2');
+        $c4 = I ('get.c4');
+        $data['c2'] = $c2;
+        $data['c4'] = $c4;          
+
+        $lyDataM = $this->getModel("ly_data");
+        $lyData = $lyDataM->field('c5, c6 as year')->where($data)->group('c5')->order('c6')->select();
+
+        $result = array();
+        $result = $lyData;
+
+        return $result;
+    }
+}

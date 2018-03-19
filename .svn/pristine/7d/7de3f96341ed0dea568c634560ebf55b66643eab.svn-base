@@ -1,0 +1,122 @@
+<div class="banner saleguidebg">
+  <div class="main_container">
+      <div class="banner-title">
+          <h2 class="ct">卖车指南</h2>
+          <p class="tt">Sale Guide</p>
+      </div>
+    </div>
+</div>
+
+<div class="main_container m-column">
+  <div class="m-column-tab">
+    <p class="tt">卖车指南</p>
+    <ul class="ct">
+      <if condition="$level == 'top'">
+        <li class="{$action_name=='process'? 'current':''}"><a href="./process.html">卖车流程</a></li>
+        <li class="{$action_name=='introduction'? 'current':''}"><a href="./introduction.html">卖车须知</a></li>
+      <else />
+        <li class="{$action_name=='process'? 'current':''}"><a href="../process.html">卖车流程</a></li>
+        <li class="{$action_name=='introduction'? 'current':''}"><a href="../introduction.html">卖车须知</a></li>
+      </if>
+    </ul>
+  </div>
+
+  <div class="m-column-ct">
+   
+    <p class="tt">卖车须知</p>
+   
+    <div class="notice">
+      
+      <div class="notice-small">
+        <h2>Q1: 朋友e车怎么帮您卖车？</h2>
+        <p>朋友e车是国内首家二手车高价比卖网，每天超过3000专业买家同时为每一辆车出价，为您的爱车比出最高价。同时，朋友e车还免费提供上门检测、手续代办等一站式服务。</p>
+      </div>
+      
+      <div class="notice-small">
+        <h2>Q2: 交易过程中需要哪些费用？</h2>
+        <p>对于个人车主，朋友e车在整个的服务过程中（包括上门检测、在线比价竞拍，手续代办过户等一系列服务）都是免费的。</p>
+      </div>
+
+      <div class="notice-small">
+
+          <h2>Q3: 卖车的流程怎么走？</h2>
+
+          <div class="notice-small-progress">
+            <div class="notice-small-progress-box">
+              <p class="title">1、免费预约卖车</p>
+              <p class="content">您可以线上进行提交卖车需求，客服将第一时间为您服务</p>
+          </div>
+
+
+          <div class="notice-small-progress-box">
+              <p class="title">2、免费上门评估</p>
+              <p class="content">专业检测师上门为您的车辆进行全方位检测评估，真正反映价值</p>
+          </div>
+
+
+          <div class="notice-small-progress-box">
+              <p class="title">3、全国买家竞拍</p>
+              <p class="content">超过3000专业买家线上同时出价竞拍，确保您的车辆能卖出最高价</p>
+          </div>
+
+
+          <div class="notice-small-progress-box">
+              <p class="title">4、极速安全交易</p>
+              <p class="content">提供材料核对、资金代管、过户办理等一站式服务，当天车款极速到账</p>
+          </div>
+
+      </div>
+
+
+      <div class="notice-small">
+        <h2>Q4: 如果对竞价价格不满意怎么办？</h2>
+        <p>当您收到朋友e车的竞拍报价后，如果对价格不满意，请您拨打朋友e车客户服务热线400-9907-999反映您的疑虑，您也可以申请重新竞拍。</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q5: 如何卖价更高？</h2>
+        <p>买家比较看重漆面保养，划痕，保养情况等，因此您在卖车前最好能提前修复外观(可走保险)，保证车的清洁，并且出示4S店的保养记录，这样可以相对卖个高价。</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q6: 确认价格后如何成交？</h2>
+        <p>当您接受朋友e车比价竞拍的最高价格后，客服人员会与您预约成交的时间，成交手续在朋友e车检测中心门店办理，朋友e车提供全程免费代办过户等相关手续。如您对地址或前往路线有任何问题，可随时拨打朋友e车客户服务热线400-9907-999，我们期待您的光临！</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q7: 多久能收到车款？</h2>
+        <p>检测完一天内您将收到报价，如您同意成交，在签署交易协议后，您当场可收到预付款，剩余50%款项过户完成后即刻收取。</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q8: 我需要准备哪些手续材料？</h2>
+        <p>车辆成交所需的证件和手续，主要包括机动车行驶证、居民身份证、保险单、机动车登记证书、车辆购置税完税证明。朋友e车再次提醒您，请您仔细核对《车辆证件及手续材料确认单》。如果您在核对过程中，发现您的手续材料有所缺失，不用担心，朋友e车可以为您提供专业代办。</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q9: 如何保证交易手续的安全性？</h2>
+        <p>为了确保您的车辆交易的安全性，朋友e车会为您的车辆成交提供全程担保服务，委派专人负责客户车辆过户的证件和手续安全，确保您的证件不被非法使用。在交易过程中，如果因为朋友e车或专业买家的原因致使交易过程产生问题，朋友e车先行赔付。</p>
+
+      </div>
+
+      <div class="notice-small">
+        <h2>Q10: 为什么要进行车辆检测？</h2>
+        <p>通过朋友e车的专业检测，还原您的爱车真实车况，便于为您组织公正公平的线上比价竞拍，确保您的爱车不会因为无关紧要或者无中生有的问题，影响车辆竞拍的价格。</p>
+      </div>
+
+      <div class="notice-small">
+        <h2>Q11: 朋友e车车辆检测有哪几种方式？</h2>
+        <p>1、到店检测方式：您可以选择空闲时间，自行到店参与检测，让您感受到五星级的客户服务。</p>
+        <p>2、上门服务方式：朋友e车可根据您的时间，安排专业的检测工程师上门专程为您服务。</p>
+      </div>
+
+       <div class="notice-small">
+        <h2>Q12: 要进行哪些检测，多长时间？</h2>
+        <p>朋友e车自主研发的车辆检测体系（VPQS）能够如实反映车辆真实状况。整个车辆的检测时间大约只需30分钟。此外检测过程中，朋友e车的检测工程师还会与您确认车辆证件与手续材料，确保您的爱车卖出更高价。</p>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+</div>

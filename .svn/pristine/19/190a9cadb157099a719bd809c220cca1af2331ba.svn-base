@@ -1,0 +1,122 @@
+.step{
+    padding: 0 135px;
+    margin: 0 auto;
+
+    width: 916px;
+    
+    @include clearfix();
+
+    &-title{
+        padding-bottom: 68px;
+        padding-top: 63px;
+
+        text-align: center;
+    }
+
+    &-box{
+
+       &-small{
+            clear: both;
+            overflow: hidden;
+
+            margin-bottom: 10px;
+
+            .title{
+                float: left;
+
+                .num{
+                    width: 78px;
+                    height: 58px;
+
+                    display: block;
+
+                    float: left;
+
+                    &.num01{
+                        width: 68px;
+                        background: url(../img/sale/sale-step-01.png) no-repeat left top;        
+                    }
+
+                    &.num02{
+                        background: url(../img/sale/sale-step-02.png) no-repeat left top;        
+                    }
+
+                    &.num03{
+                        background: url(../img/sale/sale-step-03.png) no-repeat left top;        
+                    }
+
+                    &.num04{
+                        background: url(../img/sale/sale-step-04.png) no-repeat left top;        
+                    }
+                }
+                
+                .tt{
+                    float: left;
+                    padding-left: 10px;
+
+                    .en{
+                        font-size: 22px;
+                        color: #fc803f;
+                        font-family: "Arial";
+                    }
+
+                    .ct{
+                        margin-top: -1px;
+
+                        font-size: 26px;
+                        color: #555;
+                    }
+
+                    .info{
+                        padding-top: 5px;
+
+                        font-size: 22px;
+                        color: #a1a1a1;
+                    }
+                }
+            }
+
+            .img{
+                width: 344px;
+                height: 210px;
+
+                img{
+                    display: block;
+                    border-radius: 8px;
+                }
+
+            }
+
+            &.even{
+                
+                .title{
+                    float: left;
+                    padding-top: 52px;
+
+                    width: 462px;
+                }
+
+                .img{
+                    float: right;
+                }
+            }
+
+            &.odd{
+
+                .title{
+                    float: right;
+                    padding-top: 58px;
+                    margin-right: 5px;
+
+                    width: 378px;
+                }
+
+                .img{
+                    float: left;
+                    margin-left: 45px;
+                }
+            }
+        }
+    }
+}
+

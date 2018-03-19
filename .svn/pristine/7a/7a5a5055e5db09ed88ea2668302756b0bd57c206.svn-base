@@ -1,0 +1,373 @@
+.bread-nav {
+  width: 880px;
+  height: 45px;
+  line-height: 45px;
+  color: #333;
+  font-size: 12px;
+}
+.bread-nav .idx {
+  color: #333;
+}
+
+.infodetail {
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 30px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.infodetail-pic {
+  float: left;
+  width: 338px;
+  height: 170px;
+  margin-top: 15px;
+}
+.infodetail-pic img {
+  width: 100%;
+  height: 100%;
+}
+.infodetail-desc {
+  float: right;
+  width: 530px;
+}
+.infodetail-desc .tt {
+  height: 35px;
+  font-size: 26px;
+  color: #3c3c3c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.infodetail-desc .param .item {
+  float: left;
+  padding: 20px 0 10px;
+  width: 132px;
+  text-align: left;
+  border-bottom: 1px solid #dbdbdb;
+}
+.infodetail-desc .param .item .title {
+  height: 20px;
+  line-height: 20px;
+  color: #666;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.infodetail-desc .param .item .content {
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.infodetail-desc .param .item .moreparam {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #808080;
+}
+.infodetail-desc .param .item.diff {
+  border-bottom: none;
+}
+
+.situation-price {
+  margin-top: 10px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.situation-price .access {
+  float: left;
+}
+.situation-price em {
+  font-style: normal;
+}
+.situation-price em.money {
+  color: #ff6b1d;
+  font-size: 36px;
+}
+.situation-price em.line {
+  width: 15px;
+  height: 30px;
+  padding: 0 5px;
+  line-height: 30px;
+  font-size: 35px;
+  color: #ff6b1d;
+  text-align: center;
+}
+.situation-price em.unit {
+  color: #ff6b1d;
+}
+.situation-price .from {
+  padding-top: 20px;
+  float: right;
+  width: 137px;
+  height: 26px;
+}
+.situation-desc .ct {
+  font-size: 14px;
+  color: #353535;
+  padding: 20px 0 17px 0;
+}
+.situation-desc .detail {
+  padding: 12px 0 10px 0;
+  width: 900px;
+  height: 121px;
+  background: url("../img/valuate-detail/situation-line.png") no-repeat 0 0;
+}
+.situation-desc .detail .item {
+  float: left;
+  padding: 0 34px;
+}
+.situation-desc .detail .item h3 {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #555;
+}
+.situation-desc .detail .item h3 .icon {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 28px;
+  height: 22px;
+}
+.situation-desc .detail .item h3 .icon.appearance {
+  background: url(../img/valuate-detail/valuate-detail-appearance.png) no-repeat 0 0;
+}
+.situation-desc .detail .item h3 .icon.case {
+  background: url(../img/valuate-detail/valuate-detail-case.png) no-repeat 0 0;
+}
+.situation-desc .detail .item h3 .icon.upholstery {
+  background: url(../img/valuate-detail/valuate-detail-upholstery.png) no-repeat 0 0;
+}
+.situation-desc .detail .item h3 .icon.other {
+  background: url(../img/valuate-detail/valuate-detail-other.png) no-repeat 0 0;
+}
+.situation-desc .detail .item p {
+  position: relative;
+  color: #999;
+  padding-left: 10px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.situation-desc .detail .item p::before {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #999;
+}
+.situation-sale {
+  width: 900px;
+  padding-top: 53px;
+}
+.situation-sale .item {
+  position: relative;
+  float: left;
+  width: 246px;
+}
+.situation-sale .item .icon {
+  width: 57px;
+  height: 57px;
+  float: left;
+  display: inline-block;
+}
+.situation-sale .item .icon.tel {
+  background: url(../img/valuate-detail/valuate-detail-tel.png) no-repeat 0 0;
+}
+.situation-sale .item .icon.door {
+  background: url(../img/valuate-detail/valuate-detail-door.png) no-repeat 0 0;
+}
+.situation-sale .item .icon.auction {
+  background: url(../img/valuate-detail/valuate-detail-auction.png) no-repeat 0 0;
+}
+.situation-sale .item .icon.deal {
+  background: url(../img/valuate-detail/valuate-detail-deal.png) no-repeat 0 0;
+}
+.situation-sale .item .title {
+  float: left;
+  padding-left: 17px;
+  padding-top: 5px;
+}
+.situation-sale .item .title .tt {
+  width: 87px;
+  font-size: 18px;
+  color: #555;
+}
+.situation-sale .item .title .ct {
+  padding-top: 5px;
+  color: #666;
+  text-align: center;
+}
+.situation-sale .item::after {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  content: "";
+  width: 24px;
+  height: 21px;
+  display: inline-block;
+  background: url(../img/valuate-detail/valuate-detail-arrow.png) no-repeat right 0;
+}
+.situation-sale .item.diff {
+  width: 162px;
+}
+.situation-sale .item.diff::after {
+  background: none;
+}
+
+.situation-know {
+  margin-top: 30px;
+}
+.situation-know .txt {
+  padding-top: 5px;
+  float: left;
+  width: 113px;
+}
+.situation-know .txt .txt {
+  float: left;
+  font-size: 18px;
+  color: #8a8a8a;
+}
+.situation-know .txt .txt em {
+  font-style: normal;
+}
+.situation-know .txt .txt em.yl {
+  color: #ff6b1d;
+}
+.situation-know .icon {
+  margin: 12px 14px 0 15px;
+  float: left;
+}
+.situation-know .btn {
+  float: left;
+}
+.situation-know .btn span {
+  display: inline-block;
+  padding: 10px 30px;
+  -webkit-transition: all 400ms ease 0s;
+          transition: all 400ms ease 0s;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  background: #ff6b1d;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0 #e9cabf;
+}
+.situation-know .btn span:hover {
+  -webkit-transform: scale3d(1.05, 1.05, 1);
+          transform: scale3d(1.05, 1.05, 1);
+}
+
+.ourfeature {
+  clear: both;
+}
+.ourfeature h2 {
+  margin-bottom: 20px;
+  padding-top: 42px;
+  font-size: 16px;
+  color: #707070;
+  height: 45px;
+  background: url(../img/valuate-detail/ourfeature-title.png) no-repeat 0 bottom;
+}
+.ourfeature .item {
+  width: 225px;
+  float: left;
+}
+.ourfeature .item .img {
+  float: left;
+  width: 80px;
+  height: 71px;
+}
+.ourfeature .item .txt {
+  float: left;
+  padding-top: 12px;
+  width: 140px;
+  color: #999;
+  font-size: 14px;
+}
+.ourfeature .item .txt p {
+  padding-left: 10px;
+}
+
+.valuate-salecar-wrap {
+  background-image: url("../img/pbl/tspr-50.png");
+  background-repeat: repeat;
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 70;
+  width: 100%;
+  height: 100%;
+}
+.valuate-salecar-wrap.active {
+  display: block;
+}
+.valuate-salecar-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-left: 72px;
+  background: url(../img/valuate-detail/valueate-salecar-box.png) no-repeat 0 bottom;
+  border-radius: 0;
+  width: 438px;
+  height: 350px;
+  margin-left: -255px;
+  margin-top: -176px;
+}
+.valuate-salecar-box-close {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: url(../img/valuate-detail/valueate-salecar-close.png) no-repeat 0 bottom;
+}
+.valuate-salecar-box-small {
+  padding-top: 154px;
+}
+.valuate-salecar-box-small-btn {
+  margin-top: 78px;
+  width: 270px;
+}
+.valuate-salecar-box-small-btn span {
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  width: 130px;
+  height: 40px;
+}
+.valuate-salecar-box input {
+  padding: 12px 0 10px 8px;
+  width: 270px;
+  line-height: 12px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.content {
+  margin-bottom: 40px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.content .left {
+  width: 900px;
+  float: left;
+}
+.content .right {
+  width: 270px;
+  float: right;
+  margin-top: 28px;
+}
+
+/*# sourceMappingURL=valuate-detail.css.map */

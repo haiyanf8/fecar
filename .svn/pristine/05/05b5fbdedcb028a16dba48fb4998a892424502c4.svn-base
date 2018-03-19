@@ -1,0 +1,356 @@
+.m-paging {
+  margin-top: 22px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  text-align: center;
+  color: #808080;
+  line-height: 0;
+  clear: both;
+}
+.m-paging .wrap {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+  overflow: hidden;
+  _zoom: 1;
+}
+.m-paging-link {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  color: #3c3c3c;
+  line-height: 30px;
+  word-spacing: -6px;
+}
+.m-paging-link a {
+  display: inline-block;
+  width: 28px;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 28px;
+  border: 1px solid #dbdbdb;
+}
+.m-paging-link a.current {
+  color: #ffffff;
+  background-color: #ff6b1d;
+  border-color: #ff6b1d;
+}
+.m-paging-link a.dots {
+  margin-left: 3px;
+  margin-right: 1px;
+  letter-spacing: 5px;
+  border: none;
+}
+.m-paging-link a.end {
+  width: 72px;
+  position: relative;
+}
+.m-paging-link a.end:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  top: 7px;
+}
+.m-paging-link a.end.pre {
+  padding-right: 14px;
+  text-align: right;
+}
+.m-paging-link a.end.pre:after {
+  border-right: 7px solid #808080;
+  left: 12px;
+}
+.m-paging-link a.end.next {
+  padding-left: 14px;
+  text-align: left;
+}
+.m-paging-link a.end.next:after {
+  border-left: 7px solid #808080;
+  right: 12px;
+}
+.m-paging-link a.end.not {
+  color: #ccc;
+}
+.m-paging-link a.end.not:after {
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+}
+.m-paging-total {
+  float: left;
+  margin-left: 8px;
+  line-height: 30px;
+}
+.m-paging form {
+  display: inline-block;
+  margin-left: 40px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.m-paging form span {
+  float: left;
+  line-height: 30px;
+}
+.m-paging form input {
+  float: left;
+  height: 28px;
+  border: 1px solid #dbdbdb;
+  color: inherit;
+  text-align: center;
+}
+.m-paging form input[type="text"] {
+  width: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 28px;
+}
+.m-paging form input[type="text"]:focus {
+  color: #3c3c3c;
+}
+.m-paging form input[type="submit"] {
+  width: 58px;
+  margin-left: 12px;
+  box-sizing: content-box;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.m-paging form input[type="submit"]:hover {
+  color: #3c3c3c;
+}
+
+.article-header {
+  padding: 30px 0;
+  width: 100%;
+  background: #f7f7f7;
+  overflow: hidden;
+  _zoom: 1;
+}
+.article-header-pic {
+  width: 1200px;
+  height: 417px;
+  margin: 0 auto;
+}
+.article-header-pic .left {
+  position: relative;
+  float: left;
+  width: 734px;
+  height: 417px;
+}
+.article-header-pic .left ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.article-header-pic .left ul .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 734px;
+  height: 417px;
+  opacity: 0;
+  float: left;
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+}
+.article-header-pic .left ul .item.active {
+  opacity: 1;
+  top: 0;
+}
+.article-header-pic .left ul .item .img {
+  position: absolute;
+  z-index: 1;
+  width: 734px;
+  height: 417px;
+}
+.article-header-pic .left ul .item .txt {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  overflow: hidden;
+  padding: 22px 25px 15px;
+  width: 684px;
+  height: 27px;
+  font-size: 24px;
+  color: #ffffff;
+  background: url(../img/pbl/tspr-50.png);
+  -webkit-transition: all 1s ease 0s;
+          transition: all 1s ease 0s;
+}
+.article-header-pic .left ul .item .txt .tt {
+  width: 685px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-header-pic .left ul .item .txt .ct {
+  padding-top: 15px;
+  width: 678px;
+  height: 35px;
+  color: #ffffff;
+  font-size: 12px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.article-header-pic .left ul .item:hover .txt {
+  height: 85px;
+}
+.article-header-pic .left .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  z-index: 3;
+}
+.article-header-pic .left .btn a {
+  margin-right: 5px;
+  width: 20px;
+  height: 3px;
+  display: inline-block;
+  background: #666;
+  cursor: pointer;
+}
+.article-header-pic .left .btn a.current {
+  background: #ffffff;
+}
+.article-header-pic .right {
+  float: right;
+  width: 437px;
+}
+.article-header-pic .right .top {
+  position: relative;
+  width: 437px;
+  height: 198px;
+}
+.article-header-pic .right .top a .img {
+  position: absolute;
+  z-index: 1;
+  width: 437px;
+  height: 198px;
+}
+.article-header-pic .right .top a .txt {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 25px;
+  width: 387px;
+  font-size: 18px;
+  color: #ececec;
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+  background: url(../img/pbl/tspr-50.png);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-header-pic .right .top a .txt .tt {
+  width: 387px;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-header-pic .right .top a:hover .tt {
+  color: #ffffff;
+}
+.article-header-pic .right .top.diff {
+  margin-top: 21px;
+}
+
+.article-list {
+  width: 880px;
+  margin-top: 20px;
+}
+.article-list-nav {
+  height: 48px;
+}
+.article-list-nav .item {
+  float: left;
+  margin-right: 25px;
+  width: 84px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 20px;
+  color: #3c3c3c;
+  cursor: pointer;
+}
+.article-list-nav .item:hover {
+  color: #ff6b1d;
+  border-bottom: none;
+}
+.article-list-nav .item.current {
+  color: #ff6b1d;
+  border-bottom: 2px solid #ff6b1d;
+}
+.article-list-content .item {
+  padding: 30px 0;
+  height: 182px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.article-list-content .item a {
+  display: block;
+}
+.article-list-content .item a:hover {
+  color: #ff6b1d;
+}
+.article-list-content .item .img {
+  width: 242px;
+  height: 182px;
+  float: left;
+}
+.article-list-content .item .txt {
+  float: right;
+  width: 610px;
+  height: 182px;
+}
+.article-list-content .item .txt .tt {
+  height: 30px;
+  line-height: 30px;
+  font-size: 22px;
+  color: #3c3c3c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-list-content .item .txt .info {
+  padding: 16px 0 25px 0;
+  font-size: 14px;
+  color: #777;
+}
+.article-list-content .item .txt .info em {
+  font-style: normal;
+}
+.article-list-content .item .txt .info .hit {
+  padding-left: 116px;
+}
+.article-list-content .item .txt .desc {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.aside-ad {
+  margin-top: 10px;
+  overflow: hidden;
+  _zoom: 1;
+}
+
+.content {
+  margin-bottom: 40px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.content .left {
+  float: left;
+}
+.content .right {
+  width: 245px;
+  float: right;
+  margin-top: 28px;
+}
+
+/*# sourceMappingURL=article.css.map */

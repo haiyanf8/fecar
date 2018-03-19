@@ -1,0 +1,19 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class ValuateappointModel extends Model
+{
+    protected $connection = 'DB_CONFIG2';
+    protected $tablePrefix = "fecar_";
+
+    public function getRecords($where, $field, $order, $limit)
+    {
+        return $this->where($where)->field($field)->order($order)->limit($limit)->select();
+    }
+
+    public function insertRecords($data)
+    {
+        return $this->add($data);
+    }
+}

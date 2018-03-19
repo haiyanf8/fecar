@@ -1,0 +1,14 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class ValuateModel extends Model
+{
+    protected $connection = 'DB_CONFIG2';
+    protected $tablePrefix = "fecar_";
+
+    public function getCount()
+    {
+        return $this->field('`count`')->select();
+    }
+}

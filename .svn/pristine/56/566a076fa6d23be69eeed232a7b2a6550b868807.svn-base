@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <div class="header">
+        <h1 class="logo">
+            <if condition="$level == 'top'">
+                <a href="./">
+            <else />
+                <a href="../">
+            </if>
+                <img src="__PUBLIC__/dev/img/source/pbl/logo.png" />
+            </a>
+        </h1>
+
+        <div class="local">
+            <div class="local-area">
+                <i class="local-img"></i>
+                <p class="local-txt">
+                    <span class="js-hd-city">{:session('opencity')}</span>
+                </p>
+            </div>
+            
+            <div class="local-box">
+                <div class="local-box-arrow"></div>
+                <ul class="local-box-citys">
+                	<if condition="$param['page']">
+                		<li class="{:session('opencity') == '福州' ? 'current' : ''} item"><a href="?opencity=fuzhou{$param['page']}">福州</a></li>
+                   		<li class="{:session('opencity') == '厦门' ? 'current' : ''} item"><a href="?opencity=xiamen{$param['page']}">厦门</a></li>
+                   		<li class="{:session('opencity') == '上海' ? 'current' : ''} item"><a href="?opencity=shanghai{$param['page']}">上海</a></li>
+                   		<li class="{:session('opencity') == '苏州' ? 'current' : ''} item"><a href="?opencity=suzhou{$param['page']}">苏州</a></li>
+                	<elseif condition="$action_name eq 'valuate' "/>
+                		<li class="{:session('opencity') == '福州' ? 'current' : ''} item"><a href="?opencity=fuzhou&{$queryString}">福州</a></li>
+                   		<li class="{:session('opencity') == '厦门' ? 'current' : ''} item"><a href="?opencity=xiamen&{$queryString}">厦门</a></li>
+                   		<li class="{:session('opencity') == '上海' ? 'current' : ''} item"><a href="?opencity=shanghai&{$queryString}">上海</a></li>
+                   		<li class="{:session('opencity') == '苏州' ? 'current' : ''} item"><a href="?opencity=suzhou&{$queryString}">苏州</a></li>
+                	<else/>
+                		<li class="{:session('opencity') == '福州' ? 'current' : ''} item"><a href="?opencity=fuzhou">福州</a></li>
+                   		<li class="{:session('opencity') == '厦门' ? 'current' : ''} item"><a href="?opencity=xiamen">厦门</a></li>
+                   		<li class="{:session('opencity') == '上海' ? 'current' : ''} item"><a href="?opencity=shanghai">上海</a></li>
+                   		<li class="{:session('opencity') == '苏州' ? 'current' : ''} item"><a href="?opencity=suzhou">苏州</a></li>
+                	</if>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav-item">
+                <if condition="$level == 'top'">
+                    <a href="./" class="item">首页</a>
+                    <a href="./sale.html" class="item {$action_name=='sale'? 'current':''}">卖车</a>
+                    <a href="./valuate-index.html" class="item {$action_name=='valuate'? 'current':''}">估价</a>
+                    <a href="./history.html" class="item {$action_name=='history'? 'current':''}">竞拍历史</a>
+                    <a href="./store-index.html" class="item {$action_name=='store'? 'current':''}">服务网点</a>
+                <else />
+                    <a href="../" class="item">首页</a>
+                    <a href="../sale.html" class="item {$action_name=='sale'? 'current':''}">卖车</a>
+                    <a href="../valuate.html" class="item {$action_name=='valuate'? 'current':''}">估价</a>
+                    <a href="../history.html" class="item {$action_name=='history'? 'current':''}">竞拍历史</a>
+                    <a href="../store-index.html" class="item {$action_name=='store'? 'current':''}">服务网点</a>
+                </if>
+            </div>
+        </div>
+
+        <div class="tel">
+         400-9907-999
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+
+
+.overview-pic-big{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 80;
+
+    background-color: #000;
+
+//    background-repeat: repeat;
+//    background-image: url("../img/pbl/tspr-50.png");
+
+    display: none;
+
+    &.active{
+        display: block;
+    }
+
+    .slide-box{
+        width: 1200px;
+        height: 580px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin-top: -290px;
+        margin-left: -600px;
+
+        .slide-box-img{
+            width: 100%;
+            height: 100%;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            li{
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                transition: all 1s ease 0s;
+
+                opacity: 0;
+                //IE6-IE8
+                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+
+                &.active{
+                    z-index: 5;
+
+                    opacity: 1;
+                    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                }
+
+                >img{
+                    height: 100%;
+                }
+            }
+        }
+
+        .slide-box-btn{
+            width: 73px;
+            height: 148px;
+
+            position: absolute;
+            top: 290px - 74;
+
+            z-index: 82;
+
+            background-repeat: no-repeat;
+            background-position: center;
+
+            cursor: pointer;
+
+            &.prev{
+                left: 0;
+                background-image: url(../img/auction-detail/slide-pic-big-prev.png);
+            }
+
+            &.next{
+                right: 0;
+                background-image: url(../img/auction-detail/slide-pic-big-next.png);
+            }
+        }
+
+        .close{
+            width: 37px;
+            height: 37px;
+
+            position: absolute;
+            top: -52px;
+            right: 0;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../img/auction-detail/close-big.png");
+
+            cursor: pointer;
+        }
+    }
+}

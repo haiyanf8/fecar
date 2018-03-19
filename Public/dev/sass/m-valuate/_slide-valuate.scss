@@ -1,0 +1,585 @@
+.slide{
+    width: 100%;
+    height: 437px;
+
+    position: relative;
+    z-index: 1;
+
+	background: url(../img/valuate/valuate-bg.jpg) center center no-repeat;
+
+	.l-times{
+		position: absolute;
+		top: 234px;
+		left: 50%;
+
+		margin-left: -130px;
+
+		font-size: 14px;
+		color: $cl-wt;
+
+		.tt{
+			line-height: 22px;
+            padding-bottom: 5px;
+		}
+
+		.ct{
+			height: 65px;
+
+			line-height: 55px;
+			text-align: left;
+			word-spacing: -6px;
+			white-space: nowrap;
+
+			.num{
+                padding-left: 12px;
+				display: inline-block;
+				height: 65px;
+
+				font-size: 40px;
+			}
+
+			.comma{
+				line-height: 86px;
+			}
+            .commaspace{
+                width: 56px;
+            }
+		}
+
+	}
+
+
+    .assess{
+        width: 300px;
+        height: 340px;
+
+		padding-top: 37px;
+        padding-left: 33px;
+        padding-right: 33px;
+
+        position: absolute;
+        top: 30px;
+        left: 50%;
+		margin-left: -600px;
+
+        z-index: 10;
+
+        background-color: $cl-bg;
+
+		.mod{
+            margin-bottom: 12px;
+
+            border: 1px solid #e5e5e5;
+
+            position: relative;
+
+            border-radius: 4px;
+
+			&--model{
+				z-index: 30;
+			}
+            &--date{
+                z-index: 25;
+            }
+			&--city{
+				z-index: 20;
+			}
+
+			&.active{
+				.tt{
+					background-image: url(../img/valuate/slide-select-up.png);
+				}
+				.ct{
+					display: block;
+				}
+			}
+
+            .tt{
+                height: 48px;
+
+				padding-right: 30px;
+
+                font-size: 16px;
+                text-indent: 20px;
+                line-height: 48px;
+                color: #999;
+
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+                background: url(../img/valuate/slide-select-down.png) 270px center no-repeat;
+
+                cursor: pointer;
+				user-select: none;
+
+                &.chosen{
+                    color: $cl-main;
+                }
+
+				&.hint{
+					color: $cl-yl;
+				}
+            }
+
+            .ct{
+                width: auto;
+				height: auto;
+
+				color: #808080;
+
+                background-color: $cl-bg;
+				outline: none;
+
+                position: absolute;
+                top: 48px;
+                left: -1px;
+
+                display: none;
+
+				&--model{
+					// width: 298px;
+					height: 440px;
+					white-space: nowrap;
+					word-spacing: -6px;
+
+					background-color: transparent;
+
+					.ct-wrap{
+						height: 440px;
+
+						word-spacing: 0;
+
+						outline: none;
+						border: 1px solid #e5e5e5;
+						background-color: $cl-bg;
+
+						display: none;
+
+						&.active{
+							display: block;
+						}
+
+						&--brand{
+							&.active{
+								display: block;
+							}
+
+							width: 210px;
+
+							.ct-wrap-tt{
+								background: none;
+							}
+
+							.letter{
+								width: 46px;
+
+								font-size: 12px;
+								line-height: 18px;
+
+								li{
+									width: 18px;
+
+									margin-left: 10px;
+
+									text-align: center;
+
+									cursor: pointer;
+
+									&:hover{
+										color: $cl-wt;
+										background-color: $cl-og;
+									}
+								}
+							}
+
+							.item{
+								float: left;
+								width: 210px - 46;
+								height: 440px - 36;
+
+								position: absolute;
+								top: 36px;
+								left: 46px;
+
+								overflow-y: auto;
+							}
+						}
+
+						&--series{
+							&.active{
+								display: block;
+							}
+
+							width: 210px;
+
+							position: absolute;
+							top: 0;
+							left: 210px;
+							z-index: 5;
+						}
+
+						&--model{
+							&.active{
+								display: inline-block;
+							}
+
+							width: 298px;
+
+							position: absolute;
+							top: 0;
+							left: 420px;
+							z-index: 10;
+						}
+
+						&-tt{
+							width: 100%;
+							height: 36px;
+
+							font-size: 14px;
+							color: $cl-yl;
+							line-height: 36px;
+							text-align: center;
+						}
+
+						&-list{
+							height: 440px - 36;
+							overflow-x: hidden;
+							overflow-y: auto;
+						}
+
+						.group{
+							width: 100%;
+
+                            // margin-bottom: 15px;
+
+                            white-space: nowrap;
+
+							.init{
+								width: 100%;
+								height: 24px;
+
+								font-size: 14px;
+								text-align: center;
+								color: $cl-aux;
+								line-height: 24px;
+
+								background-color: $cl-bd;
+							}
+
+							.list{
+								font-size: 12px;
+								line-height: 22px;
+								text-indent: 8px;
+
+								li{
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									cursor: pointer;
+
+									&:hover{
+                                        color: $cl-yl;
+                                    }
+
+									&.current{
+										color: $cl-yl;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&--date{
+					white-space: nowrap;
+					word-spacing: -6px;
+
+					.ct-wrap{
+						height: 317px;
+
+						word-spacing: 0;
+
+						overflow-y: auto;
+						outline: none;
+						border: 1px solid #e5e5e5;
+						background-color: $cl-bg;
+
+						display: none;
+
+						&.active{
+							display: block;
+						}
+
+						&--year{
+							width: 149px;
+						}
+
+						&--month{
+							width: 149px;
+
+							position: absolute;
+							top: 0;
+							left: 149px;
+							z-index: 5;
+						}
+
+						&-tt{
+							width: 100%;
+							height: 36px;
+
+							font-size: 16px;
+							color: $cl-yl;
+							line-height: 36px;
+							text-align: center;
+						}
+
+						&-list{
+							height: 317px - 36;
+
+							font-size: 14px;
+							line-height: 23px;
+							text-indent: 8px;
+
+							overflow-y: auto;
+
+							li{
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+
+								cursor: pointer;
+
+								&:hover{
+                                    color: $cl-yl;
+                                }
+
+								&.current{
+									color: $cl-yl;
+								}
+							}
+						}
+
+					}
+				}
+
+				&--city{
+					width: 298px;
+					height: 285px;
+					white-space: nowrap;
+					word-spacing: -6px;
+
+					background-color: transparent;
+
+					.ct-wrap{
+						height: 285px;
+						width: 100%;
+
+						word-spacing: 0;
+
+						outline: none;
+						border: 1px solid #e5e5e5;
+						background-color: $cl-bg;
+
+						display: none;
+
+						&.active{
+							display: inline-block;
+						}
+
+						&-list{
+							height: 285px - 15;
+							padding-top: 15px;
+							overflow-y: auto;
+						}
+
+						.group{
+							width: 100%;
+
+                            margin-bottom: 11px;
+
+							font-size: 22px;
+                            white-space: nowrap;
+
+							@include clearfix();
+
+							.init{
+								float: left;
+								width: 50px;
+
+								font-size: 12px;
+								color: $cl-og;
+								text-indent: 14px;
+								line-height: 22px;
+							}
+
+							.list{
+								overflow: hidden;
+
+								font-size: 12px;
+								line-height: 22px;
+
+								li{
+									float: left;
+
+									margin-left: 10px;
+									margin-right: 10px;
+
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+
+									cursor: pointer;
+
+									&:hover{
+                                        color: $cl-yl;
+                                    }
+
+									&.current{
+										color: $cl-yl;
+									}
+								}
+							}
+						}
+					}
+
+				}
+            }
+
+            .ipt{
+                width: 200px;
+                height: 24px;
+
+                padding: 12px 0 12px 20px;
+
+                font-size: 16px;
+                line-height: 24px;
+
+                color: $cl-main;
+                border: none;
+                outline: none;
+
+				::placeholder{
+					color: #999;
+				}
+            }
+
+			.mileage-unit{
+				display: block;
+
+				width: 60px;
+				height: 48px;
+
+				font-size: 16px;
+				text-align: center;
+				line-height: 48px;
+
+				position: absolute;
+				top: 0;
+				right: 16px;
+			}
+        }
+
+        .valuate-btn{
+            display: block;
+            width: 100%;
+            height: 50px;
+
+            margin-top: 22px;
+
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+            color: $cl-wt;
+
+            background-color: $cl-yl;
+
+            cursor: pointer;
+            user-select: none;
+
+            transition: all 0.5s ease 0s;
+            border-radius: 3px;
+
+            &:hover{
+                background: #ff5900;
+            }
+        }
+    }
+
+}
+
+
+.assessnewswrap{
+    width: 100%;
+
+    background: #fff;
+}
+
+.mt{
+
+    .comma{
+        float: left;
+        width: 50px;
+        padding-top: 45px;
+    }
+
+    &-number{
+
+        &-box{
+            float: left;
+
+            padding-left: 5px;
+            width: 378px;
+            height: 74px;
+            line-height: 74px;
+            
+            display: inline-block;
+            vertical-align: top;
+            overflow: hidden; 
+
+            background: url(../img/valuate/times-num-bg.png) 0 0 no-repeat;
+        }
+
+        &-animate{
+
+            position: relative;
+            top: 0;
+            float: left;
+            text-align: center;
+            color: #1a1a1a;
+            
+            width: 378px;
+            height: 65px;
+            overflow: hidden;
+
+            &-dot{
+                float: left; 
+            }
+
+            &-span{
+                float: left;
+            }
+
+            &-dom{
+                position: relative;
+                top: 0;
+                
+                float: left;
+                width: 13px;
+            }
+
+            &-bg{
+                float: left;
+                padding-left: 16px;
+
+                display: inline-block;
+                width: 46px;
+                height: 65px;
+
+                font-size: 40px;
+                color: $cl-yl;
+            }
+        }
+    }
+}

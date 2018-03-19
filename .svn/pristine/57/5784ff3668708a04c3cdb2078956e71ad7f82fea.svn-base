@@ -1,0 +1,108 @@
+
+
+.pbl-success-alert{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    background-repeat: repeat;
+    background-image: url("../img/pbl/tspr-50.png");
+
+    display: none;
+
+    &.active{
+        display: block;
+    }
+
+    .wrap--content{
+        width: 500px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        overflow: hidden;
+
+        margin-left: -250px;
+        margin-top: -100px;
+
+        background-color: $cl-bg;
+
+        >.title{
+            height: 49px;
+            width: 80%;
+            margin: 0 auto;
+
+            text-align: center;
+            font-size: 16px;
+            line-height: 49px;
+
+            border-bottom: 1px solid $cl-bd;
+        }
+
+        >.content{
+            width: 65%;
+
+            overflow: hidden;
+
+            margin: 9px auto;
+
+            text-align: center;
+            font-size: 14px;
+
+            line-height: 21px;
+
+            .strong{
+                color: $cl-yl;
+            }
+
+			.strong-red{
+				color: #fe461c;
+			}
+
+			img{
+				margin-top: 10px;
+				width: 50%;
+			}
+        }
+
+        >.btn--yes{
+            width: 100px;
+            height: 30px;
+
+            overflow: hidden;
+
+            margin: 20px auto;
+
+            font-size: 16px;
+            text-align: center;
+            line-height: 30px;
+            color: $cl-wt;
+
+            background-color: $cl-yl;
+            border-radius: 3px;
+
+            cursor: pointer;
+            user-select: none;
+        }
+
+        >.close{
+            width: 15px;
+            height: 15px;
+
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../img/pbl/close.png");
+
+            cursor: pointer;
+        }
+    }
+}

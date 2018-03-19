@@ -1,0 +1,96 @@
+<div class="situation">
+	<div class="situation-price">
+		<span class="access">估价：<em class="money">￥{:round($priceData['max_sell_price']/10000,2)}</em><em class="line">-</em><em class="money">￥{:round($priceData['max_private_price']/10000,2)}</em><em class="unit">万</em></span>
+		<span class="from">
+			估价技术支持
+			<img src="__PUBLIC__/dev/img/valuate-detail/situation-from.png" />
+		</span>
+	</div>
+
+	<div class="situation-desc">
+		<p class="ct">仅为市场行情估算，实际车价参考以下车况：</p>
+
+		<div class="detail">
+			<ul>
+				<li class="item">
+					<h3><i class="icon appearance"></i>车辆外观</h3>
+					<p>是否补漆</p>
+					<p>有无划痕凹陷</p>
+					<p>有无改色，贴纸，贴膜</p>
+				</li>
+
+				<li class="item">
+					<h3><i class="icon case"></i>车辆工况</h3>
+					<p>发动机，变速箱，是否正常</p>
+					<p>助力，空调，车窗，天窗是否正常</p>
+					<p>车窗，天窗是否正常</p>
+				</li>
+
+				<li class="item">
+					<h3><i class="icon upholstery"></i>车辆内饰</h3>
+					<p>有无磨损或污渍</p>
+				</li>
+
+				<li class="item">
+					<h3><i class="icon other"></i>其它</h3>
+					<p>不可更换部分是否损伤</p>
+					<p>是否4S店保养</p>
+					<p>过户次数</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="situation-know">
+		<div class="txt">
+			<span class="txt ">了解<em class="yl">全面车况</em></span> 
+		</div>
+
+		<div class="icon">
+			<img src="__PUBLIC__/dev/img/valuate-detail/arrow.gif" >
+		</div>
+
+		<div class="btn js-accurate-valuation">
+			<span>精准估价</span>
+		</div>
+	</div>
+
+	<div class="ourfeature">
+
+		<h2>我们的特色</h2>
+	
+		<ul>
+			<li class="item">
+				<img src="__PUBLIC__/dev/img/valuate-detail/ourfeature-01.png" class="img">
+				<div class="txt">
+					<p>1、车检师提供免费</p>
+					<p>上门检测服务</p>
+				</div>
+			</li>
+			<li class="item">
+				<img src="__PUBLIC__/dev/img/valuate-detail/ourfeature-02.png" class="img">
+				<div class="txt">
+					<p>2、海量历史卖车</p>
+					<p>数据支撑</p>
+				</div>
+			</li>
+
+			<li class="item">
+				<img src="__PUBLIC__/dev/img/valuate-detail/ourfeature-03.png" class="img">
+				<div class="txt">
+					<p>3、实时新车指导</p>
+					<p>价格分析</p>
+				</div>
+			</li>
+
+			<li class="item">
+				<img src="__PUBLIC__/dev/img/valuate-detail/ourfeature-04.png" class="img">
+				<div class="txt">
+					<p>4、专业的定价团队</p>
+					<p>为您服务</p>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+</div>

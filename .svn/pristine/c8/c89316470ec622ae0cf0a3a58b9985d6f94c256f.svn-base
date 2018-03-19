@@ -1,0 +1,54 @@
+
+
+.flink{
+	margin-top: 6px;
+    margin-bottom: 40px;
+
+    color: #686868;
+	line-height: 24px;
+
+    background-color: $cl-bg;
+
+	.main_container{
+		@include clearfix();
+	}
+
+    &-tt{
+		float: left;
+		padding-left: 13px;
+
+        font-size: 16px;
+
+        position: relative;
+
+        &:before{
+            content: "";
+
+            display: block;
+            width: 3px;
+            height: 16px;
+            background: $cl-yl;
+
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+    }
+
+    &-list{
+        overflow: hidden;
+
+		font-size: 14px;
+
+        li{
+			float: left;
+
+            margin-left: 10px;
+            margin-right: 14px;
+
+			white-space: nowrap;
+
+			@include hover-cl-anm();
+        }
+    }
+}

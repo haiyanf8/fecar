@@ -1,0 +1,884 @@
+[ 2016-06-30T09:24:35+08:00 ] ::1 /www/index.php/Index/article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined property: stdClass::$content E:\www\www\Application\Home\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Application\Home\Controller\BaseController.class.php 第 44 行.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Application\Home\Controller\BaseController.class.php 第 44 行.
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0210s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,a.bid_times as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=3 ) ORDER BY bid_time desc LIMIT 8   [ RunTime:0.0230s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+ERR: 模板不存在:./Application/Home/View/Index/article-list.html
+
+[ 2016-06-30T09:24:44+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T09:24:52+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:25:14+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:27:25+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0312s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:28:42+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-30T09:31:01+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:31:15+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:32:22+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0156s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:32:24+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0190s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T09:32:25+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0240s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T09:32:25+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0220s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:32:25+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0220s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T09:32:40+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0150s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-30T09:34:02+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0100s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:34:42+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:39:14+08:00 ] ::1 /www/index.php/Index/info-article-detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0300s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 205 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 205 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 256 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:39:26+08:00 ] ::1 /www/index.php/Index/info-article-detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 205 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 205 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 256 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:39:47+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0300s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:39:47+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0100s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:39:49+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.010000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:48:10+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:50:34+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:50:52+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0100s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T09:56:13+08:00 ] ::1 /www/index.php/Index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0190s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0230s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T17:51:49+08:00 ] 127.0.0.1 /www/index.php/dev/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined property: stdClass::$content E:\www\www\Application\Home\Controller\BaseController.class.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Application\Home\Controller\BaseController.class.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Application\Home\Controller\BaseController.class.php 第 77 行.
+NOTIC: [2048] Declaration of Home\Model\OriginModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\OriginModel.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `fecar_origin` [ RunTime:0.0200s ]
+SQL: SELECT `id` FROM `fecar_origin` WHERE ( sessionid='oeh6j7oh5mcmb8264s62u5vui2' ) LIMIT 1   [ RunTime:0.0180s ]
+SQL: INSERT INTO `fecar_origin` (`sessionid`,`access_time`,`ipaddr`,`channel`,`agent`) VALUES ('oeh6j7oh5mcmb8264s62u5vui2','2016-06-30 17:51:49','127.0.0.1','direct-access','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0') [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0190s ]
+NOTIC: [2048] Declaration of Home\Model\LinkModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\LinkModel.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0200s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0250s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0200s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc LIMIT 0,10   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T17:52:15+08:00 ] 127.0.0.1 /www/index.php/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+NOTIC: [2048] Declaration of Home\Model\LinkModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\LinkModel.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0240s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0170s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc LIMIT 0,10   [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T17:52:42+08:00 ] 127.0.0.1 /www/index.php/dev/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+NOTIC: [2048] Declaration of Home\Model\LinkModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\LinkModel.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0150s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0230s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0150s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc LIMIT 0,10   [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T17:52:57+08:00 ] 127.0.0.1 /www/index.php/dev/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 76 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 207 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 207 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 208 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 250 行.
+NOTIC: [8] Undefined variable: links E:\www\www\Application\Runtime\Cache\Home\7e52c1be24e7e202dc43c05aa1b77ce6.php 第 322 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-30T17:53:13+08:00 ] 127.0.0.1 /www/index.php/dev/info_article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+ERR: 非法操作:info_article_list
+
+[ 2016-06-30T17:55:41+08:00 ] 127.0.0.1 /www/index.php/index/info-article-list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+NOTIC: [2048] Declaration of Home\Model\LinkModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\LinkModel.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0150s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0220s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0180s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc LIMIT 0,10   [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 207 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 207 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\f7e62ca1f8a12d51214b8b7057d8cbec.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-30T17:55:52+08:00 ] 127.0.0.1 /www/index.php/index/info-article-detail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0200s ]
+NOTIC: [2048] Declaration of Home\Model\LinkModel::delete() should be compatible with Think\Model::delete($options = Array) E:\www\www\Application\Home\Model\LinkModel.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `fecar_link` [ RunTime:0.0190s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0270s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0230s ]
+SQL: SELECT `site`,`sitename`,`rank` FROM `fecar_link` ORDER BY `rank` desc LIMIT 0,10   [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\86b3f58f25272584db546037bdb4cce7.php 第 240 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

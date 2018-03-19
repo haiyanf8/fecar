@@ -1,0 +1,26 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/mx";
+
+
+@import "m-article-detail/article-detail";
+
+
+
+.content{
+    margin-bottom: 40px;
+    @include clearfix();
+
+    .left{
+        float: left;
+    }
+
+    .right{
+        width: 270px;
+        float: right;
+
+        margin-top: 28px;
+    }
+}

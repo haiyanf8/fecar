@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>估价</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/pbl-f6655fe4ae.css">
+        <link rel="stylesheet" href="__PUBLIC__/css/valuate-e247cdacba.css">
+    </head>
+
+    <body>
+
+        <include file="Index/m-pbl:hd" />
+
+		<include file="Index/m-valuate:slide_valuate" />
+
+        <include file="Index/m-valuate:valuate-rank" />
+
+        <include file="Index/m-pbl:hot--lite" />
+
+        <include file="Index/m-pbl:ft" />
+
+        <include file="Index/m-pbl:_aside-nav" />
+
+        <script src="__PUBLIC__/js/lib/jquery-1.11.3.min.js" charset="utf-8"></script>
+        <script src="__PUBLIC__/js/pbl-dcc1e1efe5.js" charset="utf-8"></script>
+        <script src="__PUBLIC__/js/valuate-fc9f9ee9f7.js" charset="utf-8"></script>
+        <!-- IE8及以下支持JSON -->
+        <!--[if lt IE 9]>
+            <script src="https://g.alicdn.com/aliww/ww/json/json.js" charset="utf-8"></script>
+        <![endif]-->
+        <!-- 自动适配移动端与pc端 -->
+        <script src="https://g.alicdn.com/aliww/??h5.imsdk/2.1.0/scripts/yw/wsdk.js,h5.openim.kit/0.3.7/scripts/kit.js" charset="utf-8"></script>
+
+        <include file="Index/m-be:_theThird" />
+    </body>
+</html>

@@ -1,0 +1,142 @@
+.banner {
+  width: 100%;
+  height: 240px;
+}
+.banner-title {
+  padding-left: 70px;
+  padding-top: 70px;
+}
+.banner-title .ct {
+  font-size: 50px;
+  color: #353535;
+}
+.banner-title .tt {
+  padding-top: 3px;
+  font-size: 24px;
+  color: #ff6b1d;
+  font-family: "Arial";
+}
+.banner.introbg {
+  background: url(../img/info/intro-banner.jpg) no-repeat center 0;
+}
+.banner.saleguidebg {
+  background: url(../img/info/saleguide-banner.jpg) no-repeat center 0;
+}
+.banner.saleguidebg .ct {
+  color: #fff;
+}
+
+.m-column {
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.m-column-tab {
+  width: 200px;
+  float: left;
+  margin-bottom: 200px;
+  margin-right: 63px;
+  font-size: 16px;
+}
+.m-column-tab .tt {
+  margin-bottom: 13px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  font-size: 28px;
+  color: #ff6b1d;
+}
+.m-column-tab .ct li {
+  height: 53px;
+  line-height: 53px;
+  font-size: 18px;
+  text-align: center;
+  background: url(../img/info/info-notice-black-arrow.png) no-repeat 40px center;
+}
+.m-column-tab .ct li a {
+  display: block;
+}
+.m-column-tab .ct li.current {
+  background: url(../img/info/info-notice-white-arrow.png) no-repeat 177px center #ff6b1d;
+  color: #ffffff;
+}
+.m-column-ct {
+  overflow: hidden;
+}
+.m-column-ct > .tt {
+  position: relative;
+  padding-left: 20px;
+  height: 90px;
+  font-size: 24px;
+  line-height: 90px;
+  text-indent: 7px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.m-column-ct > .tt::before {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #ff6b1d;
+}
+
+.flow {
+  padding: 30px 0 0 0;
+  overflow: hidden;
+  _zoom: 1;
+}
+.flow h2 {
+  padding-left: 320px;
+  height: 70px;
+  line-height: 70px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ff6b1d;
+}
+.flow-1 {
+  width: 934px;
+  height: 251px;
+  background: url("../img/info/sale-progress01.jpg") no-repeat center 0;
+}
+.flow-2 {
+  width: 934px;
+  height: 259px;
+  background: url("../img/info/sale-progress02.jpg") no-repeat center 0;
+}
+.flow-3 {
+  width: 934px;
+  height: 252px;
+  background: url("../img/info/sale-progress03.jpg") no-repeat center 0;
+}
+.flow-4 {
+  width: 934px;
+  height: 39px;
+  padding-top: 104px;
+  background: url("../img/info/sale-progress04.jpg") no-repeat center 0;
+}
+.flow-txt {
+  color: #4c4c4c;
+  font-size: 14px;
+}
+.flow-txt span.left {
+  float: left;
+  padding-left: 65px;
+  padding-top: 110px;
+  width: 340px;
+}
+.flow-txt span.right {
+  float: right;
+  padding-right: 65px;
+  padding-top: 110px;
+  width: 340px;
+}
+.flow-txt span.center {
+  display: block;
+  padding-left: 245px;
+  width: 340px;
+}
+
+/*# sourceMappingURL=info-flow.css.map */

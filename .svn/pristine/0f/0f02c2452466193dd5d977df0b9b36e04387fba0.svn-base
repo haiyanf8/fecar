@@ -1,0 +1,12 @@
+[ 2016-12-22T15:19:26+08:00 ] ::1 /www/history.html
+ERR: 1054:Unknown column 'pinyin' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc 
+ERR: 1054:Unknown column 'pinyin' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc 
+
+[ 2016-12-22T15:22:32+08:00 ] ::1 /www/history.html
+ERR: 1054:Unknown column 'pinyin' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc 
+ERR: 1054:Unknown column 'pinyin' in 'field list'
+ [ SQL语句 ] : SELECT `city`,`pinyin`,`zipcode` FROM `fecar_gpjcity` WHERE `open` = 1 ORDER BY rank desc 
+

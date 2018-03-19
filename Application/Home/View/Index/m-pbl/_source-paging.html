@@ -1,0 +1,35 @@
+<div class="m-paging">
+	<div class="wrap">
+		<span class="m-paging-link"> {$pageStr} </span> <span class="m-paging-total">共{$count}页</span>
+			<if condition="$action_name == 'history'">
+				<form action="./history.html" method="get">
+			<elseif condition="$action_name == 'article-list'" />
+				<form action="{$curpage}" method="get">
+			<else />
+				<form action="" method="get">
+			</if>
+			<if condition="$age">
+				<input  type='hidden' name='age' value='{$age}'>
+			</if>
+			<if condition="$mile">
+				<input  type='hidden' name='mile' value='{$mile}'>
+			</if>
+			
+			<if condition="$price">
+				<input  type='hidden' name='price' value='{$price}'>
+			</if>
+			<if condition="$brand">
+				<input  type='hidden' name='brand' value='{$brand}'>
+			</if>
+			<if condition="$model">
+				<input  type='hidden' name='model' value='{$model}'>
+			</if>
+			<if condition="$series">
+				<input  type='hidden' name='series' value='{$series}'>
+			</if>
+			<span>到第</span> <input type="text" name="p" value=""
+				atuocomplete="off"> <span>页</span> <input type="submit"
+				value="确定">
+		</form>
+	</div>
+</div>

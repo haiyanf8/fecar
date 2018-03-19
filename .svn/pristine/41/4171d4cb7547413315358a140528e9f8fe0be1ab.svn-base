@@ -1,0 +1,176 @@
+.bread-nav{
+	width: 904px;
+	height: 40px;
+	line-height: 40px;
+
+	color: #333;
+	font-size: 12px;
+
+	border-bottom: 1px solid $cl-bd;
+
+	.idx{
+		color: #777;
+	}
+
+}
+
+.article-detail{
+	width: 907px;
+
+	h1{
+		&.title{
+			font-size: 30px;
+			color: $cl-main;
+
+			margin: 45px 0 15px 0;
+		}
+	}
+	&-info{
+		width: 907px;
+		border-bottom: 3px solid #666;
+
+		padding-bottom: 10px;
+
+		margin-bottom: 35px;
+
+		@include clearfix();
+		em{
+			font-style: normal;
+		}
+		span{
+			float: left;
+			margin-right: 60px;
+			i{
+				background-repeat: no-repeat;
+				margin-right: 5px;
+				&.i-time{
+					width: 16px;
+					height: 16px;
+					background-image: url("../img/info/time.png");
+
+					margin-bottom: -3px;
+				}
+
+				&.i-read{
+					width: 24px;
+					height: 15px;
+					background-image: url("../img/info/article-detail-visible.png");
+
+					margin-bottom: -4px;
+				}
+
+				&.i-user{
+					width: 14px;
+					height: 15px;
+					background-image: url("../img/info/article-detail-user.png");
+
+					margin-bottom: -2px;
+				}
+			}
+		}
+	}
+	&-des{
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #f8f8f8;
+
+		padding: 20px 30px;
+
+		line-height: 28px;
+
+		color: #777;
+
+		font-size: 14px;
+
+		em{
+			font-style: normal;
+			color: $cl-main;
+		}
+	}
+	&-cont{
+		margin-bottom: 50px;
+
+		font-size: 16px;
+		text-align: center;
+
+		img{
+			max-width: 850px;
+		}
+		p{
+			margin: 15px 0;
+			line-height: 25px;
+			text-align: left;
+		}
+		a{
+			color: #4c9ed9;
+		}
+		em{
+			font-style: italic;
+			font-weight: inherit;
+		}
+		strong{
+			font-weight: bold;
+			font-style: inherit;
+		}
+	}
+
+	&-relative{
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #f8f8f8;
+
+		padding: 20px 30px;
+
+		line-height: 28px;
+
+		color: #777;
+
+		font-size: 14px;
+		overflow: hidden;
+
+		em{
+			font-style: normal;
+			width: 70px;
+
+			color: $cl-main;
+
+			display: inline-block;
+		}
+
+		.keyword{
+			em{
+				word-spacing: 2px;
+			}
+			a{
+				color: #c30000;
+				margin: 0 5px;
+			}
+		}
+
+		.relativeArticle{
+			em{
+				float: left;
+			}
+
+			ul{
+				width: 768px;
+				float: right;
+				li{
+					width: 256px;
+					height: 30px;
+					line-height: 30px;
+
+					float: left;
+					a{
+						width: 220px;
+						height: 30px;
+						line-height: 30px;
+
+						display: inline-block;
+						@include text-overflow();
+					}
+				}
+			}
+		}
+	}
+}

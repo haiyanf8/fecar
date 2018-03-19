@@ -1,0 +1,90 @@
+<div class="footer">
+    <div class="footcenter">
+        <div class="footer-con">
+            <div class="footer-left">
+                <img class="logoimg" src="__PUBLIC__/dev/img/source/pbl/logo.png" alt="迈迈车官方网站-专业检测评估卖车平台,迈迈车LOGO" />
+                <div class="txt"><i class="tel"></i>400-9907-999</div>
+                <div class="txt wxfont"><i class="wx"></i>关注微信
+                    <div class="footer-left-wechat ewm">
+                        <div class="img">
+                            <img class="js-ft-wechat" src="__PUBLIC__/dev/img/source/pbl/qr--wechat.jpg">
+                        </div>
+                        <div class="info">
+                            <p>微信官方公众号</p>
+                            <p>扫一扫添加关注</p>
+                        </div>
+
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <dl class="footer-dl footer-txt">
+                    <dd class="footer-tt">关于我们</dd>
+                    <if condition="$level == 'top'">
+                        <dd class="item-txt"><a href="./intro.html" target="_blank">&gt;公司简介</a></dd>
+                        <dd class="item-txt"><a href="./business.html" target="_blank">&gt;商务合作</a></dd>
+                    <else />
+                        <dd class="item-txt"><a href="../intro.html" target="_blank">&gt;公司简介</a></dd>
+                        <dd class="item-txt"><a href="../business.html" target="_blank">&gt;商务合作</a></dd>
+                    </if>
+                </dl>
+
+                <dl class="footer-dl footer-txt">
+                    <dd class="footer-tt">卖车指南</dd>
+                    <if condition="$level == 'top'">
+                        <dd class="item-txt" ><a href="./process.html" target="_blank">&gt;卖车流程</a></dd>
+                        <dd class="item-txt"><a href="./introduction.html" target="_blank">&gt;卖车须知</a></dd>
+                    <else />
+                        <dd class="item-txt" ><a href="../process.html" target="_blank">&gt;卖车流程</a></dd>
+                        <dd class="item-txt"><a href="../introduction.html" target="_blank">&gt;卖车须知</a></dd>
+                    </if>
+                </dl>
+
+                <dl class="footer-dl footer-txt">
+                    <dd class="footer-tt">新闻中心</dd>
+                    <if condition="$level == 'top'">
+                        <dd class="item-txt"><a href="./article-cate/1.html" target="_blank">&gt;行业动态</a></dd>
+                        <dd class="item-txt"><a href="./article-cate/2.html" target="_blank">&gt;卖车问答</a></dd>
+                        <dd class="item-txt"><a href="./article-cate/3.html" target="_blank">&gt;汽车知识</a></dd>
+                        <dd class="item-txt"><a href="./article-cate/4.html" target="_blank">&gt;新闻资讯</a></dd>
+                    <else />
+                        <dd class="item-txt"><a href="../article-cate/1.html" target="_blank">&gt;行业动态</a></dd>
+                        <dd class="item-txt"><a href="../article-cate/2.html" target="_blank">&gt;卖车问答</a></dd>
+                        <dd class="item-txt"><a href="../article-cate/3.html" target="_blank">&gt;汽车知识</a></dd>
+                        <dd class="item-txt"><a href="../article-cate/4.html" target="_blank">&gt;新闻资讯</a></dd>
+                    </if>
+                </dl>
+
+                 <dl class="footer-dl footer-txt footer-addresss">
+                    <dd class="footer-tt">公司地址</dd>
+                    <dd class="item-txt">
+                        <i class="area"></i>
+                        上海市长宁区天山路600弄思创大厦4号楼7层
+                    </dd>
+					<!-- <dd class="item-txt">
+						<i class="area"></i>
+						福州市晋安区福新东路370号中海联汽车创意园
+					</dd> -->
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-link">
+        <span class="tt">友情链接:</span>
+        <span class="ct">
+            <volist name="links" id="vo">
+                <a href="{$vo['site']}" target="_blank">{$vo['sitename']}</a>
+            </volist>
+        </span>
+    </div>
+
+</div>
+<div class="footer-record">
+     <p class="record-txt">
+     	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258281401'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258281401%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+        Copyright© 2016 fecar.com All Right Reserved | 闽ICP备14020087号-1
+     </p>
+</div>

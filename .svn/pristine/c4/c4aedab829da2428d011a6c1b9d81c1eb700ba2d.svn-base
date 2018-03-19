@@ -1,0 +1,110 @@
+
+
+<div class="main js-ls-goto-map">
+	<div class="main_container">
+
+		<div class="main-left">
+			<ul class="js-ls-goto-point">
+				<li class="m-city m-sh js-goto-point--shanghai current" data-city="shanghai">
+					<h2 class="m-city-tt">
+						<i class="i before"></i>
+						<span>上海站</span>
+						<i class="i goto-map js-goto-map" data-city="shanghai"></i>
+					</h2>
+
+					<!-- <div class="m-sh-tt js-citySwitch-reference">
+						<div class="item current js-goto-point" data-city="shbranch">吴中店</div>
+						<div class="item js-goto-point" data-city="shanghai">闸北店</div>
+					</div>
+
+					<div class="m-sh-cont js-citySwitch-target">
+						<div class="item active">
+							<div class="m-city-img">
+								<img src="__PUBLIC__/prd/img/source/store/sh-1.jpg" />
+							</div>
+
+							<p class="m-city-addr js-addr-shbranch">地址：上海市闵行区吴中路2344号。
+							</p>
+						</div>
+
+						<div class="item">
+							<div class="m-city-img">
+								<img src="__PUBLIC__/prd/img/source/store/sh.jpg" />
+							</div>
+
+							<p class="m-city-addr js-addr-shanghai">地址：上海市闸北区闸北江场西路299弄7号楼1楼283号。
+							</p>
+						</div>
+					</div> -->
+
+
+
+					<div class="m-sh-cont">
+						<div class="item active">
+							<div class="m-city-img city-shanghai">
+								<img src="__PUBLIC__/prd/img/source/store/sh-1.jpg" />
+							</div>
+
+							<p class="m-city-addr js-addr-shanghai">地址：上海市闵行区吴中路2344号。
+							</p>
+						</div>
+					</div>
+				</li>
+
+
+				<li class="m-city js-goto-point" data-city="fuzhou">
+					<h2 class="m-city-tt">
+						<i class="i before"></i>
+						<span>福州站</span>
+						<i class="i goto-map js-goto-map" data-city="fuzhou"></i>
+					</h2>
+
+					<div class="m-city-img">
+						<img src="__PUBLIC__/prd/img/source/store/fz.jpg" alt="" />
+					</div>
+
+					<p class="m-city-addr fztxt js-addr-fuzhou">地址：福州市晋安区福新东路370号中海联汽车创意展示园区3号楼1层。
+					</p>
+
+				</li>
+
+
+				<li class="m-city js-goto-point" data-city="xiamen">
+					<h2 class="m-city-tt">
+						<i class="i before"></i>
+						<span>厦门站</span>
+						<i class="i goto-map js-goto-map" data-city="xiamen"></i>
+					</h2>
+
+					<div class="m-city-img city-xiamen">
+						<img src="__PUBLIC__/prd/img/source/store/xm.jpg" alt="" />
+					</div>
+
+					<p class="m-city-addr js-addr-xiamen">地址：厦门市思明区吕岭路1034号万科金域蓝湾。
+					</p>
+
+				</li>
+
+				<li class="m-city js-goto-point last" data-city="suzhou">
+					<h2 class="m-city-tt">
+						<i class="i before"></i>
+						<span>苏州站</span>
+						<i class="i goto-map js-goto-map" data-city="suzhou"></i>
+					</h2>
+
+					<div class="m-city-img city-xiamen">
+						<img src="__PUBLIC__/prd/img/source/store/xm.jpg" alt="" />
+					</div>
+
+					<p class="m-city-addr js-addr-suzhou">地址：苏州市姑苏区吴中西路860号。
+					</p>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="main-right m-map">
+			<div id="m-map-baidu" class="m-map-baidu js-map-baidu"></div>
+		</div>
+	</div>
+</div>

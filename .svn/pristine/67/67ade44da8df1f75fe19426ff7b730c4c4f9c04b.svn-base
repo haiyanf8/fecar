@@ -1,0 +1,68 @@
+<div class="news">
+	<div class="news-title">
+		<h2>
+			<p class="tten">LATEST NEWS</p>
+			<p class="ttcn">最新资讯</p>
+		</h2>
+		<span class="more"><a href="./article.html">更多&gt;&gt;</a></span>
+	</div>
+
+	<div class="news-content">
+		<ul>
+			<li class="item">
+				<div class="img">
+					<a href="./article-detail/{$leftArticle['articleid']}.html">
+						<img src="{$leftArticle['prepic']}" class="img">
+					</a>
+				</div>
+				<h3 class="tt">
+					<a href="./article-detail/{$leftArticle['articleid']}.html">{$leftArticle['title']}</a>
+				</h3>
+				<p class="ct">
+					{$leftArticle['abstract']}
+				</p>
+				<p class="more">
+					<a href="./article-detail/{$leftArticle['articleid']}.html">详情</a>
+				</p>
+				
+			</li>
+
+			<li class="item twopadding">
+				<h3 class="tt">
+					<a href="./article-detail/{$middleArticle['articleid']}.html">{$middleArticle['title']}</a>
+				</h3>
+				<p class="ct">
+					{$middleArticle['abstract']}
+				</p>
+				<p class="more">
+					<a href="./article-detail/{$middleArticle['articleid']}.html">详情</a>
+				</p>
+
+				<div class="img">
+					<a href="./article-detail/{$middleArticle['articleid']}.html"><img src="{$middleArticle['prepic']}"></a>
+				</div>
+			</li>
+
+			<li class="item nomargin">
+				<div class="img">
+					<a href="./article-detail/{$rightArticle['articleid']}.html">
+						<img src="{$rightArticle['prepic']}">
+					</a>
+				</div>
+				
+				<h3 class="tt">
+					<a href="./article-detail/{$rightArticle['articleid']}.html">{$rightArticle['title']}
+					</a>
+				</h3>
+
+				<p class="ct">
+					{$rightArticle['abstract']}
+				</p>
+
+				<p class="more">
+					<a href="./article-detail/{$rightArticle['articleid']}.html">详情</a>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>

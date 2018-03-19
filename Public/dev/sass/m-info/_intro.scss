@@ -1,0 +1,66 @@
+
+
+.intro{
+	padding-top: 50px;
+	padding-bottom: 0;
+	padding-right: 0;
+
+	&-tt{
+		margin-bottom: 50px;
+
+		text-align: center;
+	}
+
+	p{
+		font-size: 20px;
+		line-height: 40px;
+
+		color: #353535;
+
+		&.yl{
+			color: $cl-yl;
+			font-weight: bold;
+		}
+
+		&.circle{
+			position: relative;
+
+			padding-left: 20px;
+
+			&::before{
+				position: absolute;
+				top: 18px;
+				left: 0;
+
+				content: "";
+				display: block;
+
+				width: 8px;
+				height: 8px;
+
+				border-radius: 50%;
+				background: $cl-yl;
+				
+			}
+		}
+
+		&.breakTop60{
+			margin-bottom: 40px;
+		}
+
+		&.breakTopBottom60{
+			margin: 40px 0;
+		}
+	}
+}
+
+.company{
+	width: 933px;
+	margin: 70px auto 0;
+	img{
+		width: 933px;
+		display: inline-block;
+		
+		margin: 0 auto 10px;
+	}
+}

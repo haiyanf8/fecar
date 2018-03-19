@@ -1,0 +1,245 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  background: url(../img/sale/sale-banner-bg.jpg) no-repeat center 0;
+}
+.banner .buy {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -600px;
+}
+.banner .buy a {
+  position: absolute;
+  margin: 216px 0 0 151px;
+  display: block;
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  background: #ff6b1d;
+  -webkit-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+}
+.banner .buy a:hover {
+  background: #f65e0e;
+}
+
+.step {
+  padding: 0 135px;
+  margin: 0 auto;
+  width: 916px;
+  overflow: hidden;
+  _zoom: 1;
+}
+.step-title {
+  padding-bottom: 68px;
+  padding-top: 63px;
+  text-align: center;
+}
+.step-box-small {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.step-box-small .title {
+  float: left;
+}
+.step-box-small .title .num {
+  width: 78px;
+  height: 58px;
+  display: block;
+  float: left;
+}
+.step-box-small .title .num.num01 {
+  width: 68px;
+  background: url(../img/sale/sale-step-01.png) no-repeat left top;
+}
+.step-box-small .title .num.num02 {
+  background: url(../img/sale/sale-step-02.png) no-repeat left top;
+}
+.step-box-small .title .num.num03 {
+  background: url(../img/sale/sale-step-03.png) no-repeat left top;
+}
+.step-box-small .title .num.num04 {
+  background: url(../img/sale/sale-step-04.png) no-repeat left top;
+}
+.step-box-small .title .tt {
+  float: left;
+  padding-left: 10px;
+}
+.step-box-small .title .tt .en {
+  font-size: 22px;
+  color: #fc803f;
+  font-family: "Arial";
+}
+.step-box-small .title .tt .ct {
+  margin-top: -1px;
+  font-size: 26px;
+  color: #555;
+}
+.step-box-small .title .tt .info {
+  padding-top: 5px;
+  font-size: 22px;
+  color: #a1a1a1;
+}
+.step-box-small .img {
+  width: 344px;
+  height: 210px;
+}
+.step-box-small .img img {
+  display: block;
+  border-radius: 8px;
+}
+.step-box-small.even .title {
+  float: left;
+  padding-top: 52px;
+  width: 462px;
+}
+.step-box-small.even .img {
+  float: right;
+}
+.step-box-small.odd .title {
+  float: right;
+  padding-top: 58px;
+  margin-right: 5px;
+  width: 378px;
+}
+.step-box-small.odd .img {
+  float: left;
+  margin-left: 45px;
+}
+
+.faq {
+  width: 100%;
+  padding: 20px 0 66px 0;
+  overflow: hidden;
+  _zoom: 1;
+}
+.faq-title {
+  width: 1200px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+.faq-title > img {
+  width: 602px;
+  margin: 0 auto;
+  display: block;
+}
+.faq-box {
+  width: 1200px;
+  margin: 25px auto auto;
+  overflow: hidden;
+  _zoom: 1;
+}
+.faq-box-right {
+  float: right;
+}
+.faq-box-small {
+  width: 538px;
+  margin-left: 26px;
+  float: left;
+  _display: inline;
+}
+.faq-box-small.diff {
+  float: right;
+  margin-left: 0;
+  margin-right: 26px;
+}
+.faq-box-small .tt {
+  font-size: 24px;
+  color: #353535;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.faq-box-small .tt i {
+  display: inline-block;
+  width: 32px;
+  height: 28px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+.faq-box-small .tt i.i-note {
+  background-image: url(../img/index/faq-note.png);
+}
+.faq-box-small .tt i.i-gold {
+  background-image: url(../img/index/faq-gold.png);
+}
+.faq-box-small .tt i.i-bidding {
+  background-image: url(../img/index/faq-bidding.png);
+}
+.faq-box-small .tt i.i-deal {
+  background-image: url(../img/index/faq-deal.png);
+}
+.faq-box-small .ct {
+  width: 458px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #a2958e;
+  padding: 20px;
+  margin-left: 38px;
+  border: 1px solid #eeeede;
+}
+.faq-box-small .ct.ct60 {
+  height: 60px;
+  margin-bottom: 15px;
+}
+.faq-box-small .ct.ct80 {
+  height: 80px;
+}
+.faq-more {
+  text-align: right;
+  padding-right: 24px;
+  padding-top: 21px;
+}
+.faq-more a {
+  color: #ff6b1d;
+  font-size: 14px;
+}
+
+.m-section-tt {
+  font-size: 34px;
+  font-family: SimHei;
+  font-weight: bold;
+  color: #444;
+  line-height: 1;
+  text-align: center;
+}
+.m-section-tt span {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.m-section-tt span:before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 100%;
+  background: url(../img/pbl/section-tt-left.png) center center no-repeat;
+  position: absolute;
+  top: 0;
+  left: -188px;
+}
+.m-section-tt span:after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 100%;
+  background: url(../img/pbl/section-tt-right.png) center center no-repeat;
+  position: absolute;
+  top: 0;
+  right: -188px;
+}
+
+/*# sourceMappingURL=sale.css.map */

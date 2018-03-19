@@ -1,0 +1,41 @@
+
+<div class="bread-nav">
+	<a class="idx" href="../">首页</a>
+	<span>></span>
+	<a href="../article.html">新闻中心</a>
+	<span>></span>
+    <a href="../article-cate/{$cate[0]['cateid']}.html">{$cate[0]['category']}</a>
+    <span>></span>
+	<a href="#">正文</a>
+</div>
+
+ <div class="article-detail">
+    <h1 class="title">{$_article[0]['title']}</h1>
+    <div class="article-detail-info">
+    	<span class="time">发表于:<em>{$_article[0]['smp_date']}</em></span>
+        <span class="read">阅读:<em>{$_article[0]['pageview']}</em></span>
+        <span class="author">作者:<em>{$_article[0]['author']}</em></span>
+    </div>
+
+    <div class="article-detail-des">
+        <em>摘要：</em>{$_article[0]['abstract']}
+
+    </div>
+
+    <div class="article-detail-cont">
+
+         {$_article[0]['article']}
+
+    </div>
+
+    <div class="article-detail-relative">
+
+        <div class="relativeArticle"><em>推荐阅读：</em>
+            <ul>
+                <volist name="_recomm" id="vo">
+                    <li><a title="{$vo['title']}" href="../article-detail/{$vo['articleid']}.html">{$vo['title']}</a></li>
+                </volist>
+            </ul>
+      </div>
+    </div>
+</div>

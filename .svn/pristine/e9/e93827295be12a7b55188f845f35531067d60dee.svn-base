@@ -1,0 +1,26 @@
+
+<div class="overview-pic-big js-overview-pic-big">
+    <div class="slide-box js-overview-slide-box">
+        <ul class="slide-box-img js-overview-slide-img">
+            <li class="active"><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img00']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img01']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img02']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img10']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img11']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img12']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img20']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img21']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img22']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img30']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img31']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img32']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img40']}" alt=""></li>
+            <li><img src="{:C('imgPath')}{$carDetailInfo[0][0]['img41']}" alt=""></li>
+        </ul>
+
+        <div class="prev slide-box-btn js-overview-slide-prev"></div>
+        <div class="next slide-box-btn js-overview-slide-next"></div>
+
+        <div class="close js-close"></div>
+    </div>
+</div>

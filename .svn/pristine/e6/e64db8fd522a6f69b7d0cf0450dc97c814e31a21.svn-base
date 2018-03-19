@@ -1,0 +1,373 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo ($title); ?></title>
+        <meta name="keywords" content="<?php echo ($keywords); ?>">
+        <meta name="description" content="<?php echo ($description); ?>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" href="/www/Public/prd/css/pbl-efdae7fa71.css">
+        <link rel="stylesheet" href="/www/Public/prd/css/article-detail-52abaaeaf9.css">
+    </head>
+    <body>
+
+        <div class="wrapper">
+    <div class="header">
+        <h1 class="logo">
+            <?php if($level == 'top'): ?><a href="./">
+            <?php else: ?>
+                <a href="../"><?php endif; ?>
+                <img src="/www/Public/prd/img/source/pbl/logo.png" />
+            </a>
+        </h1>
+
+        <div class="local">
+            <div class="local-area">
+                <i class="local-img"></i>
+                <p class="local-txt">
+                    <span class="js-hd-city"><?php echo session('city');?></span>
+                </p>
+            </div>
+            
+            <div class="local-box">
+                <div class="local-box-arrow"></div>
+                <ul class="local-box-citys">
+                   <li class="<?php echo session('city') == '福州' ? 'current' : '';?> item"><a href="?city=fuzhou">福州</a></li>
+                   <li class="<?php echo session('city') == '厦门' ? 'current' : '';?> item"><a href="?city=xiamen">厦门</a></li>
+                   <li class="<?php echo session('city') == '上海' ? 'current' : '';?> item"><a href="?city=shanghai">上海</a></li>
+                   <li class="<?php echo session('city') == '苏州' ? 'current' : '';?> item"><a href="?city=suzhou">苏州</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="nav-item">
+                <?php if($level == 'top'): ?><a href="./" class="item">首页</a>
+                    <a href="./sale.html" class="item <?php echo ($action_name=='sale'? 'current':''); ?>">卖车</a>
+                    <a href="./valuate-index.html" class="item <?php echo ($action_name=='valuate'? 'current':''); ?>">估价</a>
+                    <a href="./history.html" class="item <?php echo ($action_name=='history'? 'current':''); ?>">竞拍历史</a>
+                    <a href="./store.html" class="item <?php echo ($action_name=='store'? 'current':''); ?>">服务网点</a>
+                <?php else: ?>
+                    <a href="../" class="item">首页</a>
+                    <a href="../sale.html" class="item <?php echo ($action_name=='sale'? 'current':''); ?>">卖车</a>
+                    <a href="../valuate.html" class="item <?php echo ($action_name=='valuate'? 'current':''); ?>">估价</a>
+                    <a href="../history.html" class="item <?php echo ($action_name=='history'? 'current':''); ?>">竞拍历史</a>
+                    <a href="../store.html" class="item <?php echo ($action_name=='store'? 'current':''); ?>">服务网点</a><?php endif; ?>
+            </div>
+        </div>
+
+        <div class="tel">
+         400-9907-999
+        </div>
+    </div>
+</div>
+
+
+        
+
+<div class="pbl-aside-nav aside-nav">
+	<ul>
+		<li class="msg">
+			<i class="i msg-icon"></i>
+			<!-- <div class="msg-box">
+				<div class="service">
+					
+				</div>
+			</div> -->
+		</li>
+
+		<li class="tel">
+			<i class="i tel-icon"></i>
+			<div class="tel-box">
+				<div class="flow">
+					<div class="img">
+						<img src="/www/Public/prd/img/pbl/aside-nav-tel-phone.png" />
+					</div>
+					<div class="info">
+						<p class="title">预约卖车热线</p>
+						<p class="te2lnum">400-9907-999</p>
+					</div>
+				</div>
+			</div>
+		</li>
+
+		<li class="wx">
+			<i class="i wx-icon"></i>
+			<div class="wx-ewm">
+				<div class="wx-ewmp">
+				<img src="/www/Public/prd/img/source/pbl/qr--wechat.jpg">
+			</div>
+		</li>
+
+		<li class="app">
+			<i class="i app-icon"></i>
+			<div class="app-ewm">
+				<img src="/www/Public/prd/img/source/pbl/qr--wechat.jpg">
+			</div>
+		</li>
+
+		<!-- <li class="goto js-aside-nav-goto_top">
+			<i class="i goto-icon"></i>
+		</li> -->
+	</ul>
+</div>
+
+<div class="onlineMsg-wrap">
+	<div class="onlineMsg">
+		<h2>在线留言</h2>
+		<div class="onlineMsg-box">
+
+			<p class="onlineMsg-box-radio first">
+				<span class="onlineMsgRaido">
+					<input type="radio" id="male" checked="checked" name="sex" value="male">
+					<label class="checked js-pbl-consuleRadio" name="man" for="male">先生</label>
+				</span>
+
+		        <span class="onlineMsgRaido">
+		            <input type="radio" id="female" name="sex" value="female">
+		            <label class="js-pbl-consuleRadio" name="female" for="female">女士</label>
+		   		</span>
+			</p>
+
+			<p class="onlineMsg-box-name">
+				<em>姓名 :</em><input type="text" name="username" class="js-pbl-consule-username" autocomplete="off">
+
+			</p>
+
+			<p class="onlineMsg-box-name">
+				<em>电话 :</em><input maxlength="11" type="text" name="usertel" class="js-pbl-consule-tel" autocomplete="off">
+			</p>
+
+			<p class="onlineMsg-box-content">
+				<em>咨询内容 :</em><textarea name="commentct" class="js-pbl-consule-comment  messagect" maxlength="2000" autocomplete="off"></textarea>
+			</p>
+
+			<p class="onlineMsg-box-btn">
+				<button class="js-pbl-consule-btn" >提交</button>
+			</p>
+		</div>
+		<div class="onlineMsg-close js-close"></div>
+
+	</div>
+</div>
+
+
+
+
+        <div class="main_container content">
+
+            <div class="left">
+
+                
+<div class="bread-nav">
+	<a class="idx" href="../">首页</a>
+	<span>></span>
+	<a href="../article.html">新闻中心</a>
+	<span>></span>
+	<a href="#">正文</a>
+</div>
+
+ <div class="article-detail">
+    <h1 class="title"><?php echo ($_article[0]['title']); ?></h1>
+    <div class="article-detail-info">
+    	<span class="time">发表于:<em><?php echo ($_article[0]['smp_date']); ?></em></span>
+        <span class="read">阅读:<em><?php echo ($_article[0]['pageview']); ?></em></span>
+        <span class="author">作者:<em><?php echo ($_article[0]['author']); ?></em></span>
+    </div>
+
+    <div class="article-detail-des">
+        <em>摘要：</em><?php echo ($_article[0]['abstract']); ?>
+
+    </div>
+
+    <div class="article-detail-cont">
+
+         <?php echo ($_article[0]['article']); ?>
+
+    </div>
+
+    <div class="article-detail-relative">
+
+        <div class="relativeArticle"><em>推荐阅读：</em>
+            <ul>
+                <?php if(is_array($_recomm)): $i = 0; $__LIST__ = $_recomm;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($vo['title']); ?>" href="../article-detail/<?php echo ($vo['articleid']); ?>.html"><?php echo ($vo['title']); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+      </div>
+    </div>
+</div>
+
+
+
+            </div>
+
+            <div class="right">
+
+                <div class="aside-order">
+  <h2>今日已<em><?php echo ($appointCount); ?></em>人预约卖车</h2>
+  <div class="aside-order-tel">
+    <input type="text" class="phone js-historysale-tel" placeholder="请输入车主手机号" autocompelte="off" maxLength=11>
+    <button class="salebtn js-historysale-btn">我要卖车</button>
+  </div>
+</div>
+
+
+                <div class="aside-hotsale">
+    <h2>本周热门竞拍</h2>
+    <div class="aside-hotsale-list">
+        <ul>
+            <?php if(is_array($hotSellData)): $i = 0; $__LIST__ = $hotSellData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="item">
+                    <h3 class="ct">
+                    <?php if($level == 'top'): ?><a href="./history-detail/<?php echo ($vo['carid']); ?>.html">
+                    <?php else: ?>
+                        <a href="../history-detail/<?php echo ($vo['carid']); ?>.html"><?php endif; ?>
+                        <?php echo ($vo['info']); ?>
+                    </a>
+                    </h3>
+                    <div class="info">
+                        <div class="txt">
+                            <p><span><?php echo ($vo['regist_date']); ?></span>上牌</p>
+                            <p>里程<span><?php echo round($vo['kilometer']/10000,2);?></span>万公里</p>
+                        </div>
+                        <div class="auction"><?php echo ($vo['num']); ?>人竞拍</div>
+                    </div>
+                </li><?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+    </div>
+</div>
+
+
+                <div class="aside-ad">
+    <img src="/www/Public/prd/img/article/aside-ad.jpg" alt="">
+</div>
+
+
+            </div>
+        </div>
+
+
+        <div class="footer">
+    <div class="footer-con">
+        <div class="footer-left">
+            <img class="img" src="/www/Public/prd/img/source/pbl/logo.png" alt="" />
+            <div class="txt"><i class="tel"></i>400-9907-999</div>
+            <div class="txt wxfont"><i class="wx"></i>关注微信
+                <div class="footer-left-wechat ewm">
+                <div class="img">
+                    <img class="js-ft-wechat" src="/www/Public/prd/img/source/pbl/qr--wechat.jpg">
+                </div>
+                <div class="info">
+                    <p>微信官方公众号</p>
+                    <p>扫一扫添加关注</p>
+                </div>
+              
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="footer-right">
+        <dl class="footer-dl footer-txt">
+            <dd class="footer-tt">关于我们</dd>
+            <?php if($level == 'top'): ?><dd class="item-txt"><a href="./intro.html" target="_blank">&gt;公司简介</a></dd>
+                <dd class="item-txt"><a href="./business.html" target="_blank">&gt;商务合作</a></dd>
+            <?php else: ?>
+                <dd class="item-txt"><a href="../intro.html" target="_blank">&gt;公司简介</a></dd>
+                <dd class="item-txt"><a href="../business.html" target="_blank">&gt;商务合作</a></dd><?php endif; ?>
+        </dl>
+
+        <dl class="footer-dl footer-txt">
+            <dd class="footer-tt">卖车指南</dd>
+            <?php if($level == 'top'): ?><dd class="item-txt" ><a href="./process.html" target="_blank">&gt;卖车流程</a></dd>
+                <dd class="item-txt"><a href="./introduction.html" target="_blank">&gt;卖车须知</a></dd>
+            <?php else: ?>
+                <dd class="item-txt" ><a href="../process.html" target="_blank">&gt;卖车流程</a></dd>
+                <dd class="item-txt"><a href="../introduction.html" target="_blank">&gt;卖车须知</a></dd><?php endif; ?>
+        </dl>
+        
+        <dl class="footer-dl footer-txt">
+            <dd class="footer-tt">新闻中心</dd>
+            <?php if($level == 'top'): ?><dd class="item-txt"><a href="./article-cate/1.html" target="_blank">&gt;行业动态</a></dd>
+                <dd class="item-txt"><a href="./article-cate/2.html" target="_blank">&gt;卖车问答</a></dd>
+                <dd class="item-txt"><a href="./article-cate/3.html" target="_blank">&gt;汽车知识</a></dd>
+                <dd class="item-txt"><a href="./article-cate/4.html" target="_blank">&gt;新闻资讯</a></dd>
+            <?php else: ?>
+                <dd class="item-txt"><a href="../article-cate/1.html" target="_blank">&gt;行业动态</a></dd>
+                <dd class="item-txt"><a href="../article-cate/2.html" target="_blank">&gt;卖车问答</a></dd>
+                <dd class="item-txt"><a href="../article-cate/3.html" target="_blank">&gt;汽车知识</a></dd>
+                <dd class="item-txt"><a href="../article-cate/4.html" target="_blank">&gt;新闻资讯</a></dd><?php endif; ?>
+        </dl>
+
+         <dl class="footer-dl footer-txt footer-link">
+            <dd class="footer-tt">友情链接</dd>
+            <dd class="item-txt js-hidden-friendlink">
+                <?php if(is_array($links)): $i = 0; $__LIST__ = $links;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo ($vo['site']); ?>" target="_blank"><?php echo ($vo['sitename']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+
+                <span class="linkarrow"></span>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<div class="footer-record">
+     <p class="record-txt">
+     	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258281401'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258281401%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+         Copyright© 2016 fecar.com All Right Reserved | 闽ICP备14020087号-1        福建朋友亿车网络科技有限公司          福州市晋安区福新东路370号中海联汽车创意展示园3#楼1层
+     </p>
+</div>
+
+
+
+        
+<div class="pbl-msg-alert js-pbl-msg-alert">
+    <div class="wrap--content content--success">
+    	<div class="title js-title"></div>
+        <div class="content js-content"></div>
+        <div class="btn--yes js-btn--no">确定</div>
+        <div class="close js-close"></div>
+    </div>
+</div>
+
+
+        
+<div class="js-be-api m-be" >
+	{
+		"quickSale" : "<?php echo U('appoint/insert');?>",
+		"faq" : "<?php echo U('consult/insert');?>",
+		"getBrand" : "<?php echo U('car/brand');?>",
+		"getSeries" : "<?php echo U('car/series');?>",
+		"getModel" : "<?php echo U('car/model');?>"
+	}
+</div>
+
+
+        <script src="/www/Public/prd/lib/js/jquery-1.11.3.min.js" charset="utf-8"></script>
+        <script src="/www/Public/prd/js/pbl-ff0bbb48e5.js" charset="utf-8"></script>
+		<script src="/www/Public/prd/js/article-detail-0bcb2afa94.js" charset="utf-8"></script>
+        
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?99e243f83b4397c489bac65ecc7f9aa8";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+    </body>
+</html>

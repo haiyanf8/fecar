@@ -1,0 +1,2054 @@
+[ 2016-06-28T17:24:28+08:00 ] ::1 /www/index.php/detail/3010.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0210s ]
+SQL: SELECT a.carid,a.finalprice,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,MOD(a.carid,5) + 1 as rate,b.kilometer,date_format(d.endtime,'%Y-%m-%d') as bid_time,a.bid_times as num,date_format(b.regist_date,'%Y-%m-%d') as regist_date,date_format(b.annual_check_date,'%Y-%m-%d') as annual_check_date,date_format(b.production,'%Y-%m') as production,b.discharge_standard,b.own_type,b.report,b.belong,b.area,b.score,b.style_sell_name,b.img00,b.img01,b.img02,b.img10,b.img11,b.img12,b.img20,b.img21,b.img22,b.img30,b.img31,b.img32,b.img40,b.img41,e.realname,f.*,b.no FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id LEFT JOIN fecar_check_user e on e.id=b.surveyor_id LEFT JOIN fecar_check_config f on f.check_id=a.carid  WHERE ( a.carid = 3010 ) LIMIT 1   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0250s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0501%'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050103' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050104' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0190s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0501%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0503%'  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050301' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050303' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050306' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050308' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050307' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0180s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050305' ORDER BY id asc LIMIT 1   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0190s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0503%' LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0190s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0401%'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D040103' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D040101' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0200s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0401%' LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0190s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0502%'  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050201' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050203' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050204' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050208' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050212' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D050207' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0200s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0502%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0104%'  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0230s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D010404' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0190s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0104%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0103%'  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D010308' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D010306' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0200s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0103%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D02%'  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D020105' ORDER BY id asc LIMIT 1   [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0180s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D020209' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D020204' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0210s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D020203' ORDER BY id asc LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D020214' ORDER BY id asc LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0190s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D02%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0101%'  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0190s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D010110' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_detect_item_detail_new` [ RunTime:0.0200s ]
+SQL: SELECT `item_name` FROM `fecar_detect_item_detail_new` WHERE `item_no` = 'D010112' ORDER BY id asc LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0200s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0101%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0200s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0102%'  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0190s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0102%' LIMIT 1   [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `fecar_check_item1` [ RunTime:0.0190s ]
+SQL: SELECT `item_no`,`value`,`img1`,`img2`,`img3`,`img4`,`img5` FROM `fecar_check_item1` WHERE fecar_check_item1.check_id = '3010' AND fecar_check_item1.item_no LIKE 'D0301%'  [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `fecar_check_img_water` [ RunTime:0.0200s ]
+SQL: SELECT `img_path` FROM `fecar_check_img_water` WHERE `check_id` = '3010' AND `item_no_pic` LIKE 'D0301%' LIMIT 1   [ RunTime:0.0190s ]
+NOTIC: [8] Undefined index:  E:\www\www\Application\Home\Controller\HistoryController.class.php 第 206 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: 工况 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 573 行.
+NOTIC: [8] Undefined index: 工况 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 573 行.
+NOTIC: [8] Undefined index: 工况 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 574 行.
+NOTIC: [8] Undefined index: 备注 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 589 行.
+NOTIC: [8] Undefined index: 备注 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 589 行.
+NOTIC: [8] Undefined index: 备注 E:\www\www\Application\Runtime\Cache\Home\cdef9509b792693c8770a0dd9df18a31.php 第 590 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.101006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.101006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:52:28+08:00 ] ::1 /www/index.php/articlue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:52:30+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `fecar_sell` [ RunTime:0.0160s ]
+SQL: SELECT MOD(a.carid,5) + 1 as rate,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,a.bid_times as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production FROM fecar_sell a LEFT JOIN fecar_check1 b on a.carid=b.id LEFT JOIN fecar_auction_times d on a.auction_id=d.id  WHERE ( a.status=3 ) ORDER BY bid_time desc LIMIT 8   [ RunTime:0.0300s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0280s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0210s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:52:48+08:00 ] ::1 /www/index.php/info/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T17:52:52+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0240s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:53:02+08:00 ] ::1 /www/index.php/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:53:04+08:00 ] ::1 /www/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: appointList E:\www\www\Application\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `fecar_appoint` [ RunTime:0.0160s ]
+SQL: SELECT `mobile`,DATE_FORMAT(`appoint-time`,'%H:%i:%s') as `appointtime` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0250s ]
+SQL: SELECT count(`mobile`) as `number` FROM `fecar_appoint` WHERE ( (`isfake` = '0' AND DATE_FORMAT(`appoint-time`, '%Y-%m-%d') = DATE_FORMAT(NOW(), '%Y-%m-%d')) OR 
+        (`isfake` = '1' AND DATE_FORMAT(`appoint-time`, '%H:%i:%s') < DATE_FORMAT(NOW(), '%H:%i:%s')) ) ORDER BY DATE_FORMAT(`appoint-time`, '%H:%i:%m') desc  [ RunTime:0.0170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T17:53:21+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 239 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 251 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:00:21+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:07:02+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:07:37+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-06-28T18:07:49+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:07:56+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:08:23+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:08:43+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:10:54+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:11:14+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-06-28T18:11:19+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:11:33+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2016-06-28T18:12:24+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-06-28T18:12:42+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:12:58+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:13:30+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 341 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:13:33+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Home/View/Index/mod--pbl/msg_followed.html): failed to open stream: No such file or directory E:\www\www\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 341 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:14:07+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 340 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 341 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:14:44+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:15:49+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:17:44+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001251s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2016-06-28T18:18:00+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:18:15+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:18:38+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:19:19+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:19:58+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:20:16+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:20:42+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:21:27+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-06-28T18:21:50+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:22:03+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:23:38+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:23:48+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:24:27+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:24:52+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:25:07+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2016-06-28T18:25:55+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:26:05+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:26:13+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:26:18+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:26:45+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-06-28T18:26:52+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:30:11+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:30:46+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:31:17+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:31:37+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:33:48+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 238 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 250 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 280 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 281 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:33:59+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001250s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 241 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 253 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 283 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 283 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001251s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2016-06-28T18:35:30+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:35:53+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:36:07+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:36:19+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-06-28T18:36:31+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:36:42+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021250s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-28T18:37:14+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2016-06-28T18:38:39+08:00 ] ::1 /www/index.php/index/info-article.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 28 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 36 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 37 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 38 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 67 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 70 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 73 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 76 行.
+NOTIC: [8] Undefined variable: appointCount E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 243 行.
+NOTIC: [8] Undefined variable: hotdata E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 255 行.
+NOTIC: [8] Undefined variable: pageStr E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: count E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 285 行.
+NOTIC: [8] Undefined variable: action_name E:\www\www\Application\Runtime\Cache\Home\8b53c7bb353f1f3dcabd9b9188fb6197.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

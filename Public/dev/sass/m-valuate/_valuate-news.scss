@@ -1,0 +1,106 @@
+.assessnews{
+   width: 1200px;
+   height: 92px;
+
+   position: relative;
+
+   overflow: hidden;
+
+   border-bottom: 1px solid $cl-bd;
+
+   &-title{
+       width: 189px;
+
+       height: 92px;
+       line-height: 92px;
+
+       float: left;
+       padding-left: 105px;
+
+       font-size: 26px;
+       color: #3c3c3c;
+       background: url(../img/valuate/valuate-news.png) no-repeat 42px center;
+
+       em{
+           color: #fe461c;
+           font-size: 36px;
+           font-family: "Arial";
+           font-style: normal;
+
+           padding: 0 2px;
+
+       }
+   }
+
+   &-list{
+       display:inline-block;
+
+       position:absolute;
+       top:0;
+       left:0;
+
+       >li{
+           width: 900px;
+           height: 92px;
+       }
+       &-detail{
+           width: 300px;
+
+           float: left;
+
+           padding-top: 36px;
+
+           p{
+              position: relative;
+              width: 230px;
+              height: 20px;
+              line-height: 20px;
+
+              padding-left: 20px;
+
+              font-size: 16px;
+
+              overflow: hidden;
+              color: #3c3c3c;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+
+              a{
+                &:hover{
+                    color: $cl-yl;
+                  }
+              }
+
+               &::before{
+                  position: absolute;
+                  left: 0;
+                  top: 5px;
+
+                  width: 5px;
+                  height: 5px;
+
+                  display: inline-block;
+
+                  content: "";
+                  border-radius: 2.5px;
+                  background: #353535;
+               }
+           }
+       }
+
+   }
+   &-copy{
+
+       >li{
+           width: 900px; 
+           height: 92px;
+       }
+   }
+
+   .tempWrap{
+        float: right;
+        width: 906px;
+
+        display: block;
+   }
+}

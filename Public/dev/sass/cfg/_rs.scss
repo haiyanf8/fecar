@@ -1,0 +1,73 @@
+
+@import "cl";
+
+
+html{
+	margin: 0;
+	padding: 0;
+	min-width: 1280px;
+	font-size: 12px;
+	background-color: $cl-bg;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	min-width: 1280px;
+	color: $cl-main;
+	font-family: Microsoft Yahei, Arial, sans-serif;
+}
+
+
+p{
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol, li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	color: inherit;
+	*color: $cl-main;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, strong, em{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: inherit;
+	font-size: inherit;
+}
+
+input, button{
+	font-family: Microsoft Yahei, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+
+	border: 0;
+	outline: 0;
+
+	line-height: normal;
+
+	&:focus{
+		outline: none;
+	}
+}
+
+img{
+	border: 0;
+}
+
+
+i, .i{
+	display: inline-block;
+}

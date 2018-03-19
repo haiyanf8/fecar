@@ -1,0 +1,4 @@
+[ 2016-12-08T14:56:13+08:00 ] ::1 /www/
+ERR: 1054:Unknown column 'auction.win_price' in 'where clause'
+ [ SQL语句 ] : SELECT `first`,`second`,`third` FROM `fecar_article_pic` WHERE auction.win_price > 100000 AND `id` = 2 
+

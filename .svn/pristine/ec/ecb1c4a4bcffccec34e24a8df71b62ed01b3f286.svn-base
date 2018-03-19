@@ -1,0 +1,13 @@
+[ 2016-12-26T09:52:10+08:00 ] 127.0.0.1 /www/dev.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined property: stdClass::$content E:\www\www\Dev\Home\Controller\BaseController.class.php ç¬¬ 98 è¡Œ.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Dev\Home\Controller\BaseController.class.php ç¬¬ 98 è¡Œ.
+NOTIC: [8] Trying to get property of non-object E:\www\www\Dev\Home\Controller\BaseController.class.php ç¬¬ 98 è¡Œ.
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÁ¬½Ó·½ÔÚÒ»¶ÎÊ±¼äºóÃ»ÓÐÕýÈ·´ð¸´»òÁ¬½ÓµÄÖ÷»úÃ»ÓÐ·´Ó¦£¬Á¬½Ó³¢ÊÔÊ§°Ü¡£
+
+

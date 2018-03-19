@@ -1,0 +1,16 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class SeoModel extends Model
+{
+    protected $connection = 'DB_CONFIG2';
+    protected $tablePrefix = "fecar_";
+
+    public function getSeoByIdent($ident)
+    {
+        $where['ident'] = $ident;
+        $field = '`title`, `keywords`, `description`';
+        return $this->where($where)->field($field)->select();
+    }
+}

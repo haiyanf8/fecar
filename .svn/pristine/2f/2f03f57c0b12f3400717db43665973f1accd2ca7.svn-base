@@ -1,0 +1,91 @@
+
+<div class="slide">
+
+	<div class="l-times">
+		<p class="tt">累计估值</p>
+		<div class="mt">
+	        <div class="num mt-number-box"></div>
+            <div class="comma">次</div>
+		</div>
+	</div>
+
+    <div class="assess js-assess">
+
+        <div class="mod mod--model js-select-model">
+            <p class="tt js-model" onselectstart="return false">请选择品牌车型</p>
+            <div class="ct ct--model">
+				<div class="ct-wrap ct-wrap--brand jsw-brand">
+					<p class="ct-wrap-tt">请选择品牌</p>
+					<div class="ct-wrap-list">
+						<ul class="letter jsl-letter">
+
+						</ul>
+						<div class="item jsl-brand"></div>
+					</div>
+				</div>
+
+				<div class="ct-wrap ct-wrap--series jsw-series">
+					<p class="ct-wrap-tt js-select-model-close js-tt--brand"></p>
+					<ul class="ct-wrap-list jsl-series">
+
+					</ul>
+				</div>
+
+				<div class="ct-wrap ct-wrap--model jsw-model">
+					<p class="ct-wrap-tt js-select-model-close js-tt--series"></p>
+					<ul class="ct-wrap-list jsl-model">
+
+					</ul>
+				</div>
+
+            </div>
+        </div>
+
+        <div class="mod mod--date js-select-date">
+            <p class="tt js-date">请选择上牌日期</p>
+            <div class="ct ct--date">
+                <div class="ct-wrap ct-wrap--year jsw-year">
+					<p class="ct-wrap-tt">请选择年份</p>
+					<ul class="ct-wrap-list jsl-year">
+
+                    </ul>
+				</div>
+				<div class="ct-wrap ct-wrap--month jsw-month">
+					<p class="ct-wrap-tt">请选择月份</p>
+					<ul class="ct-wrap-list jsl-month">
+
+					</ul>
+				</div>
+            </div>
+        </div>
+
+		<div class="mod mod--city js-select-city">
+            <p class="tt js-city">请选择城市</p>
+            <div class="ct ct--city">
+                <div class="ct-wrap ct-wrap--city jsw-city">
+					<ul class="ct-wrap-list jsl-city">
+
+					</ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mod">
+            <input class="ipt js-mileage" maxlength="4" type="tel" autocomplete="off" placeholder="请输入里程">
+			<span class="mileage-unit">万公里</span>
+        </div>
+
+        <div class="valuate-btn js-btn-valuate" onselectstart="return false">快速估值</div>
+    </div>
+
+	<div class="js-be-valuate m-be" >
+		{
+			"getBrand" : "{:U('carmodel/brand')}",
+			"getSeries" : "{:U('carmodel/series')}",
+			"getModel" : "{:U('carmodel/model')}",
+			"getCity" : "{:U('city/open')}",
+			"getValuate" : "{:U('valuate/submit')}"
+		}
+	</div>
+
+</div>

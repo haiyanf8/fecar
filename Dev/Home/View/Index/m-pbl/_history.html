@@ -1,0 +1,20 @@
+<li class="m-history-item">
+	<div class="img">
+		<a href="#"><img
+			src="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$data['img00']}"
+			alt="" /></a> <i class="i"></i>
+	</div>
+	<div class="info">
+		<h4 class="info-model">
+			<a href="#">{$data['info']}</a>
+		</h4>
+		<p class="info-desc">
+			<span class="date"> <i class="i"></i> <span>{$data['regist_date']}上牌</span>
+			</span> <span class="mileage"> <i class="i"></i> <span>里程{:round($data['kilometer']/10000,2)}万公里</span>
+			</span>
+		</p>
+	</div>
+	<div class="count">
+		<i class="i"></i> <span class="count-ct"><span class="red">{$data['num']}</span>竞拍</span>
+	</div>
+</li>

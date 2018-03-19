@@ -1,0 +1,41 @@
+<?php
+namespace Home\Controller;
+
+class StoreController extends BaseController
+{
+    private $_seoModel = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_seoModel = D('seo');
+    }
+
+    public function index()
+    {
+        $seoData = $this->_seoModel->getSeoByIdent('store');
+        //标题关键字  描述
+        $this->assign('title', $seoData[0]['title']);
+        $this->assign('keywords', $seoData[0]['keywords']);
+        $this->assign('description', $seoData[0]['description']);
+        $this->assign('action_name','store');
+
+        $field = '`site`, `sitename`, `rank`';
+        $order = '`rank` desc';
+        $links = D('link')->getLinks($field, $order, $limit);
+        $this->assign('links', $links);
+
+        $this->assign('level', 'top');
+
+        $this->display('Index:store');       
+    }
+    
+    /**
+     * 空操作
+     */
+    protected  function _empty()
+    {
+        $this->index();
+        return ;
+    }
+}

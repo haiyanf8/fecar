@@ -1,0 +1,255 @@
+.checkup{
+	
+	width: 1200px;
+
+	padding: 50px 0 0;
+
+	clear: both;
+	height: 165px;
+	overflow: visible;
+
+	&-testman{
+
+		width: 224px;
+		text-align: center;
+
+		float: right;
+
+		>img{
+			width: 80px;
+			height: 80px;
+
+			border-radius: 50%;
+
+			display: block;
+			
+			margin: 0 auto;
+		}
+		.ct{
+			color: #000;
+			font-size: 17px;
+
+			margin: 8px 0;
+		}
+		.tt{
+			color: #606060;
+			font-size: 17px;
+		}
+	}
+	
+	&-situation{
+		width: 975px;
+
+		float: right;
+
+		.item{
+			position: relative;
+			float: left;
+
+			width: 194px;
+			height: 154px;
+
+			border-right: 1px solid $cl-bd;
+
+			.ct{
+				position: absolute;
+				top: -20px;
+
+				width: 194px;
+				margin: 0 auto;
+				color: #4c4c4c;
+				font-size: 18px;
+
+				height: 40px;
+				text-align: center;
+
+				i{
+					&.icon{
+						width: 194px;
+						height: 40px;
+
+						background-repeat: no-repeat;
+						background-position: center center;
+					}
+
+					&.i-appearance{
+						background-image: url(../img/auction-detail/i-appearance.png)
+					}
+
+					&.i-interior{
+						background-image: url(../img/auction-detail/i-interior.png);
+					}
+
+					&.i-carcondition{
+						background-image: url(../img/auction-detail/i-carcondition.png);
+					}
+
+					&.i-note{
+						background-image: url(../img/auction-detail/i-note.png);
+					}
+
+					&.i-wcondition{
+						background-image: url(../img/auction-detail/i-wcondition.png);
+					}
+				}
+
+				em{
+					position: absolute;
+					top: 26px;
+					right: 60px;
+			
+					&.interior-ps{
+						right: 70px;
+					}
+
+					&.carcondition-ps{
+						right: 58px;
+					}
+
+					&.wcondition-ps{
+						right: 66px;
+					}
+
+					&.note-ps{
+						right: 58px;
+					}
+
+					.flag{
+						
+						display: block;
+
+						width: 15px;
+						height: 15px;
+
+						&.bad{
+							background-image: url(../img/auction-detail/test-bad.png);
+						}
+
+						&.normal{
+							background-image: url(../img/auction-detail/test-normal.png);
+						}
+					}
+				}
+			}
+
+			.title{
+				margin-top: 28px;
+				width: 194px;
+
+				height: 35px;
+				line-height: 25px;
+
+				text-align: center;
+
+				font-size: 16px;
+
+			}
+
+			.tt{
+				width: 160px;
+
+				line-height: 19px;
+
+				padding: 0 0 0 20px;
+
+				color: #606060;
+				font-size: 12px;
+
+				position: relative;
+
+				span{
+					position: relative;
+					display: inline;
+				}
+			}
+		}
+	}
+
+
+	&-overflow{
+		position: relative;
+		width: 300px;
+		right: 0px;
+		bottom: 0px;
+		height: 30px;
+		display: block;
+
+		&:hover{
+			.i-down{
+				width: 16px;
+				height: 16px;
+				background-image: url(../img/auction-detail/checkup-i-down.png);
+			}
+			.more-box{
+				display: block;
+			}
+		}
+
+		.i-down{
+			width: 16px;
+			height: 16px;
+
+			position: absolute;
+
+			left: 145px;
+			top: 0px;
+
+			margin: 0;
+
+			display: inline-block;
+			background-image: url(../img/auction-detail/checkup-i-up.png);
+
+		}
+	}
+}
+
+.more-box{
+
+	position: relative;
+	display: none;
+
+	width: 300px;
+	right: 65px;
+	top: 10px;
+
+	i{
+		&.i-tringle{
+			width: 11px;
+			height: 6px;
+			
+			display: inline-block;
+
+			position: absolute;
+			left: 213px;
+			top: 15px;
+			z-index: 8;
+
+			margin: 0;
+
+
+			background-image: url(../img/auction-detail/checkup-i-tringle.png);
+
+		}
+	}
+	
+
+	&-ct{
+		position: absolute;
+		padding: 10px;
+
+		width: 300px;
+
+		border: 1px solid #ff9900;
+		border-radius: 3px;
+		background: #fff;
+
+		top: 20px;
+		right: 0;
+		z-index: 7;
+
+	}
+}
+
+.aligncenter{
+	text-align: center;
+}

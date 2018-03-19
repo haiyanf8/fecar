@@ -1,0 +1,45 @@
+<?php
+namespace Home\Model;
+use Think\Model;
+
+class CarmodelModel extends Model
+{
+    public function getCarBrand()
+    {
+        $field = 'distinct `brandid`, `brandname`';
+
+        return $this->where('')->field($field)->select();
+    }
+
+    public function getCarSeries($brandid)
+    {
+        $where['brandid'] = $brandid;
+        $field = 'distinct `modelname`, `modelid`, `manufacturer`';
+
+        return $this->where($where)->field($field)->select();
+    }
+
+    public function getCarModel($series)
+    {
+        $where['modelid'] = $series;
+        $field = '`styleyear`, `styleid`, `stylename`, `inyear`, `outyear`';
+
+        return $this->where($where)->field($field)->select();
+    }
+
+    public function getValuateByModel($modelid)
+    {
+        $where['styleid'] = $modelid;
+        $field = '`modelpic`, `brandname`, `modelname`, `stylename`,`emission`, `gearbox`, `volume`';
+
+        return $this->where($where)->field($field)->select();
+    }
+
+    public function getYear($styleid) 
+    {
+        $where['styleid'] = $styleid;
+        $field = '`inyear`, `outyear`';
+
+        return $this->where($where)->field($field)->select();
+    }
+}

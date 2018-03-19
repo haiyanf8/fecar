@@ -1,0 +1,30 @@
+
+
+@import "cfg/cl";
+@import "cfg/sz";
+@import "cfg/rs";
+@import "cfg/mx";
+
+@import "m-pbl/_msg";
+@import "m-pbl/hd";
+@import "m-pbl/aside-auction";
+@import "m-pbl/aside-nav";
+@import "m-pbl/aside-quicksale";
+@import "m-pbl/quicksale";
+@import "m-pbl/ft";
+@import "m-pbl/flink";
+
+
+.main_container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.m-be{
+	display: none;
+}
+
+.m-tpl{
+	display: none;
+}

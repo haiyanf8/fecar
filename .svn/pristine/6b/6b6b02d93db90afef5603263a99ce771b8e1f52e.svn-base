@@ -1,0 +1,135 @@
+<?php
+/**
+* Copyright (c) 2016, 福建朋友亿车网
+* All rights reserved.
+* 文件名称： IndexController.class.php 
+* 摘    要： 首页控制器
+* 作    者： 赵阳
+* 修改日期:　2016.6.23
+*/
+namespace Home\Controller;
+use Common\Common\Util\Page;
+class IndexController extends BaseController
+{
+    private $_appointList = null;
+    private $_seoModel = null;
+    private $_article = null;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->_appointList = new AppointController();
+        $this->_seoModel = D('seo');
+        $this->_article = D('article');
+    }
+
+    public function index()
+    {
+        // echo json_encode(D('article_pic')->getAll());
+        // exit;
+        // 从文件缓存获取数据
+       // S('bidedData',null);
+        if (!S('bidedData')) {
+//            $bidedData = D('sell')->getHisSellData('a.status=3 and a.finalprice > 100000', 'num desc, bid_time desc', '20', 0);
+            $where['auction.win_price'] = array('GT',100000);
+            $bidedData = D('auction')->getHisSellDataList($where, 'auction.create_time desc,bid_times desc', '20', 0);
+            S('bidedData', $bidedData, 3600);
+        }
+        $this->assign('bidedData', S('bidedData'));
+        $this->assign('city', session('opencity'));
+        $this->assign('action_name', '');
+
+        // $appoint = $this->_appointList->appoint();
+        // $this->assign('appoint', array($appoint, floor(count($appoint) / 3)));
+        $appointCount = $this->_appointList->appointCount();
+        $this->assign('appointCount',$appointCount[0]['number']);
+
+        $field = '`site`, `sitename`, `rank`';
+        $order = '`rank` desc';
+        $links = D('link')->getLinks($field, $order, $limit);
+        $this->assign('links', $links);
+
+        $awhere = '';
+        $afield = '`articleid`, `title`, `abstract`, `prepic`';
+        $aorder = '`date` desc';
+        $alimit = '0, 3';
+        $latestArticle = D('article')->getArticles($awhere, $afield, $aorder, $alimit);
+
+        for ($i = 0; $i < sizeof($latestArticle); $i++) {
+            if (mb_strlen($latestArticle[$i]['abstract'], 'utf8') > 120) {
+                $latestArticle[$i]['abstract'] = cutString($latestArticle[$i]['abstract'], 0, 120);
+            }
+        }
+
+        // 先取推荐到首页的文章
+        $riWhere['recomm_index'] = '1';
+        $rifield = '`articleid`, `title`, `abstract`, `prepic`';
+        $riOrder = '`date` desc';
+        $riLimit = '0, 3';
+        $riArticle = D('article')->getArticles($riWhere, $rifield, $riOrder, $riLimit);
+        $count = count($riArticle);
+        if ($count < 3) {
+            $awhere = " recomm = '1' ";
+            foreach ($riArticle as $key => $value) {
+                $awhere .= "and articleid != '" . $value['articleid'] . "'";
+            }
+            //$awhere['recomm'] = '1';
+            $afield = '`articleid`, `title`, `abstract`, `prepic`';
+            $aorder = '`date` desc';
+            $limitCount = 3 - $count;
+            $alimit = '0, ' . $limitCount;
+            $latestArticle = D('article')->getArticles($awhere, $afield, $aorder, $alimit);
+            $latestArticle = array_merge($riArticle, $latestArticle);
+        } else {
+            $latestArticle = $riArticle;
+        }
+
+        for ($i = 0; $i < sizeof($latestArticle); $i++) {
+            if (mb_strlen($latestArticle[$i]['abstract'], 'utf8') > 80) {
+                $latestArticle[$i]['abstract'] = cutString($latestArticle[$i]['abstract'], 0, 80);
+            }
+        }
+
+        $where['id'] = '2';
+        $field = '`first`, `second`, `third`';
+        $extra = D('article_pic')->getPic($where, $field);
+        if ($extra) {
+            if ($extra[0]['first']) {
+                $latestArticle[0]['prepic'] = $extra[0]['first'];
+            }
+            if ($extra[0]['second']) {
+                $latestArticle[1]['prepic'] = $extra[0]['second'];
+            }
+            if ($extra[0]['third']) {
+                $latestArticle[2]['prepic'] = $extra[0]['third'];
+            }
+        }
+
+        $this->assign('leftArticle', $latestArticle[0]);
+        $this->assign('middleArticle', $latestArticle[1]);
+        $this->assign('rightArticle', $latestArticle[2]);
+
+        $seoData = $this->_seoModel->getSeoByIdent('index');
+        //标题关键字  描述
+        $this->assign('title', $seoData[0]['title']);
+        $this->assign('keywords', $seoData[0]['keywords']);
+        $this->assign('description', $seoData[0]['description']);
+
+        $this->assign('level', 'top');
+
+        $this->display('Index:index');      
+    }
+    /**
+     * 空操作
+     */
+    protected  function _empty()
+    {
+        $this->index();
+        return ;
+    }
+    
+    public function insert()
+    {
+        return $this->_appointList->insert();
+    } 
+}

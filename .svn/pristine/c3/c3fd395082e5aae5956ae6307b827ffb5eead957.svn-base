@@ -1,0 +1,153 @@
+
+.m-bsale{
+	// banner sale or aside sale
+	position: relative;
+
+	&-form{
+		@include clearfix();
+
+		white-space: nowrap;
+
+		.freeorder{
+			// width 240px, without using border-box
+			display: block;
+			float: left;
+
+			width: 197px;
+			height: 60px;
+
+			font-size: 22px;
+			line-height: 60px;
+			color: $cl-yl;
+
+			padding-left: 42px;
+
+			border-right: 1px solid $cl-bd;
+			border-radius: 10px 0 0 10px;
+			background-color: $cl-bg;
+
+			.i-arrow{
+				width: 21px;
+				height: 20px;
+
+				margin-left: 14px;
+
+				background-image: url(../img/index/banner-index-arrow.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+
+				vertical-align: -3px;
+			}
+		}
+
+		.phone{
+			display: block;
+			float: left;
+
+			width: 420px;
+			height: 28px;
+
+			padding: 16px 14px 16px 36px;
+
+			font-size: 18px;
+			line-height: 28px;
+
+			vertical-align: top;
+		}
+
+		.salebtn{
+			display: block;
+			float: left;
+
+			width: 180px;
+			height: 60px;
+
+			font-size: 22px;
+			color: #fff;
+
+			background: $cl-yl;
+			border-radius: 0 10px 10px 0;
+
+			cursor: pointer;
+
+			font-family: "Microsoft Yahei";
+		}
+	}
+
+	&-alert{
+		position: absolute;
+		top: 74px;
+		left: 222px;
+		z-index: 1;
+
+		width: 410px;
+
+		padding: 18px 30px;
+
+		background-color: $cl-bg;
+		border-radius: 5px;
+		box-shadow: 1px 5px 15px #d4d4d4;
+
+		display: none;
+
+		&.active{
+			display: block;
+		}
+
+		&:before{
+			display: block;
+			content: "";
+
+			width: 0;
+			height: 0;
+
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid $cl-wt;
+
+			position: absolute;
+			top: -9px;
+			left: 160px;
+			z-index: 2;
+		}
+
+		&:after{
+			display: block;
+			content: "";
+
+			width: 0;
+			height: 0;
+
+			clear: both;
+		}
+
+		.i-mark{
+			display: block;
+			float: left;
+
+			width: 16px;
+			height: 16px;
+
+			margin: 2px 8px;
+
+			background-color: $cl-yl;
+			border-radius: 50%;
+
+			color: #fff;
+			font-size: 12px;
+			font-style: normal;
+			text-align: center;
+			line-height: 16px;
+		}
+
+		.ct{
+			display: block;
+			overflow: hidden;
+
+			color: $cl-yl;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+	}
+}

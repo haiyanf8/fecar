@@ -1,0 +1,120 @@
+<div class="choosewrapper">
+
+    <div class="choose js-chooseform">
+        <div class="choose-item type">
+    		<p class="tt">
+    			选择车型
+    		</p>
+    		<form class="type-form" action="" method="get">
+
+    			<input class="js-type-brand" type="hidden" name="brand" value="{$brand}">
+    			<input class="js-type-series" type="hidden" name="series" value="{$series}">
+    		<!-- 	<input class="js-type-model" type="hidden" name="model" value="{$model}"> -->
+				
+				<input  type="hidden" id='brand_param' name="brand_param" value="{$param['brand']|substr=1}">
+    			<input  type="hidden" id='series_param' name="series_param" value="{$param['series']|substr=1}">
+                
+                <!-- 	<input  type="hidden" id='model_param' name="model" value="{$param['model']|substr=1}"> -->
+    			
+    			<div class="m-select m-select-brand js-select-brand jsw-brand">
+    				<p class="m-select-tt js-tt js-select-brand">{$brand? $brand:'品牌选择'}</p>
+    				<div class="m-select-ct m-select-wrap js-ct js-ls-brand">
+                        <div class="m-select-big">
+                            <p class="tit jsl-brand-title" data-name="全部"></p>
+                            <ul class="letter jsl-letter">
+
+                            </ul>
+                            <div class="brandname jsl-brand">
+                               
+                            </div>
+                        </div>
+    				</div>
+    			</div>
+
+    			<div class="m-select m-select-series js-select-series jsw-series">
+    				<p class="m-select-tt js-tt js-select-series">{$series? $series:'系列选择'}</p>
+    				<div class="m-select-ct js-ct js-ls-series m-select-newseries">
+
+    				</div>
+    			</div>
+
+    			<!-- <div class="m-select m-select-model js-select-model">
+    				<p class="m-select-tt js-tt js-select-model border">{$model? $model:'型号选择'}</p>
+    				<div class="m-select-ct js-ct js-ls-model">
+
+    				</div>
+    			</div> -->
+
+    		</form>
+        </div>
+        <div class="choose-item mile">
+            <p class="tt">
+                里程
+            </p>
+            <div class="con">
+                <a class="{$mile==''? 'current':''}" href="./history.html?{$param['mile']|substr=1}">不限</a>
+                <a class="{$mile=='0-5'? 'current':''}" href="./history.html?mile=0-5{$param['mile']}">5万公里以内</a>
+                <a class="{$mile=='5-10'? 'current':''}" href="./history.html?mile=5-10{$param['mile']}">5-10万公里</a>
+                <a class="{$mile=='10-20'? 'current':''}" href="./history.html?mile=10-20{$param['mile']}">10-20万公里</a>
+                <a class="{$mile=='20-9999'? 'current':''}" href="./history.html?mile=20-9999{$param['mile']}">20万公里以上</a>
+            </div>
+            <form class="form-mile" name="form-mile" action="./history.html?{$param['mile']|substr=1}" method="get">
+
+                <span class="inp-define">自定义：</span>
+                <input class="inp-txt" name="minmile" type="text" value={$minmile}>
+                <span class="inp-line">-</span>
+                <input class="inp-txt" name="maxmile" type="text" value={$maxmile}>
+                <span class="inp-unit">万公里</span>
+                <input class="inp-submit ensure js-button" type="button" value="确定">
+            </form>
+        </div>
+        <div class="choose-item age">
+            <p class="tt">
+                车龄
+            </p>
+            <div class="con js-carage">
+                <a class="{$age==''?'current':''}"     href="./history.html?{$param['age']|substr=1}">不限</a>
+                <a class="{$age=='0-3'?'current':''}"  href="./history.html?age=0-3{$param['age']}">3年以下</a>
+                <a class="{$age=='3-5'?'current':''}"  href="./history.html?age=3-5{$param['age']}">3-5年</a>
+                <a class="{$age=='5-8'?'current':''}"  href="./history.html?age=5-8{$param['age']}">5-8年</a>
+                <a class="{$age=='8-10'?'current':''}" href="./history.html?age=8-10{$param['age']}">8-10年</a>
+                <a class="{$age=='10-999'?'current':''}" href="./history.html?age=10-999{$param['age']}">10年以上</a>
+            </div>
+            <form class="form-mile" name="form-age" action="./history.html?{$param['age']|substr=1}" method="get">
+                <span class="inp-define">自定义：</span>
+                <input class="inp-txt" name="minage" type="text" value={$minage}>
+                <span class="inp-line">-</span>
+                <input class="inp-txt" name="maxage" type="text" value={$maxage}>
+                <span class="inp-unit">年</span>
+                <input class="inp-submit ensure js-button" type="button" value="确定">
+            </form>
+        </div>
+        <div class="choose-item price">
+            <p class="tt">
+                价格
+            </p>
+            <div class="con">
+                <a class="{$price==''?'current':''}" href="./history.html?{$param['price']|substr=1}">不限</a>
+                <a class="{$price=='0-3'?'current':''}" href="./history.html?price=0-3{$param['price']}">3万以下</a>
+                <a class="{$price=='3-5'?'current':''}" href="./history.html?price=3-5{$param['price']}">3-5万</a>
+                <a class="{$price=='5-8'?'current':''}" href="./history.html?price=5-8{$param['price']}">5-8万</a>
+                <a class="{$price=='10-15'?'current':''}" href="./history.html?price=10-15{$param['price']}">10-15万</a>
+                <a class="{$price=='15-20'?'current':''}" href="./history.html?price=15-20{$param['price']}">15-20万</a>
+                <a class="{$price=='20-30'?'current':''}" href="./history.html?price=20-30{$param['price']}">20-30万</a>
+
+                <a class="{$price=='30-9999'?'current':''}" href="./history.html?price=30-9999{$param['price']}">30万以上</a>
+
+            </div>
+            <form class="form-mile"  name="form-price" action="./history.html?{$param['price']|substr=1}" method="get">
+
+                <span class="inp-define">自定义：</span>
+                <input class="inp-txt" name="minprice" type="text" value={$minprice}>
+                <span class="inp-line">-</span>
+                <input class="inp-txt" name="maxprice" type="text" value={$maxprice}>
+                <span class="inp-unit">万</span>
+                <input class="inp-submit ensure js-button" type="button" value="确定">
+            </form>
+        </div>
+
+    </div>
+</div>

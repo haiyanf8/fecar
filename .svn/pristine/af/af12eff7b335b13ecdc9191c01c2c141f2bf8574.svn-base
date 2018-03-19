@@ -1,0 +1,1 @@
+a:6:{i:0;s:8:"province";i:1;s:4:"city";i:2;s:7:"zipcode";i:3;s:4:"open";i:4;s:4:"rank";s:5:"_type";a:5:{s:8:"province";s:11:"varchar(32)";s:4:"city";s:11:"varchar(32)";s:7:"zipcode";s:10:"varchar(8)";s:4:"open";s:6:"int(2)";s:4:"rank";s:7:"int(11)";}}

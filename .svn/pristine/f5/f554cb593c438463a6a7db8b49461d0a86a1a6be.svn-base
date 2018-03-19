@@ -1,0 +1,51 @@
+<div class="banner introbg">
+	<div class="main_container">
+	    <div class="banner-title">
+	        <h2 class="ct">关于我们</h2>
+	        <p class="tt">About Us</p>
+	    </div>
+    </div>
+</div>
+
+<div class="main_container m-column">
+	<div class="m-column-tab">
+		<p class="tt">关于我们</p>
+		<ul class="ct">
+			<if condition="$level == 'top'">
+	    		<li class="{$action_name=='intro'? 'current':''}"><a href="./intro.html">公司简介</a></li>
+	    		<li class="{$action_name=='business'? 'current':''}"><a href="./business.html">商务合作</a></li>
+	      	<else />
+	          <li class="{$action_name=='intro'? 'current':''}"><a href="../intro.html">公司简介</a></li>
+	          <li class="{$action_name=='business'? 'current':''}"><a href="../business.html">商务合作</a></li>
+	      	</if>
+		</ul>
+	</div>
+
+	<div class="m-column-ct">
+		<p class="tt">公司简介</p>
+
+		<div class="intro">
+			<div class="intro-tt">
+				<img src="__PUBLIC__/dev/img/info/intro-tt.png" />
+			</div>
+
+			<p class="yl">迈迈车</p>
+
+			<p class="breakTop60 yl">专业的S2R二手车帮卖网</p>
+
+			<p>迈迈车以“让卖车更透明”为企业使命，在国内首创先进的S2R比卖模式（Source to Retail，即车源对零售商模式），通过资源整合、上门服务、线上比卖，实现S端车源快速销售至竞价最优的R端零售商，突破时间、地域的限制，为客户提供高价、极速、便捷、安全的卖车解决方案，致力于成为最受信赖的汽车帮卖平台。</p>
+
+			<p class="breakTopBottom60 yl">我们有</p>
+
+			<p class="circle">国际化专业检测体系，879个检测细则保证车源品质</p>
+			
+			<p class="circle">10年以上汽车行业服务经验的核心管理团队</p>
+			
+			<p class="circle">行业领先的二手车检测服务</p>
+		</div>
+
+		<!--<div class="company">
+			<img src="__PUBLIC__/dev/img/info/company-1.jpg">
+		</div>-->
+	</div>
+</div>

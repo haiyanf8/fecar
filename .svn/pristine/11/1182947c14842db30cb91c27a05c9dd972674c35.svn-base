@@ -1,0 +1,63 @@
+<div class="banner introbg">
+  <div class="main_container">
+      <div class="banner-title">
+          <h2 class="ct">关于我们</h2>
+          <p class="tt">About Us</p>
+      </div>
+    </div>
+</div>
+
+<div class="main_container m-column">
+  <div class="m-column-tab">
+  	<p class="tt">关于我们</p>
+  	
+  	<ul class="ct">
+      <if condition="$level == 'top'">
+    		<li class="{$action_name=='intro'? 'current':''}"><a href="./intro.html">公司简介</a></li>
+    		<li class="{$action_name=='business'? 'current':''}"><a href="./business.html">商务合作</a></li>
+      <else />
+          <li class="{$action_name=='intro'? 'current':''}"><a href="../intro.html">公司简介</a></li>
+          <li class="{$action_name=='business'? 'current':''}"><a href="../business.html">商务合作</a></li>
+      </if>
+  	</ul>
+  </div>
+
+  <div class="m-column-ct">
+  	<p class="tt">商务合作</p>
+  	
+  	<div class="business">
+     
+ 		<div class="business-box">
+ 			<h2>商务合作</h2>
+			<div class="content">
+				<p>联系人：陈先生</p>
+				<p>渠道合作邮箱: <span class="strong">chenzheng@fecar.com</span></p>
+				<p>渠道合作热线：<span class="strong">189-5022-1997</span></p>
+				<p>联系地址：上海市长宁区天山路600弄思创大厦4号楼7层</p>
+			</div>
+ 		</div>
+
+ 		<div class="business-box">
+ 			<h2>渠道合作</h2>
+
+ 			<div class="content">
+ 			<p>联系人：林女士</p>
+            <p>商务合作邮箱：<span class="strong">lintingting@fecar.com</span></p>
+          	<p>商务合作QQ：<span class="strong">1512213407</span></p>
+          	<p>联系地址：上海市长宁区天山路600弄思创大厦4号楼7层</p>
+ 			</div>
+ 		</div>
+
+        <div class="business-box">
+            <h2>广告合作</h2>
+
+            <div class="content">
+            <p>联系人：李先生</p>
+            <p>广告合作邮箱：<span class="strong">liguangyao@fecar.com</span></p>
+            <p>广告合作热线：<span class="strong">137-7453-3234</span></p>
+            <p>联系地址：上海市长宁区天山路600弄思创大厦4号楼7层</p>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="bargin">
+	<h2>最新成交</h2>
+	<ul class="bargin-list">
+		<volist name='latestBid' id='data'>
+			<li class="item">
+				<h3><a href="{:U('detail/'.$data['carid'])}" target='_blank'>{$data['info']}</a></h3>
+				<div class="bargin-list-bottom">
+					<a href="{:U('detail/'.$data['carid'])}" target='_blank'>
+						<img src="http://imgam.fecar.cn/fecar_test/fecar/Application/public/uploads/{$data['img00']}" alt="" class="pic">
+					</a>
+					<div class="txt">
+						<p>成交日期：<em>今日</em></p>
+						<p>出厂日期：<em>{$data['production']}</em></p> 
+						<p>行驶里程：<em>{:round($data['kilometer']/10000,2)}万公里</em></p>
+						<p class="yellow">高于市场价：<em>{$data['rate']}%</em></p>
+					</div>
+				</div>
+			</li>
+		</volist>
+	</ul>
+</div>

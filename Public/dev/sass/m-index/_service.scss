@@ -1,0 +1,112 @@
+.ourservice{
+	width: 1200px;
+	margin: 0 auto;
+
+	padding-bottom: 70px;
+
+	@include clearfix();
+
+	&-title{
+		padding: 40px 0 50px 0;
+		
+		@include clearfix();
+
+		h2{
+			font-size: 20px;
+			color: #0a0a0a;
+			font-weight: bold;
+			letter-spacing: 2px;
+			
+			p{
+				&.ttcn{
+					margin-top: -4px;
+
+					font-size: 14px;
+					color: #3b3b3b;
+				}
+			}
+		}
+
+		.more{
+			float: right;
+
+			padding-top: 20px;
+
+			a{
+				font-size: 16px;
+				color: $cl-yl;
+			}
+		}
+	}
+	
+	&-content{
+		overflow: hidden;
+		clear: both;
+
+		visibility: hidden;
+		opacity: 0;
+		transform: translate3d(0, 20%, 0);
+		transition: all 1s ease 0s;
+
+		&.active{
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+			visibility: visible;	
+		}
+		
+		.item{
+			width: 300px;
+
+			float: left;
+
+			.img{
+				height: 150px;
+				
+				transition: all 0.2s ease 0s;
+				
+				&:hover{
+					transform: translate3d(0px, -6px, 0px);
+				}
+
+				i{
+					width: 300px;
+					height: 150px;
+
+					display: block;
+
+					&.sale{
+						background: url(../img/index/service-sale.png) no-repeat center 32px;
+					}
+
+					&.contrast{
+						background: url(../img/index/service-contrast.png) no-repeat center 32px;
+					}
+
+					&.safe{
+						background: url(../img/index/service-safe.png) no-repeat center 32px;
+					}
+
+					&.free{
+						background: url(../img/index/service-free.png) no-repeat center 32px;
+					}
+				}
+			}
+
+			.tt{
+				font-size: 22px;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+
+			.ct{
+				font-size: 14px;
+
+				line-height: 20px;
+
+				text-align: center;
+				color: $cl-aux;
+			}
+		}
+		
+	}
+}

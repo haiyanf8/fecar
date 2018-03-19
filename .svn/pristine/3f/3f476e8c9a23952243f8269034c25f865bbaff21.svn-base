@@ -1,0 +1,196 @@
+
+.onlineMsg{
+	width: 580px;
+	height: 478px;
+	
+	border-radius: 10px;
+
+	background: #fff;
+
+	position: absolute;
+
+	left: 50%;
+	top: 50%;
+
+	margin-left: -290px;
+	margin-top: -239px;
+
+	>h2{
+		width: 580px;
+		height: 68px;
+		line-height: 68px;
+
+		text-align: center;
+
+		color: #fff;
+		font-size: 22px;
+
+		border-radius: 10px 10px 0 0;
+
+		background-color: $cl-ayl;
+	}
+
+
+	&-box{
+
+		padding: 25px;
+
+
+		p{
+			margin: 25px 0;
+
+			@include clearfix();
+		}
+
+
+		em{
+			width: 130px;
+			height: 40px;
+			line-height: 40px;
+
+			font-style: normal;
+			font-size: 18px;
+			color: $cl-main;
+
+			display: inline-block;
+		}
+
+		input[type="text"]{
+			
+			width: 355px;
+			height: 38px;
+			line-height: 38px;
+
+			padding: 0 15px;
+			outline: none;
+
+			border: 1px solid $cl-bd;
+			background: none;
+			border-radius: 5px;
+		}
+		&-radio{
+			
+			width: 383px;
+
+			padding-left: 130px;
+
+			&.first{
+				margin: 0;
+			}
+
+			span{
+
+				width: 82px;
+
+				display: inline-block;
+
+				height: 30px;
+				line-height: 30px;
+
+				font-size: 16px;
+			}
+
+			input[type="radio"]{
+				
+				margin: 5px 5px 0px 5px;
+
+				display: none;
+			}
+
+			label{
+				padding-left: 20px;
+				
+				cursor: pointer;
+				
+				background: url(../img/sale/consule-radio-nocheck.png) no-repeat left center;
+				
+				&.checked{
+					background: url(../img/sale/consule-radio-check.png) no-repeat left center;
+				}
+			}
+		}
+
+		&-content{
+			
+			textarea{
+				
+				vertical-align: top;
+			
+
+				&.messagect{
+				
+					width: 353px;
+					height: 78px;
+					line-height: 25px;
+					
+					outline: none;
+
+					border: 1px solid $cl-bd;
+					resize: none;
+
+					padding: 10px 15px;
+
+				}
+
+			}
+
+			em{
+				height: 98px;
+			}
+		}
+
+		&-btn{
+			text-align: center;
+
+			button{
+				width: 140px;
+				height: 47px;
+				line-height: 47px;
+
+				font-size: 18px;
+				text-align: center;
+				color: #fff;
+
+				background: $cl-ayl;
+
+				cursor: pointer;
+			}
+		}
+	}
+
+
+		&-close{
+			width: 18px;
+			height: 18px;
+
+			background-image: url(../img/pbl/sale-item-close.png);
+			background-repeat: no-repeat;
+			
+			position: absolute;
+			right: 25px;
+			top: 25px;
+
+			cursor: pointer;
+		}
+	
+	&-wrap{
+		
+		background-image: url("../img/pbl/tspr-50.png");
+	   	background-repeat: repeat;
+		display: none;
+	   
+	   	height: 100%;
+	   
+	   	left: 0;
+	  	position: fixed;
+	   	top: 0;
+	  
+	  	width: 100%;
+	   	z-index: 70;
+		
+		&.active{
+			display: block;
+		}
+	}	
+
+}

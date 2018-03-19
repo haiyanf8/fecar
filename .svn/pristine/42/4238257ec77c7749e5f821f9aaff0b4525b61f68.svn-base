@@ -1,0 +1,56 @@
+
+<div class="consule" id="consule">
+	<!-- <h2><em>车主咨询</em></h2> -->
+
+	<div class="consule-box">
+		<div class="consule-box-input">
+			<p class="getraido">
+
+				<span class="consuleRadio">
+					<input type="radio" id="male" checked="checked" name="sex" value="male">
+					<label class="checked js-consuleRadio" name="man" for="male">先生</label>
+				</span>
+
+	            <span class="consuleRadio">
+		            <input type="radio" id="female" name="sex" value="female">
+		            <label class="js-consuleRadio" name="female" for="female">女士</label>
+	       		</span>
+			</p>
+
+			<p class="getname">
+				<span><em>姓名</em><input type="text" name="username" class="js-consule-username"></span>
+				<span><em>电话</em><input type="text" name="usertel" maxlength=11 class="js-consule-tel" value=""></span>
+			</p>
+
+		</div>
+
+		<div class="consule-box-textarea">
+			<textarea name="commentct"  class="messagect js-consule-comment" maxlength=2000></textarea>
+		</div>
+
+		<div class="consule-box-btn">
+			<button class="js-consule-btn">提交</button>
+		</div>
+
+	</div>
+
+	<div class="consule-list">
+		<ul>
+			<volist name="consultData" id="data">
+				<li class="item">
+					<p><em class="date">{$data['ask-time']}</em><em class="tel">{:substr_replace($data['mobile'], '****', 3, 4)}</em></p>
+					<p class="question"><em class="message">
+					<if condition="$data['name']">
+						{$data['name']}{$data['sex']}
+					<else />
+						匿名
+					</if>
+					:</em>{$data['ask']}</p>
+					<p><em class="answer">客服回答：</em>{$data['answer']}</p>
+				</li>
+			</volist>
+		</ul>
+	</div>
+</div>
+
+<include file="Index/m-pbl:_source-paging" />

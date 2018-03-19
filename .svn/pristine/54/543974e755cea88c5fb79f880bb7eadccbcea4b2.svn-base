@@ -1,0 +1,63 @@
+<div class="banner">
+	<div class="banner-header">
+		<h1 class="logo">
+		    <a href="./">
+		        <img src="__PUBLIC__/dev/img/source/pbl/logo.png" />
+		    </a>
+		</h1>
+
+		<div class="local">
+			<div class="local-bg"></div>
+		    <div class="local-area">
+		        <i class="local-img"></i>
+		        <p class="local-txt">
+		            <span class="js-hd-city">{:session('opencity')}</span>
+		        </p>
+		    </div>
+			
+			<div class="local-box">
+				<div class="local-box-arrow"></div>
+			    <ul class="local-box-citys">
+	        		<li class="{:session('opencity') == '福州' ? 'current' : ''} item"><a href="?opencity=fuzhou">福州</a></li>
+	        		<li class="{:session('opencity') == '厦门' ? 'current' : ''} item"><a href="?opencity=xiamen">厦门</a></li>
+	        		<li class="{:session('opencity') == '上海' ? 'current' : ''} item"><a href="?opencity=shanghai">上海</a></li>
+	        		<li class="{:session('opencity') == '苏州' ? 'current' : ''} item"><a href="?opencity=suzhou">苏州</a></li>
+			    </ul>
+		    </div>
+		</div>
+
+		<div class="nav">
+			<div class="nav-bg"></div>
+				<div class="nav-item">
+				    <a href="./" class="item current">首页</a>
+				    <a href="./sale.html" class="item">卖车</a>
+				    <a href="./valuate-index.html" class="item">估价</a>
+				    <a href="./history.html" class="item">竞拍历史</a>
+				    <a href="./store.html" class="item">服务网点</a>
+			    </div>
+		    </div>
+
+		    <div class="tel">
+		    	<span class="shake"></span>400-9907-999
+		    </div>
+	</div>
+	
+	<div class="banner-box js-quicksale-reference">
+		<div class="m-bsale">
+			<div class="m-bsale-form">
+				<input type="text" class="phone js-bannersale-tel" placeholder="请输入车主手机号" autocompelete="off" maxlength=11>
+				<button class="salebtn js-bannersale-btn">我要卖车</button>
+			</div>
+
+			<div class="m-bsale-alert js-banner-wrong-box">
+				<i class="i-mark">!</i>
+				<span class="ct js-banner-confirm-ct"></span>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="banner-order">
+		今日已经有<em>{$appointCount}</em>人预约卖车
+	</div>
+</div>

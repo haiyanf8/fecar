@@ -1,0 +1,23 @@
+
+
+<div class="main js-ls-goto-map">
+	<div class="main_container mapbox">
+
+		<div class="main-left">
+			<ul class="main-left-nav js-map-chosen">
+				<volist name="store" id="vo">
+					<li class="item js-item--chosen" data-city="{$vo.pinyin}">{$vo.city}					
+					</li>
+				</volist>
+			</ul>
+
+			<ul class="main-left-content js-map-target js-map-wrap">
+				
+			</ul>
+		</div>
+
+		<div class="main-right m-map">
+			<div id="m-map-baidu" class="m-map-baidu js-map-baidu"></div>
+		</div>
+	</div>
+</div>

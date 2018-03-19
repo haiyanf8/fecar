@@ -1,0 +1,115 @@
+<?php
+/**
+* Copyright (c) 2016, 福建朋友亿车网
+* All rights reserved.
+* 文件名称： ConsultModel.class.php 
+* 摘    要： 车辆竞拍模型
+* 作    者： 赵阳
+* 修改日期:　2016.6.18
+*/
+namespace Home\Model;
+use Think\Model;
+
+class SellModel extends Model
+{
+    // 数据库配置 DB_CONFIG1第一个配置
+    protected $connection = 'DB_CONFIG1';
+    protected $tablePrefix = 'fecar_';
+
+    public function getHisSellData($where = null, $order = null, $limit = null,$isDetail = null,$isCount=null)
+    {
+        if ($isDetail) {
+            $field = "a.carid,a.finalprice,concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,MOD(a.carid, 5) + 1 as rate, b.kilometer,date_format(d.endtime,'%Y-%m-%d') as bid_time, (a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,
+					  date_format(b.regist_date,'%Y-%m-%d') as regist_date,date_format(b.annual_check_date,'%Y-%m-%d') as annual_check_date,date_format(b.production,'%Y-%m') as production,b.discharge_standard,b.own_type,b.report,
+                      b.belong,b.area,b.score,b.style_sell_name,b.img00,b.img01,b.img02,b.img10,b.img11,b.img12,b.img20,b.img21,b.img22,b.img30,b.img31,b.img32,b.img40,b.img41,e.realname,f.*,b.no";
+        } else {
+            $field = "MOD(a.carid, 5) + 1 as rate, concat(b.brand,' ',b.model,' ',b.style_sell_name) as info,b.kilometer,b.img00,(a.bid_times + 2) * 3 + (a.bid_times + 3) * 2 as num,date_format(d.endtime,'%Y-%m') as bid_time,date_format(b.regist_date,'%Y-%m') as regist_date,a.carid,a.finalprice,date_format(b.production,'%Y-%m') as production";
+        }
+        $data = $this->alias('a')
+            ->join('LEFT JOIN fecar_check1 b on a.carid=b.id')
+//             ->join(
+//                 'LEFT JOIN (select count(sellid) as num,carid from fecar_sell_bid  group by sellid) c on c.carid=a.carid')
+            ->join('LEFT JOIN fecar_auction_times d on a.auction_id=d.id');
+
+        if ($isDetail) {
+            $data->join('LEFT JOIN fecar_check_user e on e.id=b.surveyor_id')->join(
+                    'LEFT JOIN fecar_check_config f on f.check_id=a.carid');
+        }
+
+        $data = $data->field($field)->where($where);
+       if($isCount) {
+       	    $count=$data->count('a.carid');
+       	    //$sellData=$data->limit($limit)->order($order)->select();
+       	    return $count;
+       } else {
+           return $data->limit($limit)->order($order)->select();
+       }
+    }
+
+    public function getCheckDetail($carid)
+    {
+        //检测部位
+        $arr = array('D0501', 'D0503', 'D0401', 'D0502',
+                'D0104', 'D0103', 'D02', 'D0101', 'D0102', 'D0301');
+        $detailData = array();
+        foreach ($arr as $v) {
+            $detailData[$v] = $this->getCheckItem($carid, $v);
+        }
+
+        return $detailData;
+    }
+    
+    /**
+     * 获取$nubber部位的检测项
+     * @param unknown $carid
+     * @param unknown $number
+     * @return Ambigous <\Think\mixed, boolean, string, NULL, mixed, void, unknown, multitype:, object>
+     */
+    public function getCheckItem($carid, $number)
+    {
+        $where ['fecar_check_item1.check_id'] = $carid;
+        $where ['fecar_check_item1.item_no'] = array('LIKE', $number . '%');
+    	$data = $this->table('fecar_check_item1')
+    	       //->join('left join fecar_detect_item_detail_new a on a.item_no=fecar_check_item1.item_no')
+    	            ->where($where)
+    	            ->field('item_no, value, img1, img2, img3, img4, img5')
+    	            ->select();
+    	//return $data;
+    	foreach ($data as &$v) {
+    		$itemname = $this->getCheckName($v['item_no']);
+    		$v['name'] = $itemname['item_name'];
+    	}
+    	return array('pic' => $this->getDetailPic($carid, $number), 'data' => $data);   	
+    }
+
+    /**
+     * 获取$nubber部位的检测图片
+     * @param  $carid 车id或者检测id
+     * @param  $number 检测编号
+     * @return Ambigous  图片地址
+     */
+    protected function getDetailPic($carid, $number)
+    {
+        //先获取图片
+        $picdata=$this->table('fecar_check_img_water')
+                      ->where(array('check_id' => $carid, 'item_no_pic' => array('LIKE', $number . '%')))
+                      ->field('img_path')
+                      ->find();
+
+        if(!$picdata) {
+        	$picdata['img_path'] = 'waterImages/' . $number . '.jpg';
+        }
+
+        return $picdata['img_path'];
+    }
+    
+    protected function getCheckName($item_no)
+    {
+    	return $this->table('fecar_detect_item_detail_new')
+                    ->where(array('item_no' => $item_no))
+                    ->order('id asc')
+                    ->limit(1)
+                    ->field('item_name')
+                    ->find();
+    }
+}

@@ -1,0 +1,13 @@
+
+<div class="js-be-api m-be" >
+	{
+		"quickSale" : "{:U('appoint/insert')}",
+		"faq" : "{:U('consult/insert')}",
+		"getBrand" : "{:U('car/brand')}",
+		"getSeries" : "{:U('car/series')}",
+		"getModel" : "{:U('car/model')}",
+        "getValuateCount": "{:U('valuate/count')}",
+        "valuateAppoint": "{:U('valuate/innerAppoint')}",
+        "getMap" : "{:U('store/coord')}"
+	}
+</div>

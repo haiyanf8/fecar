@@ -1,0 +1,39 @@
+
+
+<div class="quicksale js-quicksale active">
+
+	<!-- <div class="quicksale-up js-quicksale-up">
+		<img src="__PUBLIC__/prd/img/pbl/quick-up-people.png">
+	</div> -->
+
+	<div class="quicksale-pop js-quicksale-pop">
+
+		<div class="quicksale-pop-yl"></div>
+
+		<div class="quicksale-pop-wrap">
+			<div class="people">
+				<img src="__PUBLIC__/prd/img/pbl/quick-pop-people.png">
+			</div>
+			<div class="form">
+				
+				<input type="text" class="tel js-quicksale-tel" placeholder="请输入车主手机号" autocompelete="off" maxlength=11>
+
+				<div class="form-ipt js-ipt-info">
+					<span class="error js-quicksale-error"><img src="__PUBLIC__/prd/img/pbl/quicksale-error.png"></span>
+				</div>
+
+				<button class="salebtn js-quicksale-salebtn">我要卖车</button>
+			</div>
+			
+			<div class="form-intro">
+				<p class="pic"><img src="__PUBLIC__/prd/img/pbl/quicksale-logo.png"></p>
+				<p class="txt">让卖车更透明</p>
+			</div>
+
+		</div>
+		
+		<div class="quicksale-pop-close js-quicksale-close">
+			<img src="__PUBLIC__/prd/img/pbl/asidesale-close.png">
+		</div>
+	</div>
+</div>
